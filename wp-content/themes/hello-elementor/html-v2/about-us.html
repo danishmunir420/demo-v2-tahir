@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us Page</title>
+
+  <!-- Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HERO / HEADER -->
+  <!-- HEADER BAR (same for desktop + mobile) -->
+<!-- HEADER BAR (same for desktop + mobile) -->
+    <header class="tv-header-wrap tv-header"id="tvHeader">
+        <div class="container-xl container-full">
+            <div class="tv-headerbar position-relative d-flex align-items-center justify-content-between">
+                <!-- Left: Menu button -->
+                <button class="tv-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open menu" data-anim="left">
+                    <!-- hamburger -->
+                    <img src="assets/images/menu-icon.svg" alt="Open menu">
+                </button>
+
+                <!-- Center: Logo (always centered) -->
+                <a class="tv-brand position-absolute start-50 translate-middle-x" href="#" aria-label="Testiva home" data-anim="fade-up">
+                    <img src="assets/images/logo.svg" alt="Testiva logo">
+                </a>
+
+                <!-- Right: CTA -->
+                <div class="d-flex align-items-center d-none d-md-block" data-anim="right">
+                    <a class="tv-cta-pill" href="#">
+                        Let’s Talk <span class="tv-caret" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- OFFCANVAS MENU (Full screen) -->
+        <div class="offcanvas offcanvas-start tv-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="tv-menu__inner container-fluid">
+                <!-- Close button -->
+                <button type="button" class="tv-menu__close" data-bs-dismiss="offcanvas" aria-label="Close menu">
+                    <img src="assets/images/close-icon.svg" alt="Close menu" width="32px">
+                </button>
+
+                <div class="row g-5 align-items-start tv-menu__grid">
+                    <!-- Left: Links + contact -->
+                    <div class="col-lg-5">
+                        <nav aria-label="Primary" class="tv-menu__nav">
+                            <a class="tv-menu__link" href="#">About Us</a>
+                            <a class="tv-menu__link" href="#">Services</a>
+                            <a class="tv-menu__link" href="#">Projects</a>
+                            <a class="tv-menu__link" href="#">Verticals</a>
+                            <a class="tv-menu__link" href="#">Contact Us</a>
+                        </nav>
+
+                        <div class="tv-menu__contact">
+                            <a class="tv-menu__contact-item" href="tel:+19297306357">
+                                <span class="tv-menu__icon" aria-hidden="true">
+                                    <img src="assets/images/phone-icon.svg" alt="Phone Icon">
+                                </span>
+                                <span>+1(929)-730-635-7</span>
+                            </a>
+
+                            <a class="tv-menu__contact-item" href="mailto:info@testiva.io">
+                                <span class="tv-menu__icon" aria-hidden="true">
+                                    <img src="assets/images/email-icon.svg" alt="Email Icon">
+                                </span>
+                                <span>Info@testiva.io</span>
+                            </a>
+                        </div>
+
+                        <!-- Right: CTA -->
+                        <div class="d-flex align-items-center d-block d-md-none" data-anim="right">
+                            <a class="tv-cta-pill" href="#">
+                                Let’s Talk <span class="tv-caret" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Feature tiles -->
+                    <div class="col-lg-7 d-none d-md-block">
+                        <div class="row g-4">
+                            <!-- Tile 1 -->
+                            <div class="col-md-6">
+                                <a class="tv-menu-tile" href="#">
+                                    <div class="tv-menu-tile__imgWrap">
+                                        <img src="assets/images/menu-img-01.jpg" alt="Healthcare QA" />
+                                    </div>
+                                    <div class="tv-menu-tile__label">
+                                        Healthcare QA <span class="tv-caret" aria-hidden="true"></span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Tile 2 -->
+                            <div class="col-md-6">
+                                <a class="tv-menu-tile" href="#">
+                                    <div class="tv-menu-tile__imgWrap">
+                                        <img src="assets/images/menu-img-02.jpg" alt="AI apps" />
+                                    </div>
+                                    <div class="tv-menu-tile__label">
+                                        AI apps <span class="tv-caret" aria-hidden="true"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+  <!-- Inner Banner -->
+   
+  <section class="tv-about-banner">
+    <div class="tv-banner-inner">
+      <!-- Foreground Image -->
+      <div class="tv-about-banner__image  js-hero-bg">
+        <img src="assets/images/banner-inner-img.png" alt="About us Banner">
+      </div>
+      <div class="tv-about-banner__wrap">
+        <!-- Center Tagline -->
+        <div class="tv-about-banner__tagline  js-hero-bg">
+          <h1 data-anim="title">About Us</h1>
+        </div>
+        <div class="tv-about-banner__content">
+          <div class="banner-outer-img js-hero-person">
+            <img src="assets/images/banner-person-img.png" alt="About us Banner" data-anim="image" data-duration="3">
+          </div>
+          <h2 class="js-hero-sub" data-anim="fade-up" data-delay="0.5">
+            Committed to Excellence,<br>
+            Driven by Quality
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <main id="main">
+    <section class="tv-about-belief py-5">
+      <div class="container">
+        <!-- small mark -->
+        <div class="tv-about-belief__mark mb-4" aria-hidden="true">
+          <img src="assets/images/top-section-icon.svg" alt="icon" data-anim="image">
+        </div>
+
+        <!-- heading + copy -->
+        <div class="text-center">
+          <h2 class="tv-about-belief__title mb-3" data-anim="title">
+            <span class="tv-about-belief__blue">At Testiva, We Believe</span>
+            <span class="tv-about-belief__dark">That Quality Is<br/>The Foundation Of Success.</span>
+          </h2>
+
+          <p class="tv-about-belief__text mx-auto mb-5" data-anim="fade-up" data-delay="0.3">
+            Our expert team brings years of experience and deep technical knowledge to every project,
+            ensuring that your software performs flawlessly. From manual testing to automation, performance
+            testing to security, we offer a wide range of services tailored to meet your unique needs.
+          </p>
+        </div>
+
+        <!-- cards -->
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="tv-about-belief-card" data-anim="left">
+              <div class="tv-about-belief-card__icon" aria-hidden="true">
+                <!-- simple inline svg icon -->
+                <img src="assets/images/b-icon-01.svg" alt="">
+              </div>
+
+              <p class="tv-about-belief-card__text">
+                We provide a full range of<br/>
+                top-tier testing services<br/>
+                under one roof.
+              </p>
+            </article>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="tv-about-belief-card" data-anim="zoom" data-ease="power4.out">
+              <div class="tv-about-belief-card__icon" aria-hidden="true">
+                <img src="assets/images/b-icon-02.svg" alt="">
+              </div>
+
+              <p class="tv-about-belief-card__text">
+                Our team of professionals<br/>
+                brings a wealth of industry<br/>
+                experience.
+              </p>
+            </article>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="tv-about-belief-card" data-anim="right">
+              <div class="tv-about-belief-card__icon" aria-hidden="true">
+                <img src="assets/images/b-icon-03.svg" alt="">
+              </div>
+
+              <p class="tv-about-belief-card__text">
+                We are dedicated to<br/>
+                delivering superior quality in<br/>
+                every project.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- // story -->
+     <section class="tv-story py-5 tv-story-block">
+      <div class="container">
+        <!-- Top heading -->
+        <div class="text-center tv-story__head">
+          <h2 class="tv-story__title mb-3" data-anim="fade-up">
+            <span class="tv-story__blue">Our Story</span>
+            <span class="tv-story__dark">From<br/>Passion to Precision</span>
+          </h2>
+
+          <p class="tv-story__lead mx-auto" data-anim="fade-up" data-delay="0.3">
+            What started as a small group of passionate testers has grown into a trusted QA team helping
+            startups and enterprises deliver flawless software. We built our reputation on attention to detail,
+            strong communication, and a commitment to continuous improvement.
+          </p>
+        </div>
+
+        <!-- Grid -->
+         <div class="tv-story-grid">
+
+          <!-- LEFT -->
+          <div class="tv-col-left">
+            <h3 class="tv-story-title" data-anim="left">Our Mission</h3>
+            <p class="tv-story-text" data-anim="left">
+              We aim to bridge the gap between development and quality by becoming a trusted
+              QA partner for startups and enterprises seeking software excellence.
+            </p>
+
+            <div class="tv-story-card tv-story-card--small position-relative">
+              <img src="assets/images/our-story-01.png" alt="Team working" data-anim="right">
+              <span class="tv-story-accent" aria-hidden="true">
+                <img src="assets/images/story-corner-icon.svg" alt="Story Corner Icon" data-anim="right">
+              </span>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="tv-col-right">
+            <div class="tv-story-card tv-story-card--big position-relative">
+              <img src="assets/images/story-img-01.png" alt="Team discussion" data-anim="left">
+              <div class="tv-story-mark-bottom" aria-hidden="true">
+                <img src="assets/images/story-corner-black.svg" alt="Story Corner Icon" data-anim="left">
+              </div>
+            </div>
+
+            <div class="tv-story-vision">
+              <h3 class="tv-story-title" data-anim="right">Our Vision</h3>
+              <p class="tv-story-text" data-anim="right">
+                To empower businesses worldwide by ensuring every digital experience is seamless,
+                secure, and user-centric.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="tv-benefits">
+  <div class="container">
+    <div class="tv-stack" id="tvBenefitsStack">
+
+      <div class="tv-stack__cards">
+        <article class="tv-stack__card is-active">
+          <div class="tv-benefits-inner text-center">
+            <div class="tv-benefits-kicker" data-anim="fade-up">Key Benefits</div>
+            <h2 class="tv-benefits-title" data-anim="fade-up">Expertise</h2>
+            <p class="tv-benefits-text" data-anim="fade-up">Our experts bring a broad range of experience and industry insights.</p>
+          </div>
+        </article>
+
+        <article class="tv-stack__card">
+          <div class="tv-benefits-inner text-center">
+            <div class="tv-benefits-kicker" data-anim="fade-up">Key Benefits</div>
+            <h2 class="tv-benefits-title" data-anim="fade-up">Efficiency</h2>
+            <p class="tv-benefits-text" data-anim="fade-up">Streamlined processes reduce time-to-release without compromising quality.</p>
+          </div>
+        </article>
+
+        <article class="tv-stack__card">
+          <div class="tv-benefits-inner text-center">
+            <div class="tv-benefits-kicker" data-anim="fade-up">Key Benefits</div>
+            <h2 class="tv-benefits-title" data-anim="fade-up">Reliability</h2>
+            <p class="tv-benefits-text" data-anim="fade-up">Consistent coverage ensures stable releases and fewer production issues.</p>
+          </div>
+        </article>
+
+        <article class="tv-stack__card">
+          <div class="tv-benefits-inner text-center">
+            <div class="tv-benefits-kicker" data-anim="fade-up">Key Benefits</div>
+            <h2 class="tv-benefits-title" data-anim="fade-up">Confidence</h2>
+            <p class="tv-benefits-text" data-anim="fade-up">Clear reporting helps teams ship with certainty.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="tv-stack__dots" aria-label="Benefits pagination"></div>
+
+
+    </div>
+  </div>
+</section>
+
+
+    
+
+
+
+<!-- Our values -->
+ <section class="tv-values">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <!-- Left -->
+      <div class="col-lg-6">
+        <div class="tv-values__kicker mb-3" data-anim="left">Our Values</div>
+
+        <h2 class="tv-values__title mb-4" data-anim="left">
+          At Testiva, We Are Committed To Delivering Excellence And Quality<br />
+          In Every Test We Conduct.
+        </h2>
+
+        <p class="tv-values__text mb-0" data-anim="left">
+          Through clear communication, innovation, and robust infrastructure, we ensure seamless results.
+          Our collaborative approach helps us exceed client expectations and drive success.
+        </p>
+      </div>
+
+      <!-- Right -->
+
+      <div class="col-lg-6">
+        <div class="tv-values__scroll">
+          <div class="tv-values__list" data-anim="right">
+
+            <article class="tv-values-item">
+              <h3 class="tv-values-item__title">Excellence</h3>
+              <p class="tv-values-item__desc">
+                We are committed to delivering exceptional results on every project.
+              </p>
+            </article>
+
+            <article class="tv-values-item">
+              <h3 class="tv-values-item__title">Integrity</h3>
+              <p class="tv-values-item__desc">
+                We operate with transparency and accountability, building trust with our clients.
+              </p>
+            </article>
+
+            <article class="tv-values-item">
+              <h3 class="tv-values-item__title">Continuous Learning</h3>
+              <p class="tv-values-item__desc">
+                We are always seeking new ways to improve and innovate, ensuring we provide the best services.
+              </p>
+            </article>
+
+            <article class="tv-values-item">
+              <h3 class="tv-values-item__title">Collaboration</h3>
+              <p class="tv-values-item__desc">
+                We collaborate closely with our partners to understand their goals and deliver beyond expectations.
+              </p>
+            </article>
+
+            <article class="tv-values-item">
+              <h3 class="tv-values-item__title">Effective Communication</h3>
+              <p class="tv-values-item__desc">
+                We maintain transparent, timely communication to keep you informed and involved, ensuring reliable results.
+              </p>
+            </article>
+
+            <article class="tv-values-item">
+              <h3 class="tv-values-item__title">Robust Infrastructure</h3>
+              <p class="tv-values-item__desc">
+                With cutting-edge remote tools, we deliver efficient, secure, and globally accessible testing services anytime, anywhere.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Testimonial slider -->
+     <section class="tv-testimonials py-5">
+      <div class="container">
+        <h2 class="tv-testimonials__title text-center mb-5" data-anim="fade-up" data-once="false">What’s People Say’s</h2>
+
+        <div class="swiper tv-testimonials-swiper">
+          <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="tv-testimonial">
+                <div class="tv-testimonial__media">
+                  <img
+                    src="assets/images/testimonial-img.jpg"
+                    alt="Client photo"
+                    data-anim="image"
+                  />
+                </div>
+
+                <div class="tv-testimonial__card">
+                  <p class="tv-testimonial__quote" data-anim="fade-up" data-delay="0.4">
+                    “Superior Space’s user-friendly design and robust features have empowered our team
+                    to create a site that truly stands out in our industry.”
+                  </p>
+
+                  <div class="tv-testimonial__footer">
+                    <div class="tv-testimonial__name" data-anim="fade-up" data-delay="0.4">Butterfly Studio</div>
+                    <div class="tv-testimonial__role" data-anim="fade-up" data-delay="0.4">OUR ANOTHER TEMPLATE</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="tv-testimonial">
+                <div class="tv-testimonial__media">
+                  <img
+                    src="assets/images/testimonial-img.jpg"
+                    alt="Client photo"
+                    data-anim="image"
+                  />
+                </div>
+
+                <div class="tv-testimonial__card">
+                  <p class="tv-testimonial__quote" data-anim="fade-up">
+                    “Testiva helped us release faster with fewer defects. Their process and reporting made
+                    QA predictable and reliable.”
+                  </p>
+
+                  <div class="tv-testimonial__footer">
+                    <div class="tv-testimonial__name" data-anim="fade-up">David C.</div>
+                    <div class="tv-testimonial__role" data-anim="fade-up">PRODUCT LEAD</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dots -->
+          <div class="tv-testimonials__dots"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <footer class="tv-footer">
+        <div class="container">
+            <!-- CTA -->
+            <div class="tv-footer__cta text-center">
+                <h2 class="tv-footer__headline" data-anim="fade-up">
+                    Demand better<br />
+                    software quality.
+                </h2>
+
+                <form class="tv-footer__form" action="#" method="post">
+                    <label class="visually-hidden" for="footerEmail">Email</label>
+
+                    <input data-anim="left" id="footerEmail" class="tv-footer__input" type="email" placeholder="Enter your email address" required />
+
+                    <button data-anim="right" class="tv-footer__btn" type="submit">
+                        BOOK A CALL <span class="tv-caret" aria-hidden="true"></span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Links grid -->
+            <div class="row tv-footer__grid g-4" data-anim="cards">
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">ABOUT US</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Why Choose Testiva?</a></li>
+                        <li><a href="#">Our Values</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">SERVICES</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">AI Driven Automation Testing</a></li>
+                        <li><a href="#">Automation Testing</a></li>
+                        <li><a href="#">Performance Testing</a></li>
+                        <li><a href="#">Mobile App Testing</a></li>
+                        <li><a href="#">Compatibility Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">VERTICALS</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">Healthcare QA</a></li>
+                        <li><a href="#">Wellness Apps Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">GET IN TOUCH</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="mailto:info@testiva.io">info@testiva.io</a></li>
+                        <li><a href="tel:+19237306357">+1(923)-730-635-7</a></li>
+                        <li class="tv-footer__plain">
+                            17 C, DHA Rahbar, Lahore,<br />
+                            Pakistan
+                        </li>
+                    </ul>
+
+                    <div class="tv-footer__social" data-anim="cards">
+                        <a href="#" aria-label="Facebook" class="tv-footer__icon">
+                            <img src="assets/images/fb-icon.svg" alt="facebook">
+                        </a>
+                        <a href="#" aria-label="Instagram" class="tv-footer__icon">
+                            <img src="assets/images/instagram-icon.svg" alt="Instagram">
+                        </a>
+                        <a href="#" aria-label="X" class="tv-footer__icon">
+                            <img src="assets/images/x-icon.svg" alt="X">
+                        </a>
+                        <a href="#" aria-label="YouTube" class="tv-footer__icon">
+                            <img src="assets/images/youTube-icon.svg" alt="YouTube">
+                        </a>
+                    </div>
+
+                    <div class="tv-footer__copy" data-anim="right">
+                        © 2026 Testiva. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Watermark text -->
+        <div class="tv-footer__watermark d-none d-md-block" aria-hidden="true">
+            <img src="assets/images/footer-logo.svg" alt="Testiva" data-anim="image" />
+        </div>
+    </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- GSAP Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animation.js"></script>
+
+</body>
+</html>

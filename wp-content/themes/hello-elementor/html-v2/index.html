@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Page</title>
+
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- HEADER BAR (same for desktop + mobile) -->
+    <header class="tv-header-wrap tv-header"id="tvHeader">
+        <div class="container-xl container-full">
+            <div class="tv-headerbar position-relative d-flex align-items-center justify-content-between">
+                <!-- Left: Menu button -->
+                <button class="tv-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open menu" data-anim="left">
+                    <!-- hamburger -->
+                    <img src="assets/images/menu-icon.svg" alt="Open menu">
+                </button>
+
+                <!-- Center: Logo (always centered) -->
+                <a class="tv-brand position-absolute start-50 translate-middle-x" href="#" aria-label="Testiva home" data-anim="fade-up">
+                    <img src="assets/images/logo.svg" alt="Testiva logo">
+                </a>
+
+                <!-- Right: CTA -->
+                <div class="d-flex align-items-center d-none d-md-block" data-anim="right">
+                    <a class="tv-cta-pill" href="#">
+                        Let’s Talk <span class="tv-caret" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- OFFCANVAS MENU (Full screen) -->
+        <div class="offcanvas offcanvas-top tv-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="tv-menu__stripes">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span>
+            </div>
+            <div class="tv-menu__inner container-fluid">
+                <!-- Close button -->
+                <button type="button" class="tv-menu__close" data-bs-dismiss="offcanvas" aria-label="Close menu">
+                    <img src="assets/images/close-icon.svg" alt="Close menu" width="32px">
+                </button>
+
+                <div class="row g-5 align-items-start tv-menu__grid">
+                    <!-- Left: Links + contact -->
+                    <div class="col-lg-5">
+                        <nav aria-label="Primary" class="tv-menu__nav">
+                            <a class="tv-menu__link" href="#">About Us</a>
+                            <a class="tv-menu__link" href="#">Services</a>
+                            <a class="tv-menu__link" href="#">Projects</a>
+                            <a class="tv-menu__link" href="#">Verticals</a>
+                            <a class="tv-menu__link" href="#">Contact Us</a>
+                        </nav>
+
+                        <div class="tv-menu__contact">
+                            <a class="tv-menu__contact-item" href="tel:+19297306357">
+                                <span class="tv-menu__icon" aria-hidden="true">
+                                    <img src="assets/images/phone-icon.svg" alt="Phone Icon">
+                                </span>
+                                <span>+1(929)-730-635-7</span>
+                            </a>
+
+                            <a class="tv-menu__contact-item" href="mailto:info@testiva.io">
+                                <span class="tv-menu__icon" aria-hidden="true">
+                                    <img src="assets/images/email-icon.svg" alt="Email Icon">
+                                </span>
+                                <span>Info@testiva.io</span>
+                            </a>
+                        </div>
+
+                        <!-- Right: CTA -->
+                        <div class="d-flex align-items-center d-block d-md-none" data-anim="right">
+                            <a class="tv-cta-pill" href="#">
+                                Let’s Talk <span class="tv-caret" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Feature tiles -->
+                    <div class="col-lg-7 d-none d-md-block">
+                        <div class="row g-4">
+                            <!-- Tile 1 -->
+                            <div class="col-md-6">
+                                <a class="tv-menu-tile" href="#">
+                                    <div class="tv-menu-tile__imgWrap">
+                                        <img src="assets/images/menu-img-01.jpg" alt="Healthcare QA" />
+                                    </div>
+                                    <div class="tv-menu-tile__label">
+                                        Healthcare QA <span class="tv-caret" aria-hidden="true"></span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Tile 2 -->
+                            <div class="col-md-6">
+                                <a class="tv-menu-tile" href="#">
+                                    <div class="tv-menu-tile__imgWrap">
+                                        <img src="assets/images/menu-img-02.jpg" alt="AI apps" />
+                                    </div>
+                                    <div class="tv-menu-tile__label">
+                                        AI apps <span class="tv-caret" aria-hidden="true"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- Hero Slider -->
+    <section class="tv-hero">
+        <div class="tv-hero-inner">
+            <div class="tv-hero__wrap">
+
+            <!-- Main Video Swiper -->
+            <div class="swiper tv-hero-swiper">
+                <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <video class="tv-hero__video" playsinline muted preload="metadata">
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <video class="tv-hero__video" playsinline muted preload="metadata">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    </video>
+                </div>
+                </div>
+            </div>
+
+            <!-- Thumbnails (bottom-left) -->
+            <div class="swiper tv-hero-thumbs d-none d-md-block">
+                <div class="swiper-wrapper" data-anim="cards">
+
+                    <div class="swiper-slide">
+                        <button class="tv-hero-thumb" type="button">
+                            <span class="tv-hero-thumb__title">Healthcare QA<br>Services</span>
+                            <span class="tv-hero-thumb__arrow"></span>
+                            <span class="tv-hero-thumb__img">
+                                <img src="assets/images/v-slide-1-thumbnil.jpg" alt="">
+                            </span>
+                            <!-- progress bar -->
+                            <span class="tv-hero-thumb__progress" aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <button class="tv-hero-thumb" type="button">
+                            <span class="tv-hero-thumb__title">AI/ML Models<br>Testing</span>
+                            <span class="tv-hero-thumb__arrow"></span>
+                            <span class="tv-hero-thumb__img">
+                                <img src="assets/images/v-slide-2-thumbnil.png" alt="">
+                            </span>
+                            <!-- progress bar -->
+                            <span class="tv-hero-thumb__progress" aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Optional badge bottom-right (your screenshot has it) -->
+            <a class="tv-hero__badge d-none d-md-block" data-anim="right" href="#" aria-label="Clutch badge">
+                <img src="assets/images/clutch-logo.png" alt="">
+            </a>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <main id="main">
+
+
+        <!-- Trusted clients logos -->
+        <section class="tv-trusted" data-anim="section">
+            <div class="container">
+                <h2 class="tv-trusted__title text-center" data-anim="title">
+                    Trusted by organizations <span class="text-black">that cannot afford mistakes.</span>
+                </h2>
+
+                <div class="swiper tv-logo-slider">
+                    <div class="swiper-wrapper align-items-center">
+                        <!-- Add as many logos as you want -->
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/Rise-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/u-turn-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/oslo-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/barca-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/th-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/kobe-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/Rise-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/u-turn-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/oslo-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/barca-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/th-Client-Logo.svg" alt="Rise" />
+                        </div>
+                        <div class="swiper-slide tv-logo">
+                            <img src="assets/images/kobe-Client-Logo.svg" alt="Rise" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Driven Section -->
+        <section class="tv-precision" data-anim="section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- Left visual -->
+                    <div class="col-lg-6">
+                        <div class="tv-precision__visual position-relative">
+                            <!-- Main visual block (replace with your image) -->
+                            <div class="tv-precision__card">
+                                <img data-anim="image" class="tv-precision__img" src="assets/images/i-driven-img.png" alt="Abstract visual" data-anim="image" />
+                                <img src="assets/images/shield-overlay-img.png" class="ai-top-img-1" alt="" data-anim="fade-up">
+                                <img src="assets/images/person-overlay-40x40.png" class="ai-top-img-2" alt="" data-anim="right">
+                                <img src="assets/images/ai-drive-overlay-btm.png" class="ai-top-img-3" alt="" data-anim="left">
+                            </div>
+
+                            <!-- Floating small avatars -->
+                            <!-- <img class="tv-precision__avatar tv-precision__avatar--mid" src="assets/images/AI-img_Shield.webp.png" alt="" aria-hidden="true" />
+                            <img data-anim="image" class="tv-precision__avatar tv-precision__avatar--bottom" src="assets/images/Ai-img-b.png" alt="" aria-hidden="true" /> -->
+                        </div>
+                    </div>
+
+                    <!-- Right content -->
+                    <div class="col-lg-6">
+                        <h2 data-anim="right" class="tv-precision__title mb-3">
+                            <span class="tv-precision__accent">AI-driven,</span><br />
+                            technically precise,<br />
+                            for systems that<br />
+                            cannot fail.
+                        </h2>
+
+                        <p data-anim="right" class="tv-precision__text mb-4">
+                            We have a myriad of gains in business development that make them a testament
+                            to our quality.
+                        </p>
+
+                        <a data-anim="right" class="tv-precision__btn" href="#">
+                            About Us <span class="tv-caret" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Slider -->
+        <section class="tv-services">
+            <div class="container">
+                <!-- Header row -->
+                <div class="tv-services-txt d-flex align-items-start justify-content-between gap-3">
+                    <div>
+                        <h2 data-anim="fade-up" class="tv-services__title mb-2">
+                            Our <span class="tv-services__accent">Services</span>
+                        </h2>
+                        <p data-anim="fade-up" class="tv-services__subtitle mb-0">
+                            Ensuring Secure And Seamless Applications<br />
+                            Through Expert Testing Across Web, Mobile, And<br />
+                            Desktop Platforms.
+                        </p>
+                    </div>
+
+                    <a data-anim="right" class="tv-services__viewall" href="#">
+                        View All <span class="tv-caret" aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <!-- Slider -->
+                <div class="tv-services__slider-wrap">
+                    <div class="swiper tv-services-swiper">
+                        <div class="swiper-wrapper" data-anim="cards">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <a class="tv-service-card" href="#">
+                                    <img class="tv-service-card__img" src="assets/images/services-img-1.jpg" alt="AI Driven Automation Testing" />
+                                    <div class="tv-service-card__overlay"></div>
+                                    <div class="tv-service-card__content">
+                                        <h3 class="tv-service-card__title" data-anim="fade-up">AI Driven<br />Automation Testing</h3>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <a class="tv-service-card" href="#">
+                                    <img class="tv-service-card__img" src="assets/images/services-img-2.jpg" alt="Functional Testing" />
+                                    <div class="tv-service-card__overlay"></div>
+                                    <div class="tv-service-card__content">
+                                        <h3 class="tv-service-card__title" data-anim="fade-up">Functional Testing</h3>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <a class="tv-service-card" href="#">
+                                    <img class="tv-service-card__img" src="assets/images/services-img-1.jpg" alt="Performance Testing" />
+                                    <div class="tv-service-card__overlay"></div>
+                                    <div class="tv-service-card__content">
+                                        <h3 class="tv-service-card__title" data-anim="fade-up">Performance Testing</h3>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide">
+                                <a class="tv-service-card" href="#">
+                                    <img class="tv-service-card__img" src="assets/images/services-img-2.jpg" alt="Security Testing" />
+                                    <div class="tv-service-card__overlay"></div>
+                                    <div class="tv-service-card__content">
+                                        <h3 class="tv-service-card__title" data-anim="fade-up">Security Testing</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom controls (like screenshot) -->
+                    <div class="tv-slider-controls" data-anim="fade-up">
+                        <button class="tv-nav tv-nav-prev" aria-label="Previous slide">
+                            <span class="tv-arrow tv-arrow-left"></span>
+                        </button>
+
+                        <div class="tv-pagination"></div>
+
+                        <button class="tv-nav tv-nav-next" aria-label="Next slide">
+                            <span class="tv-arrow tv-arrow-right"></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Choose Section -->
+        <section class="tv-choose py-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <div data-anim="fade-up" class="tv-choose__kicker">Why Choose Us</div>
+
+                    <h2 data-anim="fade-up" class="tv-choose__headline mt-3 mb-3">
+                        <span class="tv-choose__blue">Let us raise the standard of<br />
+                        your software quality</span>, and<br />
+                        keep it there.
+                    </h2>
+
+                    <p data-anim="fade-up" class="tv-choose__sub mx-auto mb-0">
+                        Partner with us for reliable, efficient, and expert QA solutions that elevate your software quality.
+                    </p>
+                </div>
+
+                <div class="tv-choose__slider">
+                    <div class="swiper tv-choose-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <article class="tv-choose-card">
+                                    <img class="tv-choose-card__img" src="assets/images/choose-img.png" alt="Expertise" />
+                                    <div class="tv-choose-card__overlay"></div>
+                                    <div class="tv-choose-card__content">
+                                        <h3 class="tv-choose-card__title" data-anim="fade-up">Expertise</h3>
+                                        <p class="tv-choose-card__text" data-anim="fade-up">
+                                            Deep QA experience across web, mobile, and enterprise systems.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Slide 2 (center in screenshot) -->
+                            <div class="swiper-slide">
+                                <article class="tv-choose-card">
+                                    <img class="tv-choose-card__img" src="assets/images/choose-img.png" alt="Cutting-Edge Tools" />
+                                    <div class="tv-choose-card__overlay"></div>
+                                    <div class="tv-choose-card__content">
+                                        <h3 class="tv-choose-card__title" data-anim="fade-up">Cutting-Edge<br />Tools</h3>
+                                        <p class="tv-choose-card__text" data-anim="fade-up">
+                                            We leverage the latest testing tools and technologies to ensure maximum efficiency and accuracy.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <article class="tv-choose-card">
+                                    <img class="tv-choose-card__img" src="assets/images/choose-img.png" alt="Customer-Centric approach" />
+                                    <div class="tv-choose-card__overlay"></div>
+                                    <div class="tv-choose-card__content">
+                                        <h3 class="tv-choose-card__title" data-anim="fade-up">Customer-<br />Centric<br />Approach</h3>
+                                        <p class="tv-choose-card__text" data-anim="fade-up">
+                                            We adapt to your process and goals, keeping quality measurable and predictable.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Add more slides if needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  -->
+        <section class="tv-insights py-5">
+            <div class="container">
+                <h2 class="tv-insights__title text-center mb-5" data-anim="fade-up">Latest Insights</h2>
+
+                <div class="row g-4" data-anim="cards">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="tv-insight">
+                            <a class="tv-insight__media" href="#">
+                                <img src="assets/images/insights-img-01.jpg" data-anim="image" alt="Habit tracking and self-improvement apps testing" />
+                            </a>
+
+                            <div class="tv-insight__meta mt-3">
+                                <span data-anim="fade-up">May 04, 2025</span>
+                                <span class="tv-insight__dot" data-anim="fade-up">|</span>
+                                <span data-anim="fade-up">David C.</span>
+                            </div>
+
+                            <h3 class="tv-insight__heading mt-2">
+                                <a class="tv-insight__link" href="#" data-anim="fade-up">
+                                    Habit Tracking And Self-Improvement Apps Testing
+                                </a>
+                            </h3>
+                        </article>
+                    </div>
+
+                    <!-- Card 2 (underlined title style in screenshot) -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="tv-insight">
+                            <a class="tv-insight__media" href="#">
+                                <img src="assets/images/insights-img-02.jpg" data-anim="image" alt="Women’s health and reproductive wellness apps testing" />
+                            </a>
+
+                            <div class="tv-insight__meta mt-3">
+                                <span data-anim="fade-up">May 06, 2025</span>
+                                <span class="tv-insight__dot" data-anim="fade-up">|</span>
+                                <span data-anim="fade-up">David C.</span>
+                            </div>
+
+                            <h3 class="tv-insight__heading mt-2">
+                                <a class="tv-insight__link" href="#" data-anim="fade-up">
+                                    Women’s Health &amp; Reproductive Wellness Apps Testing
+                                </a>
+                            </h3>
+                        </article>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="tv-insight">
+                            <a class="tv-insight__media" href="#">
+                                <img src="assets/images/insights-img-03.jpg" data-anim="image" alt="Holistic or integrative wellness apps testing" />
+                            </a>
+
+                            <div class="tv-insight__meta mt-3">
+                                <span data-anim="fade-up">May 08, 2025</span>
+                                <span class="tv-insight__dot" data-anim="fade-up">|</span>
+                                <span data-anim="fade-up">David C.</span>
+                            </div>
+
+                            <h3 class="tv-insight__heading mt-2">
+                                <a class="tv-insight__link" href="#" data-anim="fade-up">
+                                    Holistic Or Integrative Wellness Apps Testing
+                                </a>
+                            </h3>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial slider -->
+        <section class="tv-testimonials py-5">
+            <div class="container">
+                <h2 class="tv-testimonials__title text-center mb-5" data-anim="fade-up">What’s People Say’s</h2>
+
+                <div class="swiper tv-testimonials-swiper">
+                    <div class="swiper-wrapper" data-anim="cards">
+
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="tv-testimonial">
+                                <div class="tv-testimonial__media">
+                                    <img data-anim="image" src="assets/images/testimonial-img.jpg" alt="Client photo" />
+                                </div>
+
+                                <div class="tv-testimonial__card">
+                                    <p class="tv-testimonial__quote" data-anim="fade-up">
+                                        “Superior Space’s user-friendly design and robust features have empowered our team
+                                        to create a site that truly stands out in our industry.”
+                                    </p>
+
+                                    <div class="tv-testimonial__footer">
+                                        <div class="tv-testimonial__name" data-anim="fade-up">Butterfly Studio</div>
+                                        <div class="tv-testimonial__role" data-anim="fade-up">OUR ANOTHER TEMPLATE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="tv-testimonial">
+                                <div class="tv-testimonial__media">
+                                    <img data-anim="image" src="assets/images/testimonial-img.jpg" alt="Client photo" />
+                                </div>
+
+                                <div class="tv-testimonial__card">
+                                    <p data-anim="fade-up" class="tv-testimonial__quote">
+                                        “Testiva helped us release faster with fewer defects. Their process and reporting made
+                                        QA predictable and reliable.”
+                                    </p>
+
+                                    <div class="tv-testimonial__footer">
+                                        <div data-anim="fade-up" class="tv-testimonial__name">David C.</div>
+                                        <div data-anim="fade-up" class="tv-testimonial__role">PRODUCT LEAD</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Dots -->
+                    <div class="tv-testimonials__dots" data-anim="fade-up"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer class="tv-footer">
+        <div class="container">
+            <!-- CTA -->
+            <div class="tv-footer__cta text-center">
+                <h2 class="tv-footer__headline" data-anim="fade-up">
+                    Demand better<br />
+                    software quality.
+                </h2>
+
+                <form class="tv-footer__form" action="#" method="post">
+                    <label class="visually-hidden" for="footerEmail">Email</label>
+
+                    <input data-anim="left" id="footerEmail" class="tv-footer__input" type="email" placeholder="Enter your email address" required />
+
+                    <button data-anim="right" class="tv-footer__btn" type="submit">
+                        BOOK A CALL <span class="tv-caret" aria-hidden="true"></span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Links grid -->
+            <div class="row tv-footer__grid g-4" data-anim="cards">
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">ABOUT US</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Why Choose Testiva?</a></li>
+                        <li><a href="#">Our Values</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">SERVICES</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">AI Driven Automation Testing</a></li>
+                        <li><a href="#">Automation Testing</a></li>
+                        <li><a href="#">Performance Testing</a></li>
+                        <li><a href="#">Mobile App Testing</a></li>
+                        <li><a href="#">Compatibility Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">VERTICALS</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">Healthcare QA</a></li>
+                        <li><a href="#">Wellness Apps Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">GET IN TOUCH</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="mailto:info@testiva.io">info@testiva.io</a></li>
+                        <li><a href="tel:+19237306357">+1(923)-730-635-7</a></li>
+                        <li class="tv-footer__plain">
+                            17 C, DHA Rahbar, Lahore,<br />
+                            Pakistan
+                        </li>
+                    </ul>
+
+                    <div class="tv-footer__social" data-anim="cards">
+                        <a href="#" aria-label="Facebook" class="tv-footer__icon">
+                            <img src="assets/images/fb-icon.svg" alt="facebook">
+                        </a>
+                        <a href="#" aria-label="Instagram" class="tv-footer__icon">
+                            <img src="assets/images/instagram-icon.svg" alt="Instagram">
+                        </a>
+                        <a href="#" aria-label="X" class="tv-footer__icon">
+                            <img src="assets/images/x-icon.svg" alt="X">
+                        </a>
+                        <a href="#" aria-label="YouTube" class="tv-footer__icon">
+                            <img src="assets/images/youTube-icon.svg" alt="YouTube">
+                        </a>
+                    </div>
+
+                    <div class="tv-footer__copy" data-anim="right">
+                        © 2026 Testiva. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Watermark text -->
+        <div class="tv-footer__watermark d-none d-md-block" aria-hidden="true">
+            <img src="assets/images/footer-logo.svg" alt="Testiva" data-anim="image" />
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- GSAP Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animation.js"></script>
+
+</body>
+
+</html>

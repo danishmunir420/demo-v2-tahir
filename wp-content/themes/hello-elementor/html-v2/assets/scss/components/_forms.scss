@@ -1,0 +1,16 @@
+@import "../tokens";
+
+.form-control{
+  border-radius: $tv-pill;
+  padding: .75rem 1rem;
+  border-color: var(--tv-border);
+}
+.form-control:focus{
+  border-color: var(--tv-primary-600);
+  box-shadow: 0 0 0 .25rem rgba(27, 113, 209, .15);
+}
+
+.tv-pill{
+  .form-control{ border-right: 0; }
+  .btn{ border-left: 0; border-radius: $tv-pill; }
+}

@@ -1,0 +1,246 @@
+@import "../tokens";
+
+.tv-navbar .nav-link{
+  font-weight: 500;
+  color: rgba(255,255,255,.70) !important;
+}
+.tv-navbar .nav-link:hover{
+  color: #fff !important;
+}
+
+/* Make the default toggler icon visible on dark bg */
+.tv-navbar__toggler{
+  filter: invert(1);
+}
+
+/* Full-screen white offcanvas like design */
+.tv-menu{
+  width: 100vw !important;
+  background: #fff;
+  border-right: 0;
+}
+
+.tv-menu .offcanvas-body{
+  padding: 0; /* we control padding */
+}
+
+.tv-menu__inner{
+  min-height: 100vh;
+  padding: 48px 56px;
+  position: relative;
+}
+
+/* Close X top-right */
+.tv-menu__close{
+  position: static;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  color: #000;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 576px){
+}
+
+/* Big left nav */
+.tv-menu__nav{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.tv-menu__link{
+  font-size: 60px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  line-height: 1.1;
+
+  &:hover{ color: var(--tv-primary); }
+}
+
+/* Contact under links */
+.tv-menu__contact{
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tv-menu__contact-item{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 26px;
+
+  &:hover{ color: var(--tv-primary); }
+}
+
+.tv-menu__icon{
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 0;
+  background: transparent;
+  font-size: 14px;
+}
+
+/* Right tiles */
+.tv-menu-tile{
+  display: block;
+  text-decoration: none;
+  color: #0B1220;
+}
+
+.tv-menu-tile__imgWrap{
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--tv-surface);
+  box-shadow: var(--tv-shadow-sm);
+  margin-bottom: 35px;
+}
+
+.tv-menu-tile__imgWrap img{
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 992px){
+  .tv-menu-tile__imgWrap img{ height: 420px; }
+}
+
+.tv-menu-tile__label{
+  margin-top: 12px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-size: 26px;
+}
+
+.tv-menu__inner.container-fluid {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .tv-menu__inner{ padding: 28px 20px; }
+
+  .tv-menu__close {
+    margin-bottom: 0;
+  
+    img {
+      max-width: 20px;
+    }
+  }
+
+
+  .tv-menu__nav {
+    margin-top: 20px;
+
+    .tv-menu__link {
+      font-size: 36px;
+    }
+  }
+
+  .tv-brand {
+    img {
+      max-width: 110px;
+    }
+  }
+
+  .tv-icon-btn {
+    img {
+      max-width: 32px;
+    }
+  }
+
+  .tv-menu__contact {
+    margin-bottom: 30px;
+  }
+}
+
+#mobileMenu .tv-menu__link,
+#mobileMenu .tv-menu__contact-item,
+#mobileMenu .tv-menu-tile{
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* Make offcanvas behave like top reveal visually */
+#mobileMenu.tv-menu{
+  overflow: hidden;
+}
+
+/* Stripe overlay layer */
+#mobileMenu .tv-menu__stripes{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Each stripe */
+#mobileMenu .tv-menu__stripe{
+  background: rgba(255,255,255,0.08); /* adjust to match design */
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+/* Ensure your actual menu content sits above stripes */
+#mobileMenu .tv-menu__inner{
+  position: relative;
+  z-index: 2;
+}
+
+#mobileMenu.offcanvas {
+  transition: none !important;
+  transform: none !important;
+  height: 100vh;
+}
+
+/* Fullscreen top menu, no bootstrap slide */
+#mobileMenu.offcanvas {
+  height: 100vh;
+  transform: none !important;
+  transition: none !important;
+  background: #fff;            /* ✅ white background */
+  overflow: hidden;
+}
+
+/* Stripes overlay (white theme) */
+#mobileMenu .tv-menu__stripes{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Make stripes slightly tinted so they are visible on white */
+#mobileMenu .tv-menu__stripes span{
+  background: rgba(0,0,0,0.06);   /* ✅ subtle grey stripes */
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+/* content above stripes */
+#mobileMenu .tv-menu__inner{
+  position: relative;
+  z-index: 2;
+}

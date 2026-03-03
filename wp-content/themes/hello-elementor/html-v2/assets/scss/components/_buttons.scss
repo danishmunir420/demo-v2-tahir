@@ -1,0 +1,20 @@
+@import "../tokens";
+
+.tv-btn{
+  font-weight: 600;
+  border-radius: $tv-pill;
+  padding: .75rem 1.25rem;
+}
+
+.btn-primary{
+  background: var(--tv-primary);
+  border-color: var(--tv-primary);
+}
+.btn-primary:hover{
+  background: var(--tv-primary-700);
+  border-color: var(--tv-primary-700);
+}
+
+.btn-outline-light{
+  border-width: 2px;
+}
