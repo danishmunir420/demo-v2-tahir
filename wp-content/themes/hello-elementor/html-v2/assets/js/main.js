@@ -226,6 +226,30 @@ new Swiper(".tv-testimonials-swiper", {
     },
 });
 
+// Case Studies filter (used on Case Studies V2 template)
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tv-cases__tab");
+  if (!tabs.length) return;
+
+  const items = document.querySelectorAll(".tv-case");
+  if (!items.length) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const filter = tab.dataset.filter;
+
+      tabs.forEach((t) => t.classList.remove("is-active"));
+      tab.classList.add("is-active");
+
+      items.forEach((item) => {
+        const cat = item.dataset.category;
+        const show = filter === "all" || cat === filter;
+        item.style.display = show ? "" : "none";
+      });
+    });
+  });
+});
+
 //About US page
 // new Swiper(".tv-benefits-swiper", {
 //     effect: "cards",

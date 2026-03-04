@@ -268,6 +268,121 @@ if ( ! function_exists( 'hello_elementor_body_open' ) ) {
 	}
 }
 
+/**
+ * Enqueue assets for V2 templates (Home V2 design).
+ */
+function testiva_home_v2_assets() {
+	// Only load on templates that explicitly use the V2 design.
+	if (
+		! is_page_template( 'home-v2.php' ) &&
+		! is_page_template( 'services-v2.php' ) &&
+		! is_page_template( 'about-v2.php' ) &&
+		! is_page_template( 'case-studies-v2.php' )
+	) {
+		return;
+	}
+
+	// Base URLs/paths from Hello Elementor constants.
+	$theme_url  = HELLO_THEME_URL;
+	$theme_path = HELLO_THEME_PATH;
+
+	// Google Font: Inter.
+	wp_enqueue_style(
+		'testiva-inter-font',
+		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',
+		array(),
+		null
+	);
+
+	// Bootstrap CSS (CDN).
+	wp_enqueue_style(
+		'testiva-bootstrap',
+		'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
+		array(),
+		'5.3.3'
+	);
+
+	// Swiper CSS.
+	wp_enqueue_style(
+		'testiva-swiper',
+		'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+		array(),
+		'11'
+	);
+
+	// Main CSS for the V2 design.
+	$main_css_relative = '/html-v2/assets/css/main.css';
+	$main_css_path     = $theme_path . $main_css_relative;
+
+	wp_enqueue_style(
+		'testiva-home-v2-main',
+		$theme_url . $main_css_relative,
+		array( 'testiva-bootstrap', 'testiva-swiper', 'testiva-inter-font' ),
+		file_exists( $main_css_path ) ? filemtime( $main_css_path ) : HELLO_ELEMENTOR_VERSION
+	);
+
+	// Bootstrap JS bundle.
+	wp_enqueue_script(
+		'testiva-bootstrap-bundle',
+		'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
+		array(),
+		'5.3.3',
+		true
+	);
+
+	// Swiper JS.
+	wp_enqueue_script(
+		'testiva-swiper',
+		'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+		array(),
+		'11',
+		true
+	);
+
+	// GSAP core.
+	wp_enqueue_script(
+		'testiva-gsap',
+		'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js',
+		array(),
+		'3.12.5',
+		true
+	);
+
+	// GSAP ScrollTrigger.
+	wp_enqueue_script(
+		'testiva-gsap-scrolltrigger',
+		'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js',
+		array( 'testiva-gsap' ),
+		'3.12.5',
+		true
+	);
+
+	// Main JS for V2.
+	$main_js_relative = '/html-v2/assets/js/main.js';
+	$main_js_path     = $theme_path . $main_js_relative;
+
+	wp_enqueue_script(
+		'testiva-home-v2-main',
+		$theme_url . $main_js_relative,
+		array( 'testiva-bootstrap-bundle', 'testiva-swiper', 'testiva-gsap', 'testiva-gsap-scrolltrigger' ),
+		file_exists( $main_js_path ) ? filemtime( $main_js_path ) : HELLO_ELEMENTOR_VERSION,
+		true
+	);
+
+	// Animation JS for V2.
+	$animation_js_relative = '/html-v2/assets/js/animation.js';
+	$animation_js_path     = $theme_path . $animation_js_relative;
+
+	wp_enqueue_script(
+		'testiva-home-v2-animation',
+		$theme_url . $animation_js_relative,
+		array( 'testiva-home-v2-main' ),
+		file_exists( $animation_js_path ) ? filemtime( $animation_js_path ) : HELLO_ELEMENTOR_VERSION,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'testiva_home_v2_assets' );
+
 require HELLO_THEME_PATH . '/theme.php';
 
 HelloTheme\Theme::instance();
