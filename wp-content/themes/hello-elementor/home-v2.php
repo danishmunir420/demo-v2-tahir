@@ -239,64 +239,145 @@ get_header( 'v2' );
 		</div>
 	</section>
 
-	<!-- Choose Section -->
-	<section class="tv-choose py-5">
+	<!-- Why Choose Us Section (scroll animation + stack slider) -->
+	<section class="tv-why" id="tvWhy">
 		<div class="container">
-			<div class="text-center mb-4">
-				<div data-anim="fade-up" class="tv-choose__kicker">Why Choose Us</div>
-
-				<h2 data-anim="fade-up" class="tv-choose__headline mt-3 mb-3">
-					<span class="tv-choose__blue">Let us raise the standard of<br>
-					your software quality</span>, and<br>
-					keep it there.
+			<div class="tv-why__head">
+				<h1><?php esc_html_e( 'Why Choose Us', 'hello-elementor' ); ?></h1>
+				<h2 class="tv-why__title">
+					<span class="tv-blue"><?php esc_html_e( 'Let us raise the standard of your software quality,', 'hello-elementor' ); ?></span> <?php esc_html_e( 'and keep it there.', 'hello-elementor' ); ?>
 				</h2>
-
-				<p data-anim="fade-up" class="tv-choose__sub mx-auto mb-0">
-					Partner with us for reliable, efficient, and expert QA solutions that elevate your software quality.
+				<p class="tv-why__sub">
+					<?php esc_html_e( 'Partner with us for reliable, efficient, and expert QA solutions that elevate your software quality.', 'hello-elementor' ); ?>
 				</p>
 			</div>
 
-			<div class="tv-choose__slider">
-				<div class="swiper tv-choose-swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<article class="tv-choose-card">
-								<img class="tv-choose-card__img" src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/choose-img.png' ); ?>" alt="Expertise">
-								<div class="tv-choose-card__overlay"></div>
-								<div class="tv-choose-card__content">
-									<h3 class="tv-choose-card__title" data-anim="fade-up">Expertise</h3>
-									<p class="tv-choose-card__text" data-anim="fade-up">
-										Deep QA experience across web, mobile, and enterprise systems.
-									</p>
-								</div>
-							</article>
+			<div class="tv-why__stage">
+				<!-- Screen 1: Three cards (scroll into view) -->
+				<div class="tv-why__cards">
+					<article class="tv-card tv-card--left" id="tvCardLeft">
+						<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Expertise', 'hello-elementor' ); ?>">
+						<div class="tv-card__content">
+							<h3><?php esc_html_e( 'Expertise', 'hello-elementor' ); ?></h3>
 						</div>
+					</article>
 
-						<div class="swiper-slide">
-							<article class="tv-choose-card">
-								<img class="tv-choose-card__img" src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/choose-img.png' ); ?>" alt="Cutting-Edge Tools">
-								<div class="tv-choose-card__overlay"></div>
-								<div class="tv-choose-card__content">
-									<h3 class="tv-choose-card__title" data-anim="fade-up">Cutting-Edge<br>Tools</h3>
-									<p class="tv-choose-card__text" data-anim="fade-up">
-										We leverage the latest testing tools and technologies to ensure maximum efficiency and accuracy.
-									</p>
-								</div>
-							</article>
+					<article class="tv-card tv-card--center" id="tvCardCenter">
+						<img src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Cutting-Edge Tools', 'hello-elementor' ); ?>">
+						<div class="tv-card__content">
+							<h3><?php esc_html_e( 'Cutting-Edge', 'hello-elementor' ); ?><br><?php esc_html_e( 'Tools', 'hello-elementor' ); ?></h3>
+							<p><?php esc_html_e( 'We leverage the latest testing tools and technologies to ensure maximum efficiency and accuracy.', 'hello-elementor' ); ?></p>
 						</div>
+					</article>
 
-						<div class="swiper-slide">
-							<article class="tv-choose-card">
-								<img class="tv-choose-card__img" src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/choose-img.png' ); ?>" alt="Customer-Centric approach">
-								<div class="tv-choose-card__overlay"></div>
-								<div class="tv-choose-card__content">
-									<h3 class="tv-choose-card__title" data-anim="fade-up">Customer-<br>Centric<br>Approach</h3>
-									<p class="tv-choose-card__text" data-anim="fade-up">
-										We adapt to your process and goals, keeping quality measurable and predictable.
-									</p>
+					<article class="tv-card tv-card--right" id="tvCardRight">
+						<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Customer-centric approach', 'hello-elementor' ); ?>">
+						<div class="tv-card__content">
+							<h3><?php esc_html_e( 'Customer-', 'hello-elementor' ); ?><br><?php esc_html_e( 'centric', 'hello-elementor' ); ?><br><?php esc_html_e( 'approach', 'hello-elementor' ); ?></h3>
+						</div>
+					</article>
+				</div>
+
+				<!-- Screen 2: Stack slider (revealed on scroll) -->
+				<div class="tv-why__sliderWrap" id="tvWhySliderWrap">
+					<div class="tv-stack" id="tvWhyStack">
+						<div class="tv-stack__cards">
+
+							<article class="tv-stack__card is-active">
+								<div class="tv-slide2">
+									<div class="tv-slide2__media">
+										<div class="tv-mediaCard">
+											<span class="tv-mediaCard__plate1"></span>
+											<span class="tv-mediaCard__plate2"></span>
+											<div class="tv-mediaCard__inner">
+												<img src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Cutting-Edge Tools', 'hello-elementor' ); ?>">
+												<div class="tv-mediaCard__content">
+													<h3><?php esc_html_e( 'Cutting-Edge', 'hello-elementor' ); ?><br><?php esc_html_e( 'Tools', 'hello-elementor' ); ?></h3>
+													<p><?php esc_html_e( 'We leverage the latest testing tools and technologies to ensure maximum efficiency and accuracy.', 'hello-elementor' ); ?></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tv-slide2__content">
+										<h3 class="tv-slide2__title">
+											<span class="tv-blue"><?php esc_html_e( 'Our Story', 'hello-elementor' ); ?></span>
+											<?php esc_html_e( 'From Passion', 'hello-elementor' ); ?>
+											<?php esc_html_e( 'To Precision', 'hello-elementor' ); ?>
+										</h3>
+										<p class="tv-slide2__text">
+											<?php esc_html_e( 'What started as a small group of passionate testers has grown into a trusted QA team helping startups and enterprises deliver flawless software. We built our reputation on attention to detail, strong communication, and a commitment to continuous improvement.', 'hello-elementor' ); ?>
+										</p>
+										<a class="tv-cta-pill" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+											<?php esc_html_e( 'Learn More', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
+										</a>
+									</div>
 								</div>
 							</article>
+
+							<article class="tv-stack__card">
+								<div class="tv-slide2">
+									<div class="tv-slide2__media">
+										<div class="tv-mediaCard">
+											<span class="tv-mediaCard__plate1"></span>
+											<span class="tv-mediaCard__plate2"></span>
+											<div class="tv-mediaCard__inner">
+												<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Expertise', 'hello-elementor' ); ?>">
+												<div class="tv-mediaCard__content">
+													<h3><?php esc_html_e( 'Expertise', 'hello-elementor' ); ?></h3>
+													<p><?php esc_html_e( 'Our experts combine domain knowledge and hands-on QA practices to improve stability and release confidence.', 'hello-elementor' ); ?></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tv-slide2__content">
+										<h3 class="tv-slide2__title">
+											<span class="tv-blue"><?php esc_html_e( 'Our Story', 'hello-elementor' ); ?></span>
+											<?php esc_html_e( 'Built on', 'hello-elementor' ); ?>
+											<?php esc_html_e( 'Expertise', 'hello-elementor' ); ?>
+										</h3>
+										<p class="tv-slide2__text">
+											<?php esc_html_e( 'Our team blends structured QA strategy, automation thinking, exploratory testing, and strong communication to support both startups and enterprise delivery teams.', 'hello-elementor' ); ?>
+										</p>
+										<a class="tv-cta-pill" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+											<?php esc_html_e( 'Explore Expertise', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
+										</a>
+									</div>
+								</div>
+							</article>
+
+							<article class="tv-stack__card">
+								<div class="tv-slide2">
+									<div class="tv-slide2__media">
+										<div class="tv-mediaCard">
+											<span class="tv-mediaCard__plate1"></span>
+											<span class="tv-mediaCard__plate2"></span>
+											<div class="tv-mediaCard__inner">
+												<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Customer-centric approach', 'hello-elementor' ); ?>">
+												<div class="tv-mediaCard__content">
+													<h3><?php esc_html_e( 'Customer-', 'hello-elementor' ); ?><br><?php esc_html_e( 'centric', 'hello-elementor' ); ?><br><?php esc_html_e( 'approach', 'hello-elementor' ); ?></h3>
+													<p><?php esc_html_e( 'We adapt our testing process around your goals, timelines, users, and product priorities.', 'hello-elementor' ); ?></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tv-slide2__content">
+										<h3 class="tv-slide2__title">
+											<span class="tv-blue"><?php esc_html_e( 'Our Story', 'hello-elementor' ); ?></span>
+											<?php esc_html_e( 'Focused on', 'hello-elementor' ); ?>
+											<?php esc_html_e( 'Your Success', 'hello-elementor' ); ?>
+										</h3>
+										<p class="tv-slide2__text">
+											<?php esc_html_e( 'We collaborate closely with product and engineering teams to deliver practical QA support, transparent reporting, and solutions that match real business needs.', 'hello-elementor' ); ?>
+										</p>
+										<a class="tv-cta-pill" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+											<?php esc_html_e( 'See Approach', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
+										</a>
+									</div>
+								</div>
+							</article>
+
 						</div>
+						<div class="tv-stack__dots" aria-label="<?php esc_attr_e( 'Slider dots', 'hello-elementor' ); ?>"></div>
 					</div>
 				</div>
 			</div>

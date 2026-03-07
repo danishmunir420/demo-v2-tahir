@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQs</title>
+
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- HEADER BAR (same for desktop + mobile) -->
+    <header class="tv-header-wrap tv-header tv-header-black-logo" id="tvHeader">
+        <div class="container-xl container-full">
+            <div class="tv-headerbar position-relative d-flex align-items-center justify-content-between">
+                <!-- Left: Menu button -->
+                <button class="tv-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open menu" data-anim="left">
+                    <!-- hamburger -->
+                    <img src="assets/images/menu-icon.svg" alt="Open menu" class="icon-menu-white">
+                    <img src="assets/images/menu-icon-black.svg" alt="Open menu" class="icon-black">
+                </button>
+
+                <!-- Center: Logo (always centered) -->
+                <a class="tv-brand position-absolute start-50 translate-middle-x" href="#" aria-label="Testiva home" data-anim="fade-up">
+                    <img src="assets/images/logo.svg" alt="Testiva logo" class="logo-white" data-anim="fade-up">
+                    <img src="assets/images/logo-black.svg" alt="Testiva logo" class="logo-black" data-anim="fade-up">
+                </a>
+
+                <!-- Right: CTA -->
+                <div class="d-flex align-items-center d-none d-md-block" data-anim="right">
+                    <a class="tv-cta-pill" href="#">
+                        Let’s Talk <span class="tv-caret" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- OFFCANVAS MENU (Full screen) -->
+        <div class="offcanvas offcanvas-top tv-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="tv-menu__stripes">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span>
+            </div>
+            <div class="tv-menu__inner container-fluid">
+                <!-- Close button -->
+                <button type="button" class="tv-menu__close" data-bs-dismiss="offcanvas" aria-label="Close menu">
+                    <img src="assets/images/close-icon.svg" alt="Close menu" width="32px">
+                </button>
+
+                <div class="row g-5 align-items-start tv-menu__grid">
+                    <!-- Left: Links + contact -->
+                    <div class="col-lg-5">
+                        <nav aria-label="Primary" class="tv-menu__nav">
+                            <a class="tv-menu__link" href="#">About Us</a>
+                            <a class="tv-menu__link" href="#">Services</a>
+                            <a class="tv-menu__link" href="#">Projects</a>
+                            <a class="tv-menu__link" href="#">Verticals</a>
+                            <a class="tv-menu__link" href="#">Contact Us</a>
+                        </nav>
+
+                        <div class="tv-menu__contact">
+                            <a class="tv-menu__contact-item" href="tel:+19297306357">
+                                <span class="tv-menu__icon" aria-hidden="true">
+                                    <img src="assets/images/phone-icon.svg" alt="Phone Icon">
+                                </span>
+                                <span>+1(929)-730-635-7</span>
+                            </a>
+
+                            <a class="tv-menu__contact-item" href="mailto:info@testiva.io">
+                                <span class="tv-menu__icon" aria-hidden="true">
+                                    <img src="assets/images/email-icon.svg" alt="Email Icon">
+                                </span>
+                                <span>Info@testiva.io</span>
+                            </a>
+                        </div>
+
+                        <!-- Right: CTA -->
+                        <div class="d-flex align-items-center d-block d-md-none" data-anim="right">
+                            <a class="tv-cta-pill" href="#">
+                                Let’s Talk <span class="tv-caret" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Feature tiles -->
+                    <div class="col-lg-7 d-none d-md-block">
+                        <div class="row g-4">
+                            <!-- Tile 1 -->
+                            <div class="col-md-6">
+                                <a class="tv-menu-tile" href="#">
+                                    <div class="tv-menu-tile__imgWrap">
+                                        <img src="assets/images/menu-img-01.jpg" alt="Healthcare QA" />
+                                    </div>
+                                    <div class="tv-menu-tile__label">
+                                        Healthcare QA <span class="tv-caret" aria-hidden="true"></span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Tile 2 -->
+                            <div class="col-md-6">
+                                <a class="tv-menu-tile" href="#">
+                                    <div class="tv-menu-tile__imgWrap">
+                                        <img src="assets/images/menu-img-02.jpg" alt="AI apps" />
+                                    </div>
+                                    <div class="tv-menu-tile__label">
+                                        AI apps <span class="tv-caret" aria-hidden="true"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main id="main">
+        <section class="tv-contact-page tv-page-bg is-gradiant">
+            <div class="container">
+                <div class="tv-contact-page__head">
+                <h1 class="tv-contact-page__title" data-anim="fade-up">
+                    <span class="tv-blue">Get</span> in Touch
+                </h1>
+                <p class="tv-contact-page__subtitle" data-anim="fade-up">
+                    Have a project in mind? Let's discuss how our QA expertise can ensure
+                    your software delivers exceptional quality.
+                </p>
+                </div>
+
+                <div class="tv-contact-info">
+                <div class="tv-contact-info__item">
+                    <h3 data-anim="fade-up">Email</h3>
+                    <p data-anim="fade-up"><a href="mailto:contact@testiva.com">contact@testiva.com</a></p>
+                </div>
+
+                <div class="tv-contact-info__item">
+                    <h3 data-anim="fade-up">Phone</h3>
+                    <p data-anim="fade-up"><a href="tel:+19237306357">+1(923)-730-635-7</a></p>
+                </div>
+
+                <div class="tv-contact-info__item">
+                    <h3 data-anim="fade-up">Main Office</h3>
+                    <p data-anim="fade-up">17 C, DHA Rahbar, Lahore,<br>Pakistan</p>
+                </div>
+                </div>
+
+                <div class="tv-contact-form-wrap">
+                <h2 class="tv-contact-form-wrap__title" data-anim="fade-up">
+                    <span class="tv-blue">Send Us</span> A Message
+                </h2>
+
+                <div class="tv-contact-card">
+                    <form class="tv-contact-form" action="#" method="post">
+                    <div class="tv-contact-form__grid">
+                        <div class="tv-field">
+                        <label for="tvName" data-anim="fade-up">Name *</label>
+                        <input data-anim="fade-up" id="tvName" name="name" type="text" placeholder="Your full name" required>
+                        </div>
+
+                        <div class="tv-field">
+                        <label for="tvEmail" data-anim="fade-up">Email *</label>
+                        <input data-anim="fade-up" id="tvEmail" name="email" type="email" placeholder="your.email@company.com" required>
+                        </div>
+
+                        <div class="tv-field">
+                        <label for="tvPhone" data-anim="fade-up">Phone</label>
+                        <input data-anim="fade-up" id="tvPhone" name="phone" type="tel" placeholder="+1 (555) 000-0000">
+                        </div>
+
+                        <div class="tv-field">
+                        <label for="tvCompany" data-anim="fade-up">Company</label>
+                        <input data-anim="fade-up" id="tvCompany" name="company" type="text" placeholder="Your company name">
+                        </div>
+                    </div>
+
+                    <div class="tv-field tv-field--full">
+                        <label data-anim="fade-up" for="tvMessage">Message</label>
+                        <textarea data-anim="fade-up" id="tvMessage" name="message" placeholder="Tell us about your project"></textarea>
+                    </div>
+
+                    <div class="tv-contact-form__actions">
+                        <button type="submit" class="tv-btn tv-btn--primary" data-anim="fade-up">
+                            SEND MESSAGE
+                            <span data-anim="fade-up" class="tv-caret-white" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="tv-footer">
+        <div class="container">
+            <!-- CTA -->
+            <div class="tv-footer__cta text-center">
+                <h2 class="tv-footer__headline" data-anim="fade-up">
+                    Demand better<br />
+                    software quality.
+                </h2>
+
+                <form class="tv-footer__form" action="#" method="post">
+                    <label class="visually-hidden" for="footerEmail">Email</label>
+
+                    <input data-anim="left" id="footerEmail" class="tv-footer__input" type="email" placeholder="Enter your email address" required />
+
+                    <button data-anim="right" class="tv-footer__btn" type="submit">
+                        BOOK A CALL <span class="tv-caret" aria-hidden="true"></span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Links grid -->
+            <div class="row tv-footer__grid g-4" data-anim="cards">
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">ABOUT US</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Why Choose Testiva?</a></li>
+                        <li><a href="#">Our Values</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">SERVICES</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">AI Driven Automation Testing</a></li>
+                        <li><a href="#">Automation Testing</a></li>
+                        <li><a href="#">Performance Testing</a></li>
+                        <li><a href="#">Mobile App Testing</a></li>
+                        <li><a href="#">Compatibility Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">VERTICALS</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">Healthcare QA</a></li>
+                        <li><a href="#">Wellness Apps Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">GET IN TOUCH</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="mailto:info@testiva.io">info@testiva.io</a></li>
+                        <li><a href="tel:+19237306357">+1(923)-730-635-7</a></li>
+                        <li class="tv-footer__plain">
+                            17 C, DHA Rahbar, Lahore,<br />
+                            Pakistan
+                        </li>
+                    </ul>
+
+                    <div class="tv-footer__social" data-anim="cards">
+                        <a href="#" aria-label="Facebook" class="tv-footer__icon">
+                            <img src="assets/images/fb-icon.svg" alt="facebook">
+                        </a>
+                        <a href="#" aria-label="Instagram" class="tv-footer__icon">
+                            <img src="assets/images/instagram-icon.svg" alt="Instagram">
+                        </a>
+                        <a href="#" aria-label="X" class="tv-footer__icon">
+                            <img src="assets/images/x-icon.svg" alt="X">
+                        </a>
+                        <a href="#" aria-label="YouTube" class="tv-footer__icon">
+                            <img src="assets/images/youTube-icon.svg" alt="YouTube">
+                        </a>
+                    </div>
+
+                    <div class="tv-footer__copy" data-anim="right">
+                        © 2026 Testiva. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Watermark text -->
+        <div class="tv-footer__watermark d-none d-md-block" aria-hidden="true">
+            <img src="assets/images/footer-logo.svg" alt="Testiva" data-anim="image" />
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- GSAP Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animation.js"></script>
+
+</body>
+
+</html>

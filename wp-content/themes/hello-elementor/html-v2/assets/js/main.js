@@ -226,30 +226,6 @@ new Swiper(".tv-testimonials-swiper", {
     },
 });
 
-// Case Studies filter (used on Case Studies V2 template)
-document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".tv-cases__tab");
-  if (!tabs.length) return;
-
-  const items = document.querySelectorAll(".tv-case");
-  if (!items.length) return;
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const filter = tab.dataset.filter;
-
-      tabs.forEach((t) => t.classList.remove("is-active"));
-      tab.classList.add("is-active");
-
-      items.forEach((item) => {
-        const cat = item.dataset.category;
-        const show = filter === "all" || cat === filter;
-        item.style.display = show ? "" : "none";
-      });
-    });
-  });
-});
-
 //About US page
 // new Swiper(".tv-benefits-swiper", {
 //     effect: "cards",
@@ -834,4 +810,227 @@ gsap.utils.toArray(".js-footer-word").forEach((wrap) => {
     repeat: -1
   });
 });
+
+// Chose Section
+
+gsap.registerPlugin(ScrollTrigger);
+
+function initTvStackSlider(rootId){
+  const root = document.getElementById(rootId);
+  if (!root) return;
+
+  const cards = Array.from(root.querySelectorAll(".tv-stack__card"));
+  const dotsWrap = root.querySelector(".tv-stack__dots");
+  let index = 0;
+  let animating = false;
+
+  dotsWrap.innerHTML = cards.map((_, i) =>
+    '<button class="tv-stack__dot' + (i === 0 ? ' is-active' : '') + '" type="button" aria-label="Go to slide ' + (i + 1) + '"></button>'
+  ).join("");
+
+  const dots = Array.from(dotsWrap.querySelectorAll(".tv-stack__dot"));
+
+  function layoutSlides(activeIndex){
+    cards.forEach((card, i) => {
+      const isActive = i === activeIndex;
+
+      gsap.set(card, {
+        zIndex: isActive ? 2 : 1,
+        opacity: isActive ? 1 : 0,
+        y: isActive ? 0 : 30,
+        x: 0,
+        scale: 1,
+        pointerEvents: isActive ? "auto" : "none"
+      });
+
+      card.classList.toggle("is-active", isActive);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("is-active", i === activeIndex);
+    });
+  }
+
+  function goTo(nextIndex){
+    if (animating || nextIndex === index) return;
+    animating = true;
+
+    const current = cards[index];
+    const next = cards[nextIndex];
+
+    gsap.set(next, {
+      zIndex: 3,
+      opacity: 0,
+      y: 40,
+      pointerEvents: "auto"
+    });
+
+    gsap.to(current, {
+      opacity: 0,
+      y: -30,
+      duration: 0.38,
+      ease: "power2.out"
+    });
+
+    gsap.to(next, {
+      opacity: 1,
+      y: 0,
+      duration: 0.48,
+      ease: "power3.out",
+      onComplete: function(){
+        index = nextIndex;
+        layoutSlides(index);
+        animating = false;
+      }
+    });
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", function(){
+      goTo(i);
+    });
+  });
+
+  layoutSlides(index);
+  return { goTo };
+}
+
+initTvStackSlider("tvWhyStack");
+
+(function(){
+  const section = document.getElementById("tvWhy");
+  const cardLeft = document.getElementById("tvCardLeft");
+  const cardCenter = document.getElementById("tvCardCenter");
+  const cardRight = document.getElementById("tvCardRight");
+  const cardsWrap = document.querySelector(".tv-why__cards");
+  const sliderWrap = document.getElementById("tvWhySliderWrap");
+  const slideStage = document.querySelector(".tv-why__stage");
+
+  if (!section || !cardLeft || !cardCenter || !cardRight || !cardsWrap || !sliderWrap) return;
+
+  const isMobile = window.matchMedia("(max-width: 991px)").matches;
+  if (isMobile) return;
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: slideStage,
+      start: "top 20%",
+      end: "+=120%",
+      scrub: true,
+      pin: true,
+      anticipatePin: 1
+    }
+  })
+  .to(cardLeft, {
+    opacity: 0,
+    x: -260,
+    y: 20,
+    rotate: -22,
+    scale: 0.90,
+    duration: 0.45,
+    ease: "power2.out"
+  }, 0)
+  .to(cardRight, {
+    opacity: 0,
+    x: 260,
+    y: 20,
+    rotate: 22,
+    scale: 0.90,
+    duration: 0.45,
+    ease: "power2.out"
+  }, 0)
+  .to(cardCenter, {
+    opacity: 0,
+    y: 40,
+    scale: 0.92,
+    duration: 0.45,
+    ease: "power2.out"
+  }, 0.06)
+  .to(cardsWrap, {
+    opacity: 0,
+    duration: 0.2,
+    ease: "none"
+  }, 0.22)
+  .to(sliderWrap, {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    onStart: function(){
+      sliderWrap.style.pointerEvents = "auto";
+    }
+  }, 0.30);
+})();
+
+window.addEventListener("load", function(){
+  ScrollTrigger.refresh();
+});
+
+window.addEventListener("resize", function(){
+  ScrollTrigger.refresh();
+});
+
+//FAQs Accordion
+document.addEventListener("DOMContentLoaded", function () {
+const faqItems = document.querySelectorAll(".tv-faq__item");
+
+faqItems.forEach((item) => {
+  const button = item.querySelector(".tv-faq__question");
+  const answer = item.querySelector(".tv-faq__answer");
+
+  // Set default open item
+  if (item.classList.contains("is-open")) {
+    answer.style.maxHeight = answer.scrollHeight + "px";
+  }
+
+  button.addEventListener("click", function () {
+    const isOpen = item.classList.contains("is-open");
+
+    // Close all items
+    faqItems.forEach((faq) => {
+      faq.classList.remove("is-open");
+      faq.querySelector(".tv-faq__question").setAttribute("aria-expanded", "false");
+      faq.querySelector(".tv-faq__answer").style.maxHeight = null;
+    });
+
+    // Open clicked item if it was closed
+    if (!isOpen) {
+      item.classList.add("is-open");
+      button.setAttribute("aria-expanded", "true");
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    }
+  });
+});
+});
+
+//BG animation
+gsap.registerPlugin(ScrollTrigger);
+
+  const bg = document.getElementById("tvPageBg");
+  const sections = document.querySelectorAll(".tv-section");
+
+  function setBackground(theme) {
+    bg.classList.remove("is-default", "is-faq", "is-contact");
+    bg.classList.add("is-" + theme);
+
+    gsap.fromTo(bg,
+      { opacity: 0.85, scale: 1.03 },
+      { opacity: 1, scale: 1, duration: 0.7, ease: "power2.out" }
+    );
+  }
+
+  sections.forEach((section) => {
+    const theme = section.dataset.bg || "default";
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top 55%",
+      end: "bottom 45%",
+      onEnter: () => setBackground(theme),
+      onEnterBack: () => setBackground(theme)
+    });
+  });
+
+  setBackground("default");
+
 

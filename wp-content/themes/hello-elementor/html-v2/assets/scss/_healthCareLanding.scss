@@ -1,0 +1,195 @@
+.tv-healthcare-hero {
+  padding: 40px 0 36px;
+  background: linear-gradient(180deg, #eef5fb 0%, #f7f8fa 100%);
+}
+
+.tv-healthcare-hero .container {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tv-healthcare-hero__content {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tv-healthcare-hero__title {
+  margin: 0 0 14px;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #2F1F33;
+}
+
+.tv-healthcare-hero__subtitle {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #000;
+}
+
+.tv-healthcare-hero__features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 26px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.tv-healthcare-hero__features li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #364153;
+}
+
+.tv-check-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  background: url('../images/check-icon-green.svg') no-repeat center/contain;
+}
+
+.tv-check-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.tv-healthcare-hero__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 54px;
+}
+
+.tv-btn {
+  min-width: 130px;
+  height: 68px;
+  padding: 40px 22px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+}
+
+.tv-caret-black {
+    font-size: 10px;
+    line-height: 1;
+    transform: translateY(-1px);
+    background: url('../images/carter-black-icon.svg') no-repeat top right;
+    width: 15px;
+    height: 15px;
+}
+
+.tv-btn__arrow {
+  font-size: 10px;
+  transform: translateY(1px);
+}
+
+.tv-btn--primary {
+  background: #00529C;
+  color: #fff;
+  border: 1px solid #00529C;
+}
+
+.tv-btn--primary:hover {
+  background: #0a54c0;
+  border-color: #0a54c0;
+  color: #fff;
+}
+
+.tv-btn--outline-dark {
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.tv-btn--outline-dark:hover {
+  background: rgba(0, 0, 0, 0.04);
+  color: #fff;
+}
+
+.tv-healthcare-hero__media {
+  max-width: 820px;
+  margin: 0 auto 34px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.tv-healthcare-hero__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16 / 8;
+}
+
+.tv-healthcare-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tv-stat h3 {
+  margin: 0 0 6px;
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: 1;
+  font-weight: 700;
+  color: #141414;
+}
+
+.tv-stat p {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #141414;
+}
+
+@media (max-width: 767px) {
+  .tv-healthcare-hero {
+    padding: 56px 0 28px;
+  }
+
+  .tv-healthcare-hero__title {
+    line-height: 1.02;
+  }
+
+  .tv-healthcare-hero__subtitle {
+    font-size: 15px;
+  }
+
+  .tv-healthcare-hero__actions {
+    margin-bottom: 36px;
+  }
+
+  .tv-healthcare-hero__media {
+    margin-bottom: 28px;
+    border-radius: 18px;
+  }
+
+  .tv-healthcare-hero__stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

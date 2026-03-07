@@ -140,14 +140,14 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <video class="tv-hero__video" playsinline muted preload="metadata">
-                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                    <source src="assets/videos/Testiva_AIHomeVideo-1.mp4" type="video/mp4">
                     </video>
                 </div>
 
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <video class="tv-hero__video" playsinline muted preload="metadata">
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    <source src="assets/videos/Testiva_Healthcare_HomeVideo.mp4" type="video/mp4">
                     </video>
                 </div>
                 </div>
@@ -273,11 +273,11 @@
 
                     <!-- Right content -->
                     <div class="col-lg-6">
-                        <h2 data-anim="right" class="tv-precision__title mb-3">
-                            <span class="tv-precision__accent">AI-driven,</span><br />
-                            technically precise,<br />
-                            for systems that<br />
-                            cannot fail.
+                        <h2 class="tv-precision__title mb-3">
+                            <span data-anim="right" class="tv-precision__accent d-inline-block">AI-driven,</span><br />
+                            <span data-anim="right"  class="d-inline-block">technically precise,</span><br />
+                            <span data-anim="right" class="d-inline-block">for systems that</span><br />
+                            <span data-anim="right" class="d-inline-block">cannot fail.</span>
                         </h2>
 
                         <p data-anim="right" class="tv-precision__text mb-4">
@@ -382,71 +382,154 @@
         </section>
 
         <!-- Choose Section -->
-        <section class="tv-choose py-5">
+        <!-- SECTION (Copy from here if you only want the section markup) -->
+        <section class="tv-why" id="tvWhy">
             <div class="container">
-                <div class="text-center mb-4">
-                    <div data-anim="fade-up" class="tv-choose__kicker">Why Choose Us</div>
+            <div class="tv-why__head">
+                <h1>Why Choose Us</h1>
+                <h2 class="tv-why__title">
+                    <span class="tv-blue">Let us raise the standard of your software quality,</span> and keep it there.
+                </h2>
+                <p class="tv-why__sub">
+                Partner with us for reliable, efficient, and expert QA solutions that elevate your software quality.
+                </p>
+            </div>
 
-                    <h2 data-anim="fade-up" class="tv-choose__headline mt-3 mb-3">
-                        <span class="tv-choose__blue">Let us raise the standard of<br />
-                        your software quality</span>, and<br />
-                        keep it there.
-                    </h2>
+            <div class="tv-why__stage">
 
-                    <p data-anim="fade-up" class="tv-choose__sub mx-auto mb-0">
-                        Partner with us for reliable, efficient, and expert QA solutions that elevate your software quality.
-                    </p>
-                </div>
-
-                <div class="tv-choose__slider">
-                    <div class="swiper tv-choose-swiper">
-                        <div class="swiper-wrapper">
-                            <!-- Slide 1 -->
-                            <div class="swiper-slide">
-                                <article class="tv-choose-card">
-                                    <img class="tv-choose-card__img" src="assets/images/choose-img.png" alt="Expertise" />
-                                    <div class="tv-choose-card__overlay"></div>
-                                    <div class="tv-choose-card__content">
-                                        <h3 class="tv-choose-card__title" data-anim="fade-up">Expertise</h3>
-                                        <p class="tv-choose-card__text" data-anim="fade-up">
-                                            Deep QA experience across web, mobile, and enterprise systems.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <!-- Slide 2 (center in screenshot) -->
-                            <div class="swiper-slide">
-                                <article class="tv-choose-card">
-                                    <img class="tv-choose-card__img" src="assets/images/choose-img.png" alt="Cutting-Edge Tools" />
-                                    <div class="tv-choose-card__overlay"></div>
-                                    <div class="tv-choose-card__content">
-                                        <h3 class="tv-choose-card__title" data-anim="fade-up">Cutting-Edge<br />Tools</h3>
-                                        <p class="tv-choose-card__text" data-anim="fade-up">
-                                            We leverage the latest testing tools and technologies to ensure maximum efficiency and accuracy.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <!-- Slide 3 -->
-                            <div class="swiper-slide">
-                                <article class="tv-choose-card">
-                                    <img class="tv-choose-card__img" src="assets/images/choose-img.png" alt="Customer-Centric approach" />
-                                    <div class="tv-choose-card__overlay"></div>
-                                    <div class="tv-choose-card__content">
-                                        <h3 class="tv-choose-card__title" data-anim="fade-up">Customer-<br />Centric<br />Approach</h3>
-                                        <p class="tv-choose-card__text" data-anim="fade-up">
-                                            We adapt to your process and goals, keeping quality measurable and predictable.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <!-- Add more slides if needed -->
-                        </div>
+                <!-- Screen 1 -->
+                <div class="tv-why__cards">
+                <article class="tv-card tv-card--left" id="tvCardLeft">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Expertise">
+                    <div class="tv-card__content">
+                    <h3>Expertise</h3>
                     </div>
+                </article>
+
+                <article class="tv-card tv-card--center" id="tvCardCenter">
+                    <img src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&w=900&q=80" alt="Cutting-Edge Tools">
+                    <div class="tv-card__content">
+                    <h3>Cutting-Edge<br>Tools</h3>
+                    <p>We leverage the latest testing tools and technologies to ensure maximum efficiency and accuracy.</p>
+                    </div>
+                </article>
+
+                <article class="tv-card tv-card--right" id="tvCardRight">
+                    <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Customer-centric approach">
+                    <div class="tv-card__content">
+                    <h3>Customer-<br>centric<br>approach</h3>
+                    </div>
+                </article>
                 </div>
+
+                <!-- Screen 2 -->
+                <div class="tv-why__sliderWrap" id="tvWhySliderWrap">
+                <div class="tv-stack" id="tvWhyStack">
+                    <div class="tv-stack__cards">
+
+                    <article class="tv-stack__card is-active">
+                        <div class="tv-slide2">
+                        <div class="tv-slide2__media">
+                            <div class="tv-mediaCard">
+                            <span class="tv-mediaCard__plate1"></span>
+                            <span class="tv-mediaCard__plate2"></span>
+                            <div class="tv-mediaCard__inner">
+                                <img src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&w=900&q=80" alt="Cutting-Edge Tools">
+                                <div class="tv-mediaCard__content">
+                                <h3>Cutting-Edge<br>Tools</h3>
+                                <p>We leverage the latest testing tools and technologies to ensure maximum efficiency and accuracy.</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="tv-slide2__content">
+                            <h3 class="tv-slide2__title">
+                                <span class="tv-blue">Our Story</span>
+                                From Passion
+                                To Precision
+                            </h3>
+                            <p class="tv-slide2__text">
+                            What started as a small group of passionate testers has grown into a trusted QA team helping startups and enterprises deliver flawless software. We built our reputation on attention to detail, strong communication, and a commitment to continuous improvement.
+                            </p>
+                            <a class="tv-cta-pill" href="#">
+                                Learn More <span class="tv-caret"></span>
+                            </a>
+                        </div>
+                        </div>
+                    </article>
+
+                    <article class="tv-stack__card">
+                        <div class="tv-slide2">
+                        <div class="tv-slide2__media">
+                            <div class="tv-mediaCard">
+                            <span class="tv-mediaCard__plate1"></span>
+                            <span class="tv-mediaCard__plate2"></span>
+                            <div class="tv-mediaCard__inner">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Expertise">
+                                <div class="tv-mediaCard__content">
+                                    <h3>Expertise</h3>
+                                    <p>Our experts combine domain knowledge and hands-on QA practices to improve stability and release confidence.</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="tv-slide2__content">
+                            <h3 class="tv-slide2__title">
+                            <span class="tv-blue">Our Story</span>
+                            Built on
+                            Expertise
+                            </h3>
+                            <p class="tv-slide2__text">
+                            Our team blends structured QA strategy, automation thinking, exploratory testing, and strong communication to support both startups and enterprise delivery teams.
+                            </p>
+                            <a class="tv-cta-pill" href="#">
+                                Explore Expertise <span class="tv-caret"></span>
+                            </a>
+                        </div>
+                        </div>
+                    </article>
+
+                    <article class="tv-stack__card">
+                        <div class="tv-slide2">
+                        <div class="tv-slide2__media">
+                            <div class="tv-mediaCard">
+                            <span class="tv-mediaCard__plate1"></span>
+                            <span class="tv-mediaCard__plate2"></span>
+                            <div class="tv-mediaCard__inner">
+                                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Customer-centric approach">
+                                <div class="tv-mediaCard__content">
+                                <h3>Customer-<br>centric<br>approach</h3>
+                                <p>We adapt our testing process around your goals, timelines, users, and product priorities.</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="tv-slide2__content">
+                            <h3 class="tv-slide2__title">
+                            <span class="tv-blue">Our Story</span>
+                            Focused on
+                            Your Success
+                            </h3>
+                            <p class="tv-slide2__text">
+                            We collaborate closely with product and engineering teams to deliver practical QA support, transparent reporting, and solutions that match real business needs.
+                            </p>
+                            <a class="tv-cta-pill" href="#">
+                                See Approach <span class="tv-caret"></span>
+                            </a>
+                        </div>
+                        </div>
+                    </article>
+
+                    </div>
+
+                    <div class="tv-stack__dots" aria-label="Slider dots"></div>
+                </div>
+                </div>
+
+            </div>
             </div>
         </section>
 

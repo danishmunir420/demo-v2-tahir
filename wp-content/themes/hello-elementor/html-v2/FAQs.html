@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQs</title>
+
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- HEADER BAR (same for desktop + mobile) -->
+    <header class="tv-header-wrap tv-header tv-header-black-logo" id="tvHeader">
+        <div class="container-xl container-full">
+            <div class="tv-headerbar position-relative d-flex align-items-center justify-content-between">
+                <!-- Left: Menu button -->
+                <button class="tv-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open menu" data-anim="left">
+                    <!-- hamburger -->
+                    <img src="assets/images/menu-icon.svg" alt="Open menu" class="icon-menu-white">
+                    <img src="assets/images/menu-icon-black.svg" alt="Open menu" class="icon-black">
+                </button>
+
+                <!-- Center: Logo (always centered) -->
+                <a class="tv-brand position-absolute start-50 translate-middle-x" href="#" aria-label="Testiva home" data-anim="fade-up">
+                    <img src="assets/images/logo.svg" alt="Testiva logo" class="logo-white" data-anim="fade-up">
+                    <img src="assets/images/logo-black.svg" alt="Testiva logo" class="logo-black" data-anim="fade-up">
+                </a>
+
+                <!-- Right: CTA -->
+                <div class="d-flex align-items-center d-none d-md-block" data-anim="right">
+                    <a class="tv-cta-pill" href="#">
+                        Let’s Talk <span class="tv-caret" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- OFFCANVAS MENU (Full screen) -->
+        <div class="offcanvas offcanvas-top tv-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="tv-menu__stripes">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span>
+            </div>
+            <div class="tv-menu__inner container-fluid">
+                <!-- Close button -->
+                <button type="button" class="tv-menu__close" data-bs-dismiss="offcanvas" aria-label="Close menu">
+                    <img src="assets/images/close-icon.svg" alt="Close menu" width="32px">
+                </button>
+
+                <div class="row g-5 align-items-start tv-menu__grid">
+                    <!-- Left: Links + contact -->
+                    <div class="col-lg-5">
+                        <nav aria-label="Primary" class="tv-menu__nav">
+                            <a class="tv-menu__link" href="#">About Us</a>
+                            <a class="tv-menu__link" href="#">Services</a>
+                            <a class="tv-menu__link" href="#">Projects</a>
+                            <a class="tv-menu__link" href="#">Verticals</a>
+                            <a class="tv-menu__link" href="#">Contact Us</a>
+                        </nav>
+
+                        <div class="tv-menu__contact">
+                            <a class="tv-menu__contact-item" href="tel:+19297306357">
+                                <span class="tv-menu__icon" aria-hidden="true">
+                                    <img src="assets/images/phone-icon.svg" alt="Phone Icon">
+                                </span>
+                                <span>+1(929)-730-635-7</span>
+                            </a>
+
+                            <a class="tv-menu__contact-item" href="mailto:info@testiva.io">
+                                <span class="tv-menu__icon" aria-hidden="true">
+                                    <img src="assets/images/email-icon.svg" alt="Email Icon">
+                                </span>
+                                <span>Info@testiva.io</span>
+                            </a>
+                        </div>
+
+                        <!-- Right: CTA -->
+                        <div class="d-flex align-items-center d-block d-md-none" data-anim="right">
+                            <a class="tv-cta-pill" href="#">
+                                Let’s Talk <span class="tv-caret" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Feature tiles -->
+                    <div class="col-lg-7 d-none d-md-block">
+                        <div class="row g-4">
+                            <!-- Tile 1 -->
+                            <div class="col-md-6">
+                                <a class="tv-menu-tile" href="#">
+                                    <div class="tv-menu-tile__imgWrap">
+                                        <img src="assets/images/menu-img-01.jpg" alt="Healthcare QA" />
+                                    </div>
+                                    <div class="tv-menu-tile__label">
+                                        Healthcare QA <span class="tv-caret" aria-hidden="true"></span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Tile 2 -->
+                            <div class="col-md-6">
+                                <a class="tv-menu-tile" href="#">
+                                    <div class="tv-menu-tile__imgWrap">
+                                        <img src="assets/images/menu-img-02.jpg" alt="AI apps" />
+                                    </div>
+                                    <div class="tv-menu-tile__label">
+                                        AI apps <span class="tv-caret" aria-hidden="true"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main id="main">
+        <section class="tv-faq tv-page-bg is-gradiant">
+            <div class="container">
+                <div class="tv-faq__head">
+                <h2 class="tv-faq__title" data-anim="fade-up">
+                    <span class="tv-blue">Frequently</span> Asked Questions
+                </h2>
+                <p class="tv-faq__subtitle" data-anim="fade-up">
+                    Find answers to common questions about our quality assurance services.
+                    Can't find what you're looking for? Contact our team for personalized assistance.
+                </p>
+                </div>
+
+                <div class="tv-faq__list" id="tvFaqAccordion">
+                <!-- Item 1 -->
+                <div class="tv-faq__item">
+                    <button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
+                        <span>What is Quality Assurance (QA) and why is it important?</span>
+                        <span class="tv-faq__icon" data-anim="fade-up"></span>
+                    </button>
+                    <div class="tv-faq__answer">
+                    <div class="tv-faq__answer-inner" data-anim="fade-up">
+                        Quality Assurance (QA) is the process of testing and reviewing software to ensure it performs correctly,
+                        securely, and consistently before release. It helps identify bugs early, improves user experience,
+                        reduces development risks, and ensures your product meets both technical and business requirements.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 - Open by default -->
+                <div class="tv-faq__item is-open">
+                    <button class="tv-faq__question" type="button" aria-expanded="true" data-anim="fade-up">
+                    <span>What types of testing services do you offer?</span>
+                    <span class="tv-faq__icon" data-anim="fade-up"></span>
+                    </button>
+                    <div class="tv-faq__answer" style="max-height: 220px;">
+                    <div class="tv-faq__answer-inner" data-anim="fade-up">
+                        We provide comprehensive testing services including functional testing, regression testing,
+                        performance testing, security testing, usability testing, API testing, mobile app testing,
+                        and automated testing. Our team customizes testing strategies based on your specific project
+                        requirements, technology stack, and business goals.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="tv-faq__item">
+                    <button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
+                    <span>How long does a typical QA project take?</span>
+                    <span class="tv-faq__icon" data-anim="fade-up"></span>
+                    </button>
+                    <div class="tv-faq__answer">
+                    <div class="tv-faq__answer-inner" data-anim="fade-up">
+                        The timeline depends on the size, complexity, and scope of the project. Smaller QA engagements may take a
+                        few days, while larger projects or ongoing support can span several weeks or months. After reviewing your
+                        requirements, we can provide a more accurate timeline.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="tv-faq__item">
+                    <button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
+                    <span>Do you offer automated testing services?</span>
+                    <span class="tv-faq__icon" data-anim="fade-up"></span>
+                    </button>
+                    <div class="tv-faq__answer">
+                    <div class="tv-faq__answer-inner" data-anim="fade-up">
+                        Yes, we offer automated testing services to improve efficiency, consistency, and long-term reliability.
+                        Automation is especially useful for regression testing, repetitive workflows, and continuous integration pipelines.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="tv-faq__item">
+                    <button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
+                    <span>Can you work with our existing development team?</span>
+                    <span class="tv-faq__icon" data-anim="fade-up"></span>
+                    </button>
+                    <div class="tv-faq__answer">
+                    <div class="tv-faq__answer-inner" data-anim="fade-up">
+                        Yes, we can work as an extension of your existing team. We collaborate closely with developers,
+                        product managers, and stakeholders to align testing efforts with your development process and support
+                        faster, more reliable releases.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="tv-faq__item">
+                    <button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
+                    <span>What is the difference between manual and automated testing?</span>
+                    <span class="tv-faq__icon" data-anim="fade-up"></span>
+                    </button>
+                    <div class="tv-faq__answer">
+                    <div class="tv-faq__answer-inner" data-anim="fade-up">
+                        Manual testing is performed by QA specialists who interact with the application from a user perspective.
+                        Automated testing uses scripts and tools to execute predefined test cases repeatedly. Both approaches are
+                        valuable and are often used together for better coverage.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="tv-faq__item">
+                    <button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
+                    <span>How do you ensure the security of our application?</span>
+                    <span class="tv-faq__icon" data-anim="fade-up"></span>
+                    </button>
+                    <div class="tv-faq__answer">
+                    <div class="tv-faq__answer-inner" data-anim="fade-up">
+                        We follow structured QA practices to identify vulnerabilities, risks, and weak points during testing.
+                        Depending on the project, this may include authentication checks, input validation, API validation,
+                        and coordination with security-focused reviews where needed.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="tv-faq__item">
+                    <button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
+                    <span>What deliverables can we expect from your QA services?</span>
+                    <span class="tv-faq__icon" data-anim="fade-up"></span>
+                    </button>
+                    <div class="tv-faq__answer">
+                    <div class="tv-faq__answer-inner" data-anim="fade-up">
+                        Our deliverables may include test plans, test cases, bug reports, execution summaries, QA status updates,
+                        regression reports, and recommendations for improvement. We keep reporting clear and actionable for both
+                        technical and non-technical stakeholders.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="tv-faq__item">
+                    <button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
+                    <span>How much do your QA services cost?</span>
+                    <span class="tv-faq__icon" data-anim="fade-up"></span>
+                    </button>
+                    <div class="tv-faq__answer">
+                    <div class="tv-faq__answer-inner" data-anim="fade-up">
+                        The cost depends on the project scope, required testing type, duration, and level of support needed.
+                        We offer flexible engagement models based on your business needs and can provide a tailored estimate
+                        after understanding your requirements.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="tv-faq__item">
+                    <button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
+                    <span>Do you provide support after the testing phase is complete?</span>
+                    <span class="tv-faq__icon" data-anim="fade-up"></span>
+                    </button>
+                    <div class="tv-faq__answer">
+                    <div class="tv-faq__answer-inner" data-anim="fade-up">
+                        Yes, we can provide post-testing support depending on your needs. This may include retesting fixes,
+                        regression validation, release support, and ongoing QA assistance to help ensure your product remains stable.
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+    </main>
+
+    <footer class="tv-footer">
+        <div class="container">
+            <!-- CTA -->
+            <div class="tv-footer__cta text-center">
+                <h2 class="tv-footer__headline" data-anim="fade-up">
+                    Demand better<br />
+                    software quality.
+                </h2>
+
+                <form class="tv-footer__form" action="#" method="post">
+                    <label class="visually-hidden" for="footerEmail">Email</label>
+
+                    <input data-anim="left" id="footerEmail" class="tv-footer__input" type="email" placeholder="Enter your email address" required />
+
+                    <button data-anim="right" class="tv-footer__btn" type="submit">
+                        BOOK A CALL <span class="tv-caret" aria-hidden="true"></span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Links grid -->
+            <div class="row tv-footer__grid g-4" data-anim="cards">
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">ABOUT US</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Why Choose Testiva?</a></li>
+                        <li><a href="#">Our Values</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">SERVICES</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">AI Driven Automation Testing</a></li>
+                        <li><a href="#">Automation Testing</a></li>
+                        <li><a href="#">Performance Testing</a></li>
+                        <li><a href="#">Mobile App Testing</a></li>
+                        <li><a href="#">Compatibility Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">VERTICALS</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="#">Healthcare QA</a></li>
+                        <li><a href="#">Wellness Apps Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h3 class="tv-footer__title">GET IN TOUCH</h3>
+                    <ul class="tv-footer__list">
+                        <li><a href="mailto:info@testiva.io">info@testiva.io</a></li>
+                        <li><a href="tel:+19237306357">+1(923)-730-635-7</a></li>
+                        <li class="tv-footer__plain">
+                            17 C, DHA Rahbar, Lahore,<br />
+                            Pakistan
+                        </li>
+                    </ul>
+
+                    <div class="tv-footer__social" data-anim="cards">
+                        <a href="#" aria-label="Facebook" class="tv-footer__icon">
+                            <img src="assets/images/fb-icon.svg" alt="facebook">
+                        </a>
+                        <a href="#" aria-label="Instagram" class="tv-footer__icon">
+                            <img src="assets/images/instagram-icon.svg" alt="Instagram">
+                        </a>
+                        <a href="#" aria-label="X" class="tv-footer__icon">
+                            <img src="assets/images/x-icon.svg" alt="X">
+                        </a>
+                        <a href="#" aria-label="YouTube" class="tv-footer__icon">
+                            <img src="assets/images/youTube-icon.svg" alt="YouTube">
+                        </a>
+                    </div>
+
+                    <div class="tv-footer__copy" data-anim="right">
+                        © 2026 Testiva. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Watermark text -->
+        <div class="tv-footer__watermark d-none d-md-block" aria-hidden="true">
+            <img src="assets/images/footer-logo.svg" alt="Testiva" data-anim="image" />
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- GSAP Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animation.js"></script>
+
+</body>
+
+</html>

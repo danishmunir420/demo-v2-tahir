@@ -244,3 +244,22 @@
   position: relative;
   z-index: 2;
 }
+
+.tv-header-black-logo {
+  .icon-menu-white,
+  .logo-white {
+    display: none;
+  }
+
+  &.is-scrolled {
+    .icon-menu-white,
+    .logo-white {
+      display: block;
+    }
+
+    .icon-black,
+    .logo-black {
+      display: none;
+    }
+  }
+}
