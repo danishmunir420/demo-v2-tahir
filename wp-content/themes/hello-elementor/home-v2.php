@@ -119,7 +119,40 @@ get_header( 'v2' );
 						<img src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/kobe-Client-Logo.svg' ); ?>" alt="Kobe">
 					</div>
 				</div>
+				
 			</div>
+
+			<!-- <div class="swiper tv-logo-slider">
+				<div class="swiper-wrapper align-items-center">
+					<div class="swiper-slide tv-logo">
+						 <img src="<?php //echo esc_url( site_url('/wp-content/uploads/2025/04/Free-Add-copy-150x150.png') ); ?>" alt="Free-Add">
+					</div>
+					<div class="swiper-slide tv-logo">
+						<img src="<?php //echo esc_url( site_url('/wp-content/uploads/2025/04/Urban-dicionary-150x150.png') ); ?>" alt="Urban">
+					</div>
+					<div class="swiper-slide tv-logo">
+						<img src="<?php //echo esc_url( site_url('/wp-content/uploads/2025/04/Big-family-150x150.png') ); ?>" alt="Big-family">
+					</div>
+					<div class="swiper-slide tv-logo">
+						<img src="<?php //echo esc_url( site_url('/wp-content/uploads/2025/04/Naturaly-Chick-1-150x150.png') ); ?>" alt="Naturaly-Chick">
+
+					</div>
+					<div class="swiper-slide tv-logo">
+						<img src="<?php //echo esc_url( site_url('/wp-content/uploads/2025/04/Nextiva-1-150x150.png') ); ?>" alt="Nextiva">
+					</div>
+					<div class="swiper-slide tv-logo">
+						<img src="<?php //echo esc_url( site_url('/wp-content/uploads/2025/04/Sun-Communities-150x150.png') ); ?>" alt="Sun-Communities">
+					</div>
+					<div class="swiper-slide tv-logo">
+						<img src="<?php //echo esc_url( site_url('/wp-content/uploads/2025/04/INDIAWIDE-1-150x150.png') ); ?>" alt="INDIAWIDE">
+					</div>
+					<div class="swiper-slide tv-logo">
+						<img src="<?php //echo esc_url( site_url('/wp-content/uploads/2025/04/Machine-Medicine-150x150.png') ); ?>" alt="Machine-Medicine">
+
+					</div>
+					
+				</div>
+			</div> -->
 		</div>
 	</section>
 
@@ -140,18 +173,17 @@ get_header( 'v2' );
 
 				<div class="col-lg-6">
 					<h2 data-anim="right" class="tv-precision__title mb-3">
-						<span class="tv-precision__accent">AI-driven,</span><br>
-						technically precise,<br>
-						for systems that<br>
-						cannot fail.
+						<span class="tv-precision__accent">AI-Powered,</span><br>
+						QA Services for,<br>
+						Seamless User<br>
+						Experiences.
 					</h2>
 
 					<p data-anim="right" class="tv-precision__text mb-4">
-						We have a myriad of gains in business development that make them a testament
-						to our quality.
+						We combine smart automation and comprehensive software testing services to ensure stable and high-quality software.
 					</p>
 
-					<a data-anim="right" class="tv-precision__btn" href="#">
+					<a data-anim="right" class="tv-precision__btn" href="<?php echo esc_url( site_url('/about-us/') ); ?>">
 						About Us <span class="tv-caret" aria-hidden="true"></span>
 					</a>
 				</div>
@@ -183,31 +215,31 @@ get_header( 'v2' );
 				<div class="swiper tv-services-swiper">
 					<div class="swiper-wrapper" data-anim="cards">
 						<div class="swiper-slide">
-							<a class="tv-service-card" href="#">
+							<a class="tv-service-card" href="<?php echo esc_url( site_url('/automation-testing/') ); ?>">
 								<img class="tv-service-card__img" src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/services-img-1.jpg' ); ?>" alt="AI Driven Automation Testing">
 								<div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
-									<h3 class="tv-service-card__title" data-anim="fade-up">AI Driven<br>Automation Testing</h3>
+									<h3 class="tv-service-card__title" data-anim="fade-up">Automation Testing</h3>
 								</div>
 							</a>
 						</div>
 
 						<div class="swiper-slide">
-							<a class="tv-service-card" href="#">
+							<a class="tv-service-card" href="<?php echo esc_url( site_url('/functional-testing/') ); ?>">
 								<img class="tv-service-card__img" src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/services-img-2.jpg' ); ?>" alt="Functional Testing">
 								<div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
-									<h3 class="tv-service-card__title" data-anim="fade-up">Functional Testing</h3>
+									<h3 class="tv-service-card__title" data-anim="fade-up">Functional & Usability Testing</h3>
 								</div>
 							</a>
 						</div>
 
 						<div class="swiper-slide">
-							<a class="tv-service-card" href="#">
+							<a class="tv-service-card" href="<?php echo esc_url( site_url('/performance-testing/') ); ?>">
 								<img class="tv-service-card__img" src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/services-img-1.jpg' ); ?>" alt="Performance Testing">
 								<div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
-									<h3 class="tv-service-card__title" data-anim="fade-up">Performance Testing</h3>
+									<h3 class="tv-service-card__title" data-anim="fade-up">Performance & Load Testing</h3>
 								</div>
 							</a>
 						</div>
@@ -217,7 +249,27 @@ get_header( 'v2' );
 								<img class="tv-service-card__img" src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/services-img-2.jpg' ); ?>" alt="Security Testing">
 								<div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
-									<h3 class="tv-service-card__title" data-anim="fade-up">Security Testing</h3>
+									<h3 class="tv-service-card__title" data-anim="fade-up">Security & Compliance Testing</h3>
+								</div>
+							</a>
+						</div>
+
+						<div class="swiper-slide">
+							<a class="tv-service-card" href="#">
+								<img class="tv-service-card__img" src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/services-img-2.jpg' ); ?>" alt="Security Testing">
+								<div class="tv-service-card__overlay"></div>
+								<div class="tv-service-card__content">
+									<h3 class="tv-service-card__title" data-anim="fade-up">AI/ML & LLM Testing</h3>
+								</div>
+							</a>
+						</div>
+
+						<div class="swiper-slide">
+							<a class="tv-service-card" href="#">
+								<img class="tv-service-card__img" src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/services-img-2.jpg' ); ?>" alt="Security Testing">
+								<div class="tv-service-card__overlay"></div>
+								<div class="tv-service-card__content">
+									<h3 class="tv-service-card__title" data-anim="fade-up">API & Integration Testing</h3>
 								</div>
 							</a>
 						</div>
@@ -387,68 +439,61 @@ get_header( 'v2' );
 	<!-- Latest Insights -->
 	<section class="tv-insights py-5">
 		<div class="container">
-			<h2 class="tv-insights__title text-center mb-5" data-anim="fade-up">Latest Insights</h2>
+			<h2 class="tv-insights__title text-center mb-5" data-anim="fade-up"><?php esc_html_e( 'Latest Insights', 'hello-elementor' ); ?></h2>
 
 			<div class="row g-4" data-anim="cards">
-				<div class="col-md-6 col-lg-4">
-					<article class="tv-insight">
-						<a class="tv-insight__media" href="#">
-							<img src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/insights-img-01.jpg' ); ?>" data-anim="image" alt="Habit tracking and self-improvement apps testing">
-						</a>
+				<?php
+				$insights_query = new WP_Query(
+					array(
+						'post_type'           => 'post',
+						'posts_per_page'      => 3,
+						'post_status'         => 'publish',
+						'ignore_sticky_posts' => true,
+					)
+				);
 
-						<div class="tv-insight__meta mt-3">
-							<span data-anim="fade-up">May 04, 2025</span>
-							<span class="tv-insight__dot" data-anim="fade-up">|</span>
-							<span data-anim="fade-up">David C.</span>
+				if ( $insights_query->have_posts() ) :
+					while ( $insights_query->have_posts() ) :
+						$insights_query->the_post();
+
+						if ( has_post_thumbnail() ) {
+							$image_url = get_the_post_thumbnail_url( get_the_ID(), 'large' );
+						} else {
+							$image_url = HELLO_THEME_URL . '/html-v2/assets/images/insights-img-01.jpg';
+						}
+						?>
+						<div class="col-md-6 col-lg-4">
+							<article class="tv-insight">
+								<a class="tv-insight__media" href="<?php echo esc_url( get_permalink() ); ?>">
+									<img
+										src="<?php echo esc_url( $image_url ); ?>"
+										data-anim="image"
+										alt="<?php echo esc_attr( get_the_title() ); ?>"
+									>
+								</a>
+
+								<div class="tv-insight__meta mt-3">
+									<span data-anim="fade-up">
+										<?php echo esc_html( get_the_date( 'M d, Y' ) ); ?>
+									</span>
+									<span class="tv-insight__dot" data-anim="fade-up">|</span>
+									<span data-anim="fade-up">
+										<?php echo esc_html( get_the_author() ); ?>
+									</span>
+								</div>
+
+								<h3 class="tv-insight__heading mt-2">
+									<a class="tv-insight__link" href="<?php echo esc_url( get_permalink() ); ?>" data-anim="fade-up">
+										<?php the_title(); ?>
+									</a>
+								</h3>
+							</article>
 						</div>
-
-						<h3 class="tv-insight__heading mt-2">
-							<a class="tv-insight__link" href="#" data-anim="fade-up">
-								Habit Tracking And Self-Improvement Apps Testing
-							</a>
-						</h3>
-					</article>
-				</div>
-
-				<div class="col-md-6 col-lg-4">
-					<article class="tv-insight">
-						<a class="tv-insight__media" href="#">
-							<img src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/insights-img-02.jpg' ); ?>" data-anim="image" alt="Women’s health and reproductive wellness apps testing">
-						</a>
-
-						<div class="tv-insight__meta mt-3">
-							<span data-anim="fade-up">May 06, 2025</span>
-							<span class="tv-insight__dot" data-anim="fade-up">|</span>
-							<span data-anim="fade-up">David C.</span>
-						</div>
-
-						<h3 class="tv-insight__heading mt-2">
-							<a class="tv-insight__link" href="#" data-anim="fade-up">
-								Women’s Health &amp; Reproductive Wellness Apps Testing
-							</a>
-						</h3>
-					</article>
-				</div>
-
-				<div class="col-md-6 col-lg-4">
-					<article class="tv-insight">
-						<a class="tv-insight__media" href="#">
-							<img src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/insights-img-03.jpg' ); ?>" data-anim="image" alt="Holistic or integrative wellness apps testing">
-						</a>
-
-						<div class="tv-insight__meta mt-3">
-							<span data-anim="fade-up">May 08, 2025</span>
-							<span class="tv-insight__dot" data-anim="fade-up">|</span>
-							<span data-anim="fade-up">David C.</span>
-						</div>
-
-						<h3 class="tv-insight__heading mt-2">
-							<a class="tv-insight__link" href="#" data-anim="fade-up">
-								Holistic Or Integrative Wellness Apps Testing
-							</a>
-						</h3>
-					</article>
-				</div>
+						<?php
+					endwhile;
+					wp_reset_postdata();
+				endif;
+				?>
 			</div>
 		</div>
 	</section>
@@ -474,8 +519,8 @@ get_header( 'v2' );
 								</p>
 
 								<div class="tv-testimonial__footer">
-									<div class="tv-testimonial__name" data-anim="fade-up">Butterfly Studio</div>
-									<div class="tv-testimonial__role" data-anim="fade-up">OUR ANOTHER TEMPLATE</div>
+									<div class="tv-testimonial__name" data-anim="fade-up">Steve Brickman</div>
+									<div class="tv-testimonial__role" data-anim="fade-up">Director of Technology @ mscripts</div>
 								</div>
 							</div>
 						</div>

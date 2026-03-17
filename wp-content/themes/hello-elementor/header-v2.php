@@ -65,11 +65,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!-- Left: Links + contact -->
 				<div class="col-lg-5">
 					<nav aria-label="<?php esc_attr_e( 'Primary', 'hello-elementor' ); ?>" class="tv-menu__nav">
-						<a class="tv-menu__link" href="#"><?php esc_html_e( 'About Us', 'hello-elementor' ); ?></a>
-						<a class="tv-menu__link" href="#"><?php esc_html_e( 'Services', 'hello-elementor' ); ?></a>
-						<a class="tv-menu__link" href="#"><?php esc_html_e( 'Projects', 'hello-elementor' ); ?></a>
-						<a class="tv-menu__link" href="#"><?php esc_html_e( 'Verticals', 'hello-elementor' ); ?></a>
-						<a class="tv-menu__link" href="#"><?php esc_html_e( 'Contact Us', 'hello-elementor' ); ?></a>
+						<a class="tv-menu__link" href="<?php echo esc_url( site_url('/about-us/') ); ?>"><?php esc_html_e( 'About Us', 'hello-elementor' ); ?></a>
+						<a class="tv-menu__link" href="<?php echo esc_url( site_url('/services/') ); ?>"><?php esc_html_e( 'Services', 'hello-elementor' ); ?></a>
+						<a class="tv-menu__link" href="<?php echo esc_url( site_url('/projects/') ); ?>"><?php esc_html_e( 'Projects', 'hello-elementor' ); ?></a>
+						<a class="tv-menu__link" href="<?php echo esc_url( site_url('healthcare-qa/') ); ?>"><?php esc_html_e( 'Verticals', 'hello-elementor' ); ?></a>
+						<a class="tv-menu__link" href="<?php echo esc_url( site_url('/contact-us/') ); ?>"><?php esc_html_e( 'Contact Us', 'hello-elementor' ); ?></a>
 					</nav>
 
 					<div class="tv-menu__contact">
@@ -101,7 +101,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<div class="row g-4">
 						<!-- Tile 1 -->
 						<div class="col-md-6">
-							<a class="tv-menu-tile" href="#">
+							<a class="tv-menu-tile" href="<?php echo esc_url( site_url('healthcare-qa/') ); ?>">
 								<div class="tv-menu-tile__imgWrap">
 									<img src="<?php echo esc_url( HELLO_THEME_URL . '/html-v2/assets/images/menu-img-01.jpg' ); ?>" alt="<?php esc_attr_e( 'Healthcare QA', 'hello-elementor' ); ?>">
 								</div>
