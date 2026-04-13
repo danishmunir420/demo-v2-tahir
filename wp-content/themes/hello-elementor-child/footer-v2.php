@@ -22,15 +22,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 				 Quality Together.
 			</h2>
 
-			<form class="tv-footer__form" action="#" method="post">
+			<!-- <form class="tv-footer__form" action="#" method="post">
 				<label class="visually-hidden" for="footerEmail" data-anim="fade-up"><?php esc_html_e( 'Email', 'hello-elementor' ); ?></label>
 
 				<input data-anim="left" id="footerEmail" class="tv-footer__input" type="email" placeholder="<?php esc_attr_e( 'Enter your email address', 'hello-elementor' ); ?>" required>
 
 				<button data-anim="right" class="tv-footer__btn" type="submit">
-					<?php esc_html_e( 'BOOK A CALL', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
+					<?php //esc_html_e( 'BOOK A CALL', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
 				</button>
-			</form>
+			</form> -->
+			<?php echo do_shortcode('[contact-form-7 id="0eda3a2" title="Book a call v2"]'); ?>
 		</div>
 
 		<!-- Links grid -->
@@ -67,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<h3 data-anim="fade-up" class="tv-footer__title"><?php esc_html_e( 'GET IN TOUCH', 'hello-elementor' ); ?></h3>
 				<ul class="tv-footer__list">
 					<li data-anim="fade-up"><a href="mailto:info@testiva.io">info@testiva.io</a></li>
-					<li data-anim="fade-up"><a href="tel:+19237306357">+1(929)-730-635-7</a></li>
+					<li data-anim="fade-up"><a href="tel:+19237306357">+92 300 7727644</a></li>
 					<li data-anim="fade-up" class="tv-footer__plain">
 						17 C, DHA Rahbar, Lahore,<br>
 						Pakistan

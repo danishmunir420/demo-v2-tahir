@@ -26,15 +26,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', 'hello-elementor' ); ?></a>
 
-<header class="tv-header-wrap tv-header tv-header--contact" id="tvHeaderContact">
+<header class="tv-header-wrap tv-header tv-header--contact tv-header-black-logo" id="tvHeader">
 	<div class="container-xl container-full">
 		<div class="tv-headerbar position-relative d-flex align-items-center justify-content-between">
-			<button class="tv-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuContact" aria-controls="mobileMenuContact" aria-label="<?php esc_attr_e( 'Open menu', 'hello-elementor' ); ?>" data-anim="left">
-				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/menu-icon.svg' ); ?>" alt="<?php esc_attr_e( 'Open menu', 'hello-elementor' ); ?>">
+			<button class="tv-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="<?php esc_attr_e( 'Open menu', 'hello-elementor' ); ?>" data-anim="left">
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/menu-icon.svg' ); ?>" alt="<?php esc_attr_e( 'Open menu', 'hello-elementor' ); ?>" class="icon-menu-white">
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/menu-icon-black.svg'); ?>" alt="Open menu" class="icon-black">
 			</button>
 
 			<a class="tv-brand position-absolute start-50 translate-middle-x" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" data-anim="fade-up">
-				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo-white" data-anim="fade-up">
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/logo-black.svg'); ?>" alt="Testiva logo" class="logo-black" data-anim="fade-up">
 			</a>
 
 			<div class="d-flex align-items-center d-none d-md-block" data-anim="right">
@@ -45,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 
-	<div class="offcanvas offcanvas-top tv-menu" tabindex="-1" id="mobileMenuContact" aria-labelledby="mobileMenuContactLabel">
+	<div class="offcanvas offcanvas-top tv-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenu">
 		<div class="tv-menu__stripes">
 			<span></span><span></span><span></span>
 			<span></span><span></span><span></span>
@@ -65,6 +67,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<a class="tv-menu__link" href="<?php echo esc_url( site_url( '/faqs/' ) ); ?>"><?php esc_html_e( 'Faqs', 'hello-elementor' ); ?></a>
 						<a class="tv-menu__link" href="<?php echo esc_url( site_url( '/contact-us/' ) ); ?>"><?php esc_html_e( 'Contact Us', 'hello-elementor' ); ?></a>
 					</nav>
+					<div class="tv-menu__contact">
+						<a class="tv-menu__contact-item" href="tel:+92 300 7727644">
+							<span class="tv-menu__icon" aria-hidden="true">
+								<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/phone-icon.svg' ); ?>" alt="<?php esc_attr_e( 'Phone Icon', 'hello-elementor' ); ?>">
+							</span>
+							<span>+92 300 7727644</span>
+						</a>
+
+						<a class="tv-menu__contact-item" href="mailto:info@testiva.io">
+							<span class="tv-menu__icon" aria-hidden="true">
+								<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/email-icon.svg' ); ?>" alt="<?php esc_attr_e( 'Email Icon', 'hello-elementor' ); ?>">
+							</span>
+							<span>info@testiva.io</span>
+						</a>
+					</div>
+
+					<!-- Right: CTA (mobile) -->
+					<div class="d-flex align-items-center d-block d-md-none" data-anim="right">
+						<a class="tv-cta-pill" href="#">
+							<?php esc_html_e( 'Let’s Talk', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
+						</a>
+					</div>
 				</div>
 
 				<div class="col-lg-7 d-none d-md-block">

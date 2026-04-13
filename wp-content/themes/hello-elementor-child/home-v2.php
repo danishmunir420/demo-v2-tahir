@@ -76,47 +76,47 @@ get_header( 'v2' );
 	<!-- Trusted clients logos -->
 	<section class="tv-trusted" data-anim="section">
 		<div class="container">
-			<h2 class="tv-trusted__title text-center" data-anim="title">
+			<h2 class="tv-trusted__title text-center" data-anim="fade-up">
 				Trusted by organizations <span class="text-black">that cannot afford mistakes.</span>
 			</h2>
 
 			<div class="swiper tv-logo-slider">
 				<div class="swiper-wrapper align-items-center">
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/Rise-Client-Logo.svg' ); ?>" alt="Rise">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/holistic.png' ); ?>" alt="Rise">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/u-turn-Client-Logo.svg' ); ?>" alt="U-Turn">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/firex.png' ); ?>" alt="U-Turn">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/oslo-Client-Logo.svg' ); ?>" alt="Oslo">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/mmt.png' ); ?>" alt="Oslo">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/barca-Client-Logo.svg' ); ?>" alt="Barca">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/nextiva.png' ); ?>" alt="Barca">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/th-Client-Logo.svg' ); ?>" alt="TH">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/sun.png' ); ?>" alt="TH">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/kobe-Client-Logo.svg' ); ?>" alt="Kobe">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/karen.png' ); ?>" alt="Kobe">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/Rise-Client-Logo.svg' ); ?>" alt="Rise">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/urban.png' ); ?>" alt="Rise">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/u-turn-Client-Logo.svg' ); ?>" alt="U-Turn">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/freeaddcopy.png' ); ?>" alt="U-Turn">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/oslo-Client-Logo.svg' ); ?>" alt="Oslo">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/nextiva-v2.png' ); ?>" alt="Oslo">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/barca-Client-Logo.svg' ); ?>" alt="Barca">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/holistic.png' ); ?>" alt="Barca">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/th-Client-Logo.svg' ); ?>" alt="TH">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/firex.png' ); ?>" alt="TH">
 					</div>
-					<div class="swiper-slide tv-logo">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/kobe-Client-Logo.svg' ); ?>" alt="Kobe">
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/mmt.png' ); ?>" alt="Kobe">
 					</div>
 				</div>
 				
@@ -141,18 +141,18 @@ get_header( 'v2' );
 				</div>
 
 				<div class="col-lg-6">
-					<h2 data-anim="right" class="tv-precision__title mb-3">
+					<h2 data-anim="fade-up" class="tv-precision__title mb-3">
 						<span class="tv-precision__accent">AI-Powered,</span><br>
 						QA Services for,<br>
 						Seamless User<br>
 						Experiences.
 					</h2>
 
-					<p data-anim="right" class="tv-precision__text mb-4">
+					<p data-anim="fade-up" class="tv-precision__text mb-4">
 						We combine smart automation and comprehensive software testing services to ensure stable and high-quality software.
 					</p>
 
-					<a data-anim="right" class="tv-precision__btn" href="<?php echo esc_url( site_url('/about-us/') ); ?>">
+					<a data-anim="fade-up" class="tv-precision__btn" href="<?php echo esc_url( site_url('/about-us/') ); ?>">
 						About Us <span class="tv-caret" aria-hidden="true"></span>
 					</a>
 				</div>
@@ -175,7 +175,7 @@ get_header( 'v2' );
 					</p>
 				</div>
 
-				<a data-anim="right" class="tv-services__viewall" href="#">
+				<a data-anim="fade-up" class="tv-services__viewall" href="#">
 					View All <span class="tv-caret" aria-hidden="true"></span>
 				</a>
 			</div>
@@ -185,8 +185,10 @@ get_header( 'v2' );
 					<div class="swiper-wrapper" data-anim="cards">
 						<div class="swiper-slide">
 							<a class="tv-service-card" href="<?php echo esc_url( site_url('/automation-testing/') ); ?>">
-								<img class="tv-service-card__img" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/services-img-1.jpg' ); ?>" alt="AI Driven Automation Testing">
-								<div class="tv-service-card__overlay"></div>
+								<video class="tv-services__video" playsinline muted preload="auto">
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/AutomationTesting.mp4' ); ?>" type="video/mp4">
+                                </video>
+                                <div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
 									<h3 class="tv-service-card__title" data-anim="fade-up">Automation Testing</h3>
 								</div>
@@ -195,7 +197,9 @@ get_header( 'v2' );
 
 						<div class="swiper-slide">
 							<a class="tv-service-card" href="<?php echo esc_url( site_url('/functional-testing/') ); ?>">
-								<img class="tv-service-card__img" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/services-img-2.jpg' ); ?>" alt="Functional Testing">
+								<video class="tv-services__video" playsinline muted preload="auto">
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/FunctionalUsabilityTesting.mp4' ); ?>" type="video/mp4">
+                                </video>
 								<div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
 									<h3 class="tv-service-card__title" data-anim="fade-up">Functional & Usability Testing</h3>
@@ -205,7 +209,9 @@ get_header( 'v2' );
 
 						<div class="swiper-slide">
 							<a class="tv-service-card" href="<?php echo esc_url( site_url('/performance-testing/') ); ?>">
-								<img class="tv-service-card__img" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/services-img-1.jpg' ); ?>" alt="Performance Testing">
+								<video class="tv-services__video" playsinline muted preload="auto">
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/PerformanceLoadTesting.mp4' ); ?>" type="video/mp4">
+                                </video>
 								<div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
 									<h3 class="tv-service-card__title" data-anim="fade-up">Performance & Load Testing</h3>
@@ -215,7 +221,9 @@ get_header( 'v2' );
 
 						<div class="swiper-slide">
 							<a class="tv-service-card" href="#">
-								<img class="tv-service-card__img" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/services-img-2.jpg' ); ?>" alt="Security Testing">
+								<video class="tv-services__video" playsinline muted preload="auto">
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/Security.mp4' ); ?>" type="video/mp4">
+                                </video>
 								<div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
 									<h3 class="tv-service-card__title" data-anim="fade-up">Security & Compliance Testing</h3>
@@ -225,7 +233,9 @@ get_header( 'v2' );
 
 						<div class="swiper-slide">
 							<a class="tv-service-card" href="#">
-								<img class="tv-service-card__img" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/services-img-2.jpg' ); ?>" alt="Security Testing">
+								<video class="tv-services__video" playsinline muted preload="auto">
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/AI.mp4' ); ?>" type="video/mp4">
+                                </video>
 								<div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
 									<h3 class="tv-service-card__title" data-anim="fade-up">AI/ML & LLM Testing</h3>
@@ -235,7 +245,9 @@ get_header( 'v2' );
 
 						<div class="swiper-slide">
 							<a class="tv-service-card" href="#">
-								<img class="tv-service-card__img" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/services-img-2.jpg' ); ?>" alt="Security Testing">
+								<video class="tv-services__video" playsinline muted preload="auto">
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/APITesting.mp4' ); ?>" type="video/mp4">
+                                </video>
 								<div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
 									<h3 class="tv-service-card__title" data-anim="fade-up">API & Integration Testing</h3>
@@ -245,14 +257,14 @@ get_header( 'v2' );
 					</div>
 				</div>
 
-				<div class="tv-slider-controls" data-anim="fade-up">
-					<button class="tv-nav tv-nav-prev" aria-label="Previous slide">
+				<div class="tv-slider-controls">
+					<button class="tv-nav tv-nav-prev" aria-label="Previous slide" data-anim="fade-up">
 						<span class="tv-arrow tv-arrow-left"></span>
 					</button>
 
-					<div class="tv-pagination"></div>
+					<div class="tv-pagination" data-anim="fade-up"></div>
 
-					<button class="tv-nav tv-nav-next" aria-label="Next slide">
+					<button class="tv-nav tv-nav-next" aria-label="Next slide" data-anim="fade-up">
 						<span class="tv-arrow tv-arrow-right"></span>
 					</button>
 				</div>

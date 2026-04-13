@@ -93,7 +93,40 @@ get_header( 'v2' );
 			</div>
 
 			<div class="tv-testing-wrap" id="tvTestingStack">
-				<div class="tv-testing-left" aria-hidden="true"></div>
+				<div class="tv-testing-left">
+					<div class="tv-testing-media is-active">
+					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/AutomationTesting.mp4' ); ?>" type="video/mp4">
+                      </video>
+					</div>
+
+					<div class="tv-testing-media">
+					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/FunctionalUsabilityTesting.mp4' ); ?>" type="video/mp4">
+                      </video>
+					</div>
+
+					<div class="tv-testing-media">
+					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/PerformanceLoadTesting.mp4' ); ?>" type="video/mp4">
+                      </video>
+					</div>
+					<div class="tv-testing-media">
+					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/Security.mp4' ); ?>" type="video/mp4">
+                      </video>
+					</div>
+					<div class="tv-testing-media">
+					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/AI.mp4' ); ?>" type="video/mp4">
+                      </video>
+					</div>
+					<div class="tv-testing-media">
+					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/APITesting.mp4' ); ?>" type="video/mp4">
+                      </video>
+					</div>
+				 </div>
 
 				<div class="tv-testing-right">
 					<div class="tv-stack tv-stack--testing">

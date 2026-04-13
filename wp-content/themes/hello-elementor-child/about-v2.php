@@ -16,9 +16,19 @@ get_header( 'v2' );
 		<div class="tv-banner-inner">
 			<div class="tv-about-banner__image  js-hero-bg">
 				<div class="sub-pg-video-banner">
-					<video class="tv-banner__video" autoplay playsinline muted preload="metadata">
-					<source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/AboutBanner.mp4' ); ?>" type="video/mp4">
-					</video>
+					
+					
+					<video
+						class="tv-banner__video"
+						autoplay
+						playsinline
+						muted
+						loop
+						preload="auto"
+						poster="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/banner-img.jpg' ); ?>"
+					  >
+						<source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/AboutBanner.mp4' ); ?>" type="video/mp4">
+					  </video>
 				</div>
 			  </div>
 			<div class="tv-about-banner__wrap">

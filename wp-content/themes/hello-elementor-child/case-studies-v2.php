@@ -94,13 +94,13 @@ get_header( 'v2' );
 				</article>
 
 				<article class="tv-case" data-category="dealership">
-					<a class="tv-case__media" href="#">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-03.jpg' ); ?>" alt="Loadster.app" data-anim="fade-up">
+					<a class="tv-case__media" href="<?php echo esc_url(site_url('/projects/sun-communities')); ?>">
+						<img src="<?php echo site_url('/wp-content/uploads/2025/05/Frame-68.png'); ?>" alt="Sun Communities" data-anim="fade-up">
 					</a>
-					<h3 class="tv-case__title" data-anim="fade-up">Loadster.app</h3>
-					<p class="tv-case__desc" data-anim="fade-up"><?php esc_html_e( 'Provided advanced Quality Assurance solutions.', 'hello-elementor' ); ?></p>
+					<h3 class="tv-case__title" data-anim="fade-up">Sun Communities</h3>
+					<p class="tv-case__desc" data-anim="fade-up"><?php esc_html_e( 'Sun Communities is a real estate investment trust specializing in manufactured housing and RV communities.', 'hello-elementor' ); ?></p>
 					<div class="tv-case__tags" data-anim="fade-up">
-						<span>UI/UX</span><span>Mobile App</span><span>Ecommerce</span>
+						<span>Functional Testing</span><span>Automation Testing</span><span>Usability Testing</span><span>Mobile App Testing</span><span>Wrike</span>
 					</div>
 				</article>
 

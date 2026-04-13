@@ -29,7 +29,7 @@ get_header( 'contact-v2' );
 
 				<div class="tv-contact-info__item">
 					<h3 data-anim="fade-up"><?php esc_html_e( 'Phone', 'hello-elementor' ); ?></h3>
-					<p data-anim="fade-up"><a href="tel:+19237306357">+1(923)-730-635-7</a></p>
+					<p data-anim="fade-up"><a href="tel:+19237306357">+92 300 7727644</a></p>
 				</div>
 
 				<div class="tv-contact-info__item">
@@ -43,7 +43,7 @@ get_header( 'contact-v2' );
 					<span class="tv-blue"><?php esc_html_e( 'Send Us', 'hello-elementor' ); ?></span> <?php esc_html_e( 'A Message', 'hello-elementor' ); ?>
 				</h2>
 
-				<div class="tv-contact-card">
+				<!-- <div class="tv-contact-card">
 					<form class="tv-contact-form" action="#" method="post">
 						<div class="tv-contact-form__grid">
 							<div class="tv-field">
@@ -75,11 +75,11 @@ get_header( 'contact-v2' );
 						<div class="tv-contact-form__actions">
 							<button type="submit" class="tv-btn tv-btn--primary" data-anim="fade-up">
 								<?php esc_html_e( 'SEND MESSAGE', 'hello-elementor' ); ?>
-								<span data-anim="fade-up" class="tv-caret-white" aria-hidden="true"></span>
 							</button>
 						</div>
 					</form>
-				</div>
+				</div> -->
+				<?php echo do_shortcode('[contact-form-7 id="95ee923" title="Contact us form v2"]'); ?>
 			</div>
 		</div>
 	</section>
