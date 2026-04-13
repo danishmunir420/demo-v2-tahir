@@ -6,7 +6,7 @@
  * @package HelloElementor
  */
 
-get_header( 'faqs-v2' );
+get_header( 'v2.1' );
 ?>
 
 <main id="main">

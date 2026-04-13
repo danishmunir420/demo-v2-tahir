@@ -1,8 +1,8 @@
 <?php
 /**
- * Header: Contact V2
+ * Header: V2.1
  *
- * Dedicated header for Contact Us V2 page.
+ * Shared header for Contact, FAQs, and Healthcare QA V2 pages.
  *
  * @package HelloElementor
  */
@@ -26,17 +26,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', 'hello-elementor' ); ?></a>
 
-<header class="tv-header-wrap tv-header tv-header--contact tv-header-black-logo" id="tvHeader">
+<header class="tv-header-wrap tv-header tv-header-black-logo" id="tvHeader">
 	<div class="container-xl container-full">
 		<div class="tv-headerbar position-relative d-flex align-items-center justify-content-between">
 			<button class="tv-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="<?php esc_attr_e( 'Open menu', 'hello-elementor' ); ?>" data-anim="left">
 				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/menu-icon.svg' ); ?>" alt="<?php esc_attr_e( 'Open menu', 'hello-elementor' ); ?>" class="icon-menu-white">
-				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/menu-icon-black.svg'); ?>" alt="Open menu" class="icon-black">
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/menu-icon-black.svg' ); ?>" alt="Open menu" class="icon-black">
 			</button>
 
 			<a class="tv-brand position-absolute start-50 translate-middle-x" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" data-anim="fade-up">
 				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo-white" data-anim="fade-up">
-				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/logo-black.svg'); ?>" alt="Testiva logo" class="logo-black" data-anim="fade-up">
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/logo-black.svg' ); ?>" alt="Testiva logo" class="logo-black" data-anim="fade-up">
 			</a>
 
 			<div class="d-flex align-items-center d-none d-md-block" data-anim="right">
@@ -68,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<a class="tv-menu__link" href="<?php echo esc_url( site_url( '/contact-us/' ) ); ?>"><?php esc_html_e( 'Contact Us', 'hello-elementor' ); ?></a>
 					</nav>
 					<div class="tv-menu__contact">
-						<a class="tv-menu__contact-item" href="tel:+92 300 7727644">
+						<a class="tv-menu__contact-item" href="tel:+923007727644">
 							<span class="tv-menu__icon" aria-hidden="true">
 								<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/phone-icon.svg' ); ?>" alt="<?php esc_attr_e( 'Phone Icon', 'hello-elementor' ); ?>">
 							</span>
@@ -83,7 +83,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</a>
 					</div>
 
-					<!-- Right: CTA (mobile) -->
 					<div class="d-flex align-items-center d-block d-md-none" data-anim="right">
 						<a class="tv-cta-pill" href="#">
 							<?php esc_html_e( 'Let’s Talk', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>

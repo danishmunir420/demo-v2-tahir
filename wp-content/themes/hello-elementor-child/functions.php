@@ -59,7 +59,8 @@ function hello_elementor_child_v2_assets() {
 		! is_page_template( 'about-v2.php' ) &&
 		! is_page_template( 'case-studies-v2.php' ) &&
 		! is_page_template( 'faqs-v2.php' ) &&
-		! is_page_template( 'contact-us-v2.php' )
+		! is_page_template( 'contact-us-v2.php' ) &&
+		! is_page_template( 'healthcare-qa-v2.php' )
 	) {
 		return;
 	}
