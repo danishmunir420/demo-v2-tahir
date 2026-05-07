@@ -15,7 +15,7 @@ get_header( 'v2' );
 	<section class="tv-about-banner">
 		<div class="tv-banner-inner">
 			<div class="sub-pg-video-banner">
-					<video class="tv-banner__video" autoplay playsinline muted preload="metadata">
+					<video class="tv-banner__video" autoplay playsinline muted loop preload="metadata">
 					<source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/CaseStudies-banner.mp4' ); ?>" type="video/mp4">
 					</video>
 				</div>
@@ -49,98 +49,201 @@ get_header( 'v2' );
 					</button>
 					<span class="tv-cases__sep">|</span>
 
+					<button class="tv-cases__tab" type="button" data-filter="healthcare" role="tab" aria-selected="false">
+						<?php esc_html_e( 'Healthcare', 'hello-elementor' ); ?>
+					</button>
+					<span class="tv-cases__sep">|</span>
+
 					<button class="tv-cases__tab" type="button" data-filter="ai" role="tab" aria-selected="false">
 						<?php esc_html_e( 'AI', 'hello-elementor' ); ?>
 					</button>
 					<span class="tv-cases__sep">|</span>
 
-					<button class="tv-cases__tab" type="button" data-filter="healthcare" role="tab" aria-selected="false">
-						<?php esc_html_e( 'Healthcare', 'hello-elementor' ); ?>
-					</button>
-					<span class="tv-cases__sep">|</span>
+					
 
 					<button class="tv-cases__tab" type="button" data-filter="saas" role="tab" aria-selected="false">
 						<?php esc_html_e( 'SaaS', 'hello-elementor' ); ?>
 					</button>
 					<span class="tv-cases__sep">|</span>
 
-					<button class="tv-cases__tab" type="button" data-filter="dealership" role="tab" aria-selected="false">
-						<?php esc_html_e( 'Dealership', 'hello-elementor' ); ?>
-					</button>
+					
 				</div>
 			</div>
 
 			<div class="tv-cases__grid">
+
+				<!-- Machine Medicine Technologies (MMT) - Healthcare -->
+				<article class="tv-case" data-category="healthcare">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/machine-medicine-technologies/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-60-1.jpg' ) ); ?>" alt="Machine Medicine Technologies (MMT)" data-anim="fade-up">
+					</a>
+					<h3 class="tv-case__title" data-anim="fade-up">Machine Medicine Technologies (MMT)</h3>
+					<p class="tv-case__desc" data-anim="fade-up">Machine Medicine Technologies uses AI-powered video analysis to assess and track motor function for neurological conditions.</p>
+					<div class="tv-case__tags" data-anim="fade-up">
+						<span>Functional Testing</span><span>Automation Testing</span><span>Compatibility Testing</span>
+					</div>
+				</article>
+
+				<!-- OMED - Healthcare -->
+				<article class="tv-case" data-category="healthcare">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/omed/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-62.jpg' ) ); ?>" alt="OMED" data-anim="fade-up">
+					</a>
+					<h3 class="tv-case__title" data-anim="fade-up">OMED</h3>
+					<p class="tv-case__desc" data-anim="fade-up">OMED Health provides digital health solutions for monitoring and managing gut health.</p>
+					<div class="tv-case__tags" data-anim="fade-up">
+						<span>Functional Testing</span><span>Mobile QA</span><span>Test Cases</span>
+					</div>
+				</article>
+
+				<!-- YOU(th) Health App - Healthcare + AI -->
+				<article class="tv-case" data-category="healthcare">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/youth-health-app/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-66.jpg' ) ); ?>" alt="YOU(th) Health App" data-anim="fade-up">
+					</a>
+					<h3 class="tv-case__title" data-anim="fade-up">YOU(th) Health App</h3>
+					<p class="tv-case__desc" data-anim="fade-up">YOU(th) Health provides AI-driven health assessments using smartphones for quick and comprehensive check-ups.</p>
+					<div class="tv-case__tags" data-anim="fade-up">
+						<span>Mobile App Testing</span><span>Test Cases</span><span>Jira</span>
+					</div>
+				</article>
+				
+				<!-- FreeAdCopy - AI -->
 				<article class="tv-case" data-category="ai">
-					<a class="tv-case__media" href="#">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-01.jpg' ); ?>" alt="Freeadcopy.com" data-anim="fade-up">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/freeadcopy/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-57.png' ) ); ?>" alt="FreeAdCopy" data-anim="fade-up">
 					</a>
-					<h3 class="tv-case__title" data-anim="fade-up">Freeadcopy.com</h3>
-					<p class="tv-case__desc" data-anim="fade-up"><?php esc_html_e( 'Provided advanced Quality Assurance solutions.', 'hello-elementor' ); ?></p>
+					<h3 class="tv-case__title" data-anim="fade-up">FreeAdCopy</h3>
+					<p class="tv-case__desc" data-anim="fade-up">FreeAdCopy is an AI-powered content generation platform designed to create high-converting ad copy efficiently.</p>
 					<div class="tv-case__tags" data-anim="fade-up">
-						<span>UI/UX</span><span>Mobile App</span><span>Ecommerce</span>
+						<span>AI</span><span>Test Automation</span><span>API Testing</span>
+					</div>
+				</article>
+				
+
+				
+
+				<!-- FLEXiSKiP -->
+				<article class="tv-case" data-category="all">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/flexiskip/' ) ); ?>">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-05.jpg' ); ?>" alt="FLEXiSKiP" data-anim="fade-up">
+					</a>
+					<h3 class="tv-case__title" data-anim="fade-up">FLEXiSKiP</h3>
+					<p class="tv-case__desc" data-anim="fade-up">FlexiSkip is a waste management service providing on-demand skip bin delivery and collection through a digital platform.</p>
+					<div class="tv-case__tags" data-anim="fade-up">
+						<span>Automation Testing</span><span>Usability Testing</span><span>Manual Testing</span>
 					</div>
 				</article>
 
+				<!-- Workshift - SaaS -->
 				<article class="tv-case" data-category="saas">
-					<a class="tv-case__media" href="#">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-02.jpg' ); ?>" alt="dmuscle.com" data-anim="fade-up">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/workshift/' ) ); ?>">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-06.jpg' ); ?>" alt="Workshift" data-anim="fade-up">
 					</a>
-					<h3 class="tv-case__title" data-anim="fade-up">dmuscle.com</h3>
-					<p class="tv-case__desc" data-anim="fade-up"><?php esc_html_e( 'Provided advanced Quality Assurance solutions.', 'hello-elementor' ); ?></p>
+					<h3 class="tv-case__title" data-anim="fade-up">Workshift</h3>
+					<p class="tv-case__desc" data-anim="fade-up">WorkShift is a scheduling platform that helps businesses manage employee shifts and workforce planning efficiently.</p>
 					<div class="tv-case__tags" data-anim="fade-up">
-						<span>UI/UX</span><span>Mobile App</span><span>Ecommerce</span>
+						<span>Mobile App Testing</span><span>Web Testing</span><span>Bug Reporting</span>
 					</div>
 				</article>
 
-				<article class="tv-case" data-category="dealership">
-					<a class="tv-case__media" href="<?php echo esc_url(site_url('/projects/sun-communities')); ?>">
-						<img src="<?php echo site_url('/wp-content/uploads/2025/05/Frame-68.png'); ?>" alt="Sun Communities" data-anim="fade-up">
+				<!-- Kido Protect - Healthcare -->
+				<article class="tv-case" data-category="healthcare">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/kido-protect/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-58.png' ) ); ?>" alt="Kido Protect" data-anim="fade-up">
+					</a>
+					<h3 class="tv-case__title" data-anim="fade-up">Kido Protect</h3>
+					<p class="tv-case__desc" data-anim="fade-up">Kido Protect offers digital identity protection and online safety solutions for children.</p>
+					<div class="tv-case__tags" data-anim="fade-up">
+						<span>Mobile Apps Testing</span><span>Manual Testing</span><span>Bug Reporting</span>
+					</div>
+				</article>
+
+				<!-- Sun Communities - Dealership add it all-->
+				<article class="tv-case" data-category="all">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/sun-communities/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/05/Frame-68.png' ) ); ?>" alt="Sun Communities" data-anim="fade-up">
 					</a>
 					<h3 class="tv-case__title" data-anim="fade-up">Sun Communities</h3>
-					<p class="tv-case__desc" data-anim="fade-up"><?php esc_html_e( 'Sun Communities is a real estate investment trust specializing in manufactured housing and RV communities.', 'hello-elementor' ); ?></p>
+					<p class="tv-case__desc" data-anim="fade-up">Sun Communities is a real estate investment trust specializing in manufactured housing and RV communities.</p>
 					<div class="tv-case__tags" data-anim="fade-up">
-						<span>Functional Testing</span><span>Automation Testing</span><span>Usability Testing</span><span>Mobile App Testing</span><span>Wrike</span>
+						<span>Functional Testing</span><span>Automation Testing</span><span>Usability Testing</span>
 					</div>
 				</article>
 
-				<article class="tv-case" data-category="healthcare">
-					<a class="tv-case__media" href="#">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-04.jpg' ); ?>" alt="India wide" data-anim="fade-up">
+				<!-- Nextiva -->
+				<article class="tv-case" data-category="all">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/nextiva/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-61.jpg' ) ); ?>" alt="Nextiva" data-anim="fade-up">
 					</a>
-					<h3 class="tv-case__title" data-anim="fade-up">India wide</h3>
-					<p class="tv-case__desc" data-anim="fade-up"><?php esc_html_e( 'Provided advanced Quality Assurance solutions.', 'hello-elementor' ); ?></p>
+					<h3 class="tv-case__title" data-anim="fade-up">Nextiva</h3>
+					<p class="tv-case__desc" data-anim="fade-up">Nextiva is a cloud-based platform offering VoIP, video conferencing, and customer engagement tools for businesses.</p>
 					<div class="tv-case__tags" data-anim="fade-up">
-						<span>UI/UX</span><span>Mobile App</span><span>Ecommerce</span>
+						<span>Functional Testing</span><span>Compatibility Testing</span><span>Bug Reporting</span>
 					</div>
 				</article>
 
-				<article class="tv-case" data-category="healthcare">
-					<a class="tv-case__media" href="#">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-05.jpg' ); ?>" alt="India wide" data-anim="fade-up">
+				<!-- MAVEN X -->
+				<article class="tv-case" data-category="all">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/maven-x/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/05/Frame-72.png' ) ); ?>" alt="MAVEN X" data-anim="fade-up">
 					</a>
-					<h3 class="tv-case__title" data-anim="fade-up">India wide</h3>
-					<p class="tv-case__desc" data-anim="fade-up"><?php esc_html_e( 'Provided advanced Quality Assurance solutions.', 'hello-elementor' ); ?></p>
+					<h3 class="tv-case__title" data-anim="fade-up">MAVEN X</h3>
+					<p class="tv-case__desc" data-anim="fade-up">MENA’s Premier Live Streaming Platform for Gamers.</p>
 					<div class="tv-case__tags" data-anim="fade-up">
-						<span>UI/UX</span><span>Mobile App</span><span>Ecommerce</span>
+						<span>Performance Testing</span><span>Functional Testing</span><span>API Testing</span>
 					</div>
 				</article>
 
-				<article class="tv-case" data-category="healthcare">
-					<a class="tv-case__media" href="#">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-06.jpg' ); ?>" alt="India wide" data-anim="fade-up">
+				<!-- Loadster -->
+				<article class="tv-case" data-category="all">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/loadster/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/05/Frame-73.png' ) ); ?>" alt="Loadster" data-anim="fade-up">
 					</a>
-					<h3 class="tv-case__title" data-anim="fade-up">India wide</h3>
-					<p class="tv-case__desc" data-anim="fade-up"><?php esc_html_e( 'Provided advanced Quality Assurance solutions.', 'hello-elementor' ); ?></p>
+					<h3 class="tv-case__title" data-anim="fade-up">Loadster</h3>
+					<p class="tv-case__desc" data-anim="fade-up">Loadster is a cloud-based load testing tool for web apps and APIs.</p>
 					<div class="tv-case__tags" data-anim="fade-up">
-						<span>UI/UX</span><span>Mobile App</span><span>Ecommerce</span>
+						<span>Performance Testing</span><span>Quality Assurance</span>
+					</div>
+				</article>
+
+				<!-- TCM Mobile App - Healthcare -->
+				<article class="tv-case" data-category="healthcare">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/tcm-mobile-app/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/05/Frame-70.png' ) ); ?>" alt="TCM Mobile App" data-anim="fade-up">
+					</a>
+					<h3 class="tv-case__title" data-anim="fade-up">TCM Mobile App</h3>
+					<p class="tv-case__desc" data-anim="fade-up">TCM Mobile is a reference guide app for Traditional Chinese Medicine.</p>
+					<div class="tv-case__tags" data-anim="fade-up">
+						<span>Mobile App Testing</span><span>Usability Testing</span><span>Manual Testing</span>
+					</div>
+				</article>
+
+				<!-- SaaS Application Automation - SaaS -->
+				<article class="tv-case" data-category="saas">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/saas-application-automation/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-64.png' ) ); ?>" alt="SaaS Application Automation" data-anim="fade-up">
+					</a>
+					<h3 class="tv-case__title" data-anim="fade-up">SaaS Application Automation</h3>
+					<p class="tv-case__desc" data-anim="fade-up">Automated SaaS web app with Cypress + JavaScript in a DDT framework.</p>
+					<div class="tv-case__tags" data-anim="fade-up">
+						<span>Automation Testing</span><span>CI/CD</span><span>JavaScript</span>
+					</div>
+				</article>
+				<article class="tv-case" data-category="ai">
+					<a class="tv-case__media" href="<?php echo esc_url( home_url( '/projects/youth-health-app/' ) ); ?>">
+						<img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-66.jpg' ) ); ?>" alt="YOU(th) Health App" data-anim="fade-up">
+					</a>
+					<h3 class="tv-case__title" data-anim="fade-up">YOU(th) Health App</h3>
+					<p class="tv-case__desc" data-anim="fade-up">YOU(th) Health provides AI-driven health assessments using smartphones for quick and comprehensive check-ups.</p>
+					<div class="tv-case__tags" data-anim="fade-up">
+						<span>Mobile App Testing</span><span>Test Cases</span><span>Jira</span>
 					</div>
 				</article>
 
 			</div>
 		</div>
 	</section>
-
 	<!-- Testimonial slider -->
 	<section class="tv-testimonials py-5">
 		<div class="container">
@@ -148,11 +251,54 @@ get_header( 'v2' );
 
 			<div class="swiper tv-testimonials-swiper">
 				<div class="swiper-wrapper" data-anim="cards">
+					<!-- Video 1-->
+					<div class="swiper-slide">
+                            <div class="tv-testimonial">
+                                <!-- VIDEO SLIDE -->
+                                <div class="tv-testimonial__media">
+                                    <video class="tv-testimonial-video" muted controls playsinline preload="auto" autoplay>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/TestivaTestimonial.mp4' ); ?>" type="video/mp4">
+                                    </video>
+                                </div>
 
+                                <div class="tv-testimonial__card">
+                                <p class="tv-testimonial__quote" data-anim="fade-up">
+                                    “The QA services provided by Testiva have always been outstanding. ...they allowed us to release stable software when it counts the most.”
+                                </p>
+
+                                <div class="tv-testimonial__footer">
+                                    <div class="tv-testimonial__name" data-anim="fade-up">Francesco</div>
+                                    <div class="tv-testimonial__role" data-anim="fade-up">Our another template</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+					<!--Video 2-->
+					<div class="swiper-slide">
+                            <div class="tv-testimonial">
+                                <!-- VIDEO SLIDE -->
+                                <div class="tv-testimonial__media">
+                                    <video class="tv-testimonial-video" muted controls playsinline preload="auto" autoplay>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/RokasMMT.mp4' ); ?>" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="tv-testimonial__card">
+                                <p class="tv-testimonial__quote" data-anim="fade-up">
+                                    “The QA services provided by Testiva have always been outstanding. ...they allowed us to release stable software when it counts the most.”
+                                </p>
+
+                                <div class="tv-testimonial__footer">
+                                    <div class="tv-testimonial__name" data-anim="fade-up">Francesco</div>
+                                    <div class="tv-testimonial__role" data-anim="fade-up">Our another template</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/steve.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -172,7 +318,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/chaya.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -191,7 +337,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/hussien.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -210,7 +356,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/murry.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -232,7 +378,6 @@ get_header( 'v2' );
 			</div>
 		</div>
 	</section>
-
 </main>
 
 <?php

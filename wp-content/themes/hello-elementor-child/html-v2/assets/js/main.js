@@ -23,63 +23,44 @@ function initTvStackSlider(rootId) {
   if (!root) return false;
 
   const cards = Array.from(root.querySelectorAll(".tv-stack__card"));
-  const dotsWrap = root.querySelector(".tv-stack__dots");
-  const prevBtn = root.querySelector(".tv-stack__arrow--prev, .tv-stack__prev");
-  const nextBtn = root.querySelector(".tv-stack__arrow--next, .tv-stack__next");
-
   const mediaItems = Array.from(root.querySelectorAll(".tv-testing-media"));
   const mediaVideos = Array.from(root.querySelectorAll(".tv-testing-video"));
+
+  const dotsWrap = root.querySelector(".tv-stack__dots");
+  const prevBtn = root.querySelector(".tv-stack__arrow--prev");
+  const nextBtn = root.querySelector(".tv-stack__arrow--next");
 
   if (!cards.length || !dotsWrap) return false;
 
   let index = 0;
   let animating = false;
+  let autoTimer = null;
 
   dotsWrap.innerHTML = cards
     .map(
       (_, i) =>
-        `<button class="tv-stack__dot ${i === 0 ? "is-active" : ""}" type="button" aria-label="Go to slide ${i + 1}"></button>`
+        `<button class="tv-stack__dot ${i === 0 ? "is-active" : ""}" type="button"></button>`
     )
     .join("");
 
   const dots = Array.from(dotsWrap.querySelectorAll(".tv-stack__dot"));
 
-  function pauseAllVideos() {
-    mediaVideos.forEach((video) => {
+  function playVideo(activeIndex) {
+    mediaItems.forEach((item, i) => {
+      const video = mediaVideos[i];
+
+      item.classList.toggle("is-active", i === activeIndex);
+
       if (!video) return;
+
       video.pause();
       video.currentTime = 0;
+
+      if (i === activeIndex) {
+        video.muted = true;
+        video.play().catch(() => {});
+      }
     });
-  }
-
-  function playActiveVideo(activeIndex) {
-    const activeVideo = mediaVideos[activeIndex];
-    if (!activeVideo) return;
-
-    activeVideo.muted = true;
-    activeVideo.playsInline = true;
-
-    const playNow = () => {
-      activeVideo.play().catch(() => {});
-    };
-
-    if (activeVideo.readyState >= 2) {
-      playNow();
-    } else {
-      activeVideo.load();
-      activeVideo.addEventListener("canplay", playNow, { once: true });
-    }
-  }
-
-  function updateDots(activeIndex) {
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("is-active", i === activeIndex);
-    });
-  }
-
-  function updateArrows(activeIndex) {
-    if (prevBtn) prevBtn.disabled = activeIndex === 0;
-    if (nextBtn) nextBtn.disabled = activeIndex === cards.length - 1;
   }
 
   function layoutSlides(activeIndex) {
@@ -90,115 +71,48 @@ function initTvStackSlider(rootId) {
         zIndex: isActive ? 2 : 1,
         opacity: isActive ? 1 : 0,
         y: isActive ? 0 : 30,
-        x: 0,
-        scale: 1,
         pointerEvents: isActive ? "auto" : "none"
       });
 
       card.classList.toggle("is-active", isActive);
     });
 
-    if (mediaItems.length) {
-      mediaItems.forEach((item, i) => {
-        const isActive = i === activeIndex;
-
-        item.classList.toggle("is-active", isActive);
-
-        gsap.set(item, {
-          opacity: isActive ? 1 : 0,
-          visibility: isActive ? "visible" : "hidden",
-          y: 0
-        });
-      });
-
-      pauseAllVideos();
-      setTimeout(() => {
-        playActiveVideo(activeIndex);
-      }, 60);
-    }
-
-    updateDots(activeIndex);
-    updateArrows(activeIndex);
-  }
-
-  function showActiveMedia(nextIndex, direction = "next") {
-    if (!mediaItems.length) return;
-
-    const currentMedia = mediaItems[index];
-    const nextMedia = mediaItems[nextIndex];
-
-    if (!nextMedia) return;
-
-    mediaItems.forEach((item, i) => {
-      item.classList.toggle("is-active", i === nextIndex);
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("is-active", i === activeIndex);
     });
 
-    gsap.set(nextMedia, {
-      visibility: "visible",
-      opacity: 0,
-      y: direction === "prev" ? -40 : 40
-    });
-
-    if (currentMedia && currentMedia !== nextMedia) {
-      gsap.to(currentMedia, {
-        opacity: 0,
-        y: direction === "prev" ? 30 : -30,
-        duration: 0.35,
-        ease: "power2.out",
-        onComplete: () => {
-          gsap.set(currentMedia, {
-            visibility: "hidden",
-            y: 0
-          });
-        }
-      });
-    }
-
-    gsap.to(nextMedia, {
-      opacity: 1,
-      y: 0,
-      duration: 0.45,
-      ease: "power3.out",
-      onComplete: () => {
-        pauseAllVideos();
-        playActiveVideo(nextIndex);
-      }
-    });
+    playVideo(activeIndex);
   }
 
   function goTo(nextIndex) {
-    if (animating || nextIndex === index || nextIndex < 0 || nextIndex >= cards.length) return;
+    if (animating || nextIndex === index) return;
+
+    if (nextIndex < 0) nextIndex = cards.length - 1;
+    if (nextIndex >= cards.length) nextIndex = 0;
+
     animating = true;
 
-    const direction = nextIndex > index ? "next" : "prev";
     const current = cards[index];
     const next = cards[nextIndex];
-
-    current.classList.remove("is-active");
-    next.classList.add("is-active");
 
     gsap.set(next, {
       zIndex: 3,
       opacity: 0,
-      y: direction === "prev" ? -40 : 40,
-      pointerEvents: "auto"
+      y: 40
     });
 
     gsap.to(current, {
       opacity: 0,
-      y: direction === "prev" ? 30 : -30,
-      duration: 0.38,
+      y: -30,
+      duration: 0.4,
       ease: "power2.out"
     });
 
     gsap.to(next, {
       opacity: 1,
       y: 0,
-      duration: 0.48,
+      duration: 0.55,
       ease: "power3.out",
-      onStart: function () {
-        showActiveMedia(nextIndex, direction);
-      },
       onComplete: function () {
         index = nextIndex;
         layoutSlides(index);
@@ -207,33 +121,53 @@ function initTvStackSlider(rootId) {
     });
   }
 
+  function next() {
+    goTo(index + 1);
+  }
+
+  function prev() {
+    goTo(index - 1);
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+
+    autoTimer = setInterval(function () {
+      next();
+    }, 4500);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoTimer);
+  }
+
   dots.forEach((dot, i) => {
     dot.addEventListener("click", function () {
       goTo(i);
+      startAutoSlide();
     });
   });
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", function () {
-      goTo(index - 1);
-    });
-  }
 
   if (nextBtn) {
     nextBtn.addEventListener("click", function () {
-      goTo(index + 1);
+      next();
+      startAutoSlide();
     });
   }
 
-  document.addEventListener("visibilitychange", function () {
-    if (document.hidden) {
-      pauseAllVideos();
-    } else {
-      playActiveVideo(index);
-    }
-  });
+  if (prevBtn) {
+    prevBtn.addEventListener("click", function () {
+      prev();
+      startAutoSlide();
+    });
+  }
+
+  root.addEventListener("mouseenter", stopAutoSlide);
+  root.addEventListener("mouseleave", startAutoSlide);
 
   layoutSlides(index);
+  startAutoSlide();
+
   return true;
 }
 
@@ -252,6 +186,7 @@ function initTvBenefitsStack() {
 
   let index = 0;
   let animating = false;
+  let wheelLocked = false;
 
   dotsWrap.innerHTML = cards
     .map(
@@ -261,6 +196,15 @@ function initTvBenefitsStack() {
     .join("");
 
   const dots = Array.from(dotsWrap.querySelectorAll(".tv-stack__dot"));
+
+  function updateControls(activeIndex) {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("is-active", i === activeIndex);
+    });
+
+    if (btnPrev) btnPrev.disabled = activeIndex === 0;
+    if (btnNext) btnNext.disabled = activeIndex === cards.length - 1;
+  }
 
   function layoutStack(activeIndex) {
     cards.forEach((card, i) => {
@@ -278,17 +222,24 @@ function initTvBenefitsStack() {
       card.classList.toggle("is-active", pos === 0);
     });
 
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("is-active", i === activeIndex);
-    });
+    updateControls(activeIndex);
   }
 
   function goTo(nextIndex) {
-    if (animating || nextIndex === index) return;
+    if (
+      animating ||
+      nextIndex === index ||
+      nextIndex < 0 ||
+      nextIndex >= cards.length
+    ) {
+      return false;
+    }
+
     animating = true;
 
     const current = cards[index];
     const next = cards[nextIndex];
+    const direction = nextIndex > index ? 1 : -1;
 
     gsap.set(next, {
       zIndex: 200,
@@ -297,7 +248,7 @@ function initTvBenefitsStack() {
 
     gsap.to(current, {
       duration: 0.55,
-      y: -120,
+      y: direction > 0 ? -120 : 120,
       scale: 0.96,
       opacity: 0,
       ease: "power2.inOut"
@@ -306,7 +257,7 @@ function initTvBenefitsStack() {
     gsap.fromTo(
       next,
       {
-        y: 120,
+        y: direction > 0 ? 120 : -120,
         scale: 0.92,
         opacity: 0
       },
@@ -330,15 +281,47 @@ function initTvBenefitsStack() {
         }
       }
     );
+
+    return true;
   }
 
   function next() {
-    goTo((index + 1) % cards.length);
+    return goTo(index + 1);
   }
 
   function prev() {
-    goTo((index - 1 + cards.length) % cards.length);
+    return goTo(index - 1);
   }
+
+  root.addEventListener(
+    "wheel",
+    function (e) {
+      const scrollingDown = e.deltaY > 0;
+      const scrollingUp = e.deltaY < 0;
+
+      const canGoNext = scrollingDown && index < cards.length - 1;
+      const canGoPrev = scrollingUp && index > 0;
+
+      if (!canGoNext && !canGoPrev) return;
+
+      e.preventDefault();
+
+      if (wheelLocked || animating) return;
+
+      wheelLocked = true;
+
+      if (canGoNext) {
+        next();
+      } else if (canGoPrev) {
+        prev();
+      }
+
+      setTimeout(() => {
+        wheelLocked = false;
+      }, 650);
+    },
+    { passive: false }
+  );
 
   if (btnNext) btnNext.addEventListener("click", next);
   if (btnPrev) btnPrev.addEventListener("click", prev);
@@ -627,138 +610,165 @@ document.addEventListener("DOMContentLoaded", function () {
     // SERVICES SLIDER
     // =========================================================
     const servicesEl = document.querySelector(".tv-services-swiper");
-    const servicesPrev = document.querySelector(".tv-nav-prev");
-    const servicesNext = document.querySelector(".tv-nav-next");
-    const servicesPagination = document.querySelector(".tv-pagination");
+const servicesPrev = document.querySelector(".tv-nav-prev");
+const servicesNext = document.querySelector(".tv-nav-next");
+const servicesPagination = document.querySelector(".tv-pagination");
 
-    if (servicesEl && typeof Swiper !== "undefined") {
-      function updateNavState(swiper) {
-        if (servicesPrev) {
-          servicesPrev.classList.toggle("is-disabled", swiper.isBeginning);
-        }
-        if (servicesNext) {
-          servicesNext.classList.toggle("is-disabled", swiper.isEnd);
-        }
-      }
+if (servicesEl && typeof Swiper !== "undefined") {
+  let videoTimer = null;
+  let slideDirection = "next";
 
-      function pauseAllServiceVideos(swiper) {
-        swiper.slides.forEach((slide) => {
-          const video = slide.querySelector(".tv-services__video");
-          if (!video) return;
-          video.pause();
-          video.currentTime = 0;
-        });
-      }
+  function updateNavState(swiper) {
+    if (servicesPrev) servicesPrev.classList.toggle("is-disabled", swiper.isBeginning);
+    if (servicesNext) servicesNext.classList.toggle("is-disabled", swiper.isEnd);
+  }
 
-      function playActiveServiceVideo(swiper) {
-        const activeSlide = swiper.slides[swiper.activeIndex];
-        if (!activeSlide) return;
+  function pauseAllServiceVideos(swiper) {
+    clearTimeout(videoTimer);
 
-        const video = activeSlide.querySelector(".tv-services__video");
-        if (!video) return;
+    swiper.slides.forEach((slide) => {
+      const video = slide.querySelector(".tv-services__video");
+      if (!video) return;
 
-        video.muted = true;
-        video.play().catch(() => {});
-      }
+      video.pause();
+      video.currentTime = 0;
+      video.onended = null;
+    });
+  }
 
-      function animateActiveServiceSlide(swiper, direction = "next") {
-        const activeSlide = swiper.slides[swiper.activeIndex];
-        if (!activeSlide || typeof gsap === "undefined") return;
+  function playActiveServiceVideo(swiper) {
+    clearTimeout(videoTimer);
 
-        const card = activeSlide.querySelector(".tv-service-card");
-        if (!card) return;
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    if (!activeSlide) return;
 
-        gsap.killTweensOf(card);
+    const video = activeSlide.querySelector(".tv-services__video");
 
-        gsap.fromTo(
-          card,
-          {
-            y: direction === "prev" ? -60 : 60,
-            opacity: 0
-          },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.55,
-            ease: "power3.out"
-          }
-        );
-      }
-
-      let slideDirection = "next";
-
-      const servicesOptions = {
-        slidesPerView: 2,
-        spaceBetween: 20,
-        speed: 700,
-        loop: true,
-        watchOverflow: true,
-        allowTouchMove: true,
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 18
-          },
-          576: {
-            slidesPerView: 1,
-            spaceBetween: 20
-          },
-          767: {
-            slidesPerView: 2,
-            spaceBetween: 20
-          }
-        },
-        on: {
-          init(swiper) {
-            updateNavState(swiper);
-            pauseAllServiceVideos(swiper);
-            playActiveServiceVideo(swiper);
-            animateActiveServiceSlide(swiper, "next");
-          },
-          slideChangeTransitionStart(swiper) {
-            updateNavState(swiper);
-            pauseAllServiceVideos(swiper);
-          },
-          slideChangeTransitionEnd(swiper) {
-            playActiveServiceVideo(swiper);
-            animateActiveServiceSlide(swiper, slideDirection);
-          }
-        }
-      };
-
-      if (servicesPrev && servicesNext) {
-        servicesOptions.navigation = {
-          nextEl: ".tv-nav-next",
-          prevEl: ".tv-nav-prev"
-        };
-
-        servicesPrev.addEventListener("click", function () {
-          slideDirection = "prev";
-        });
-
-        servicesNext.addEventListener("click", function () {
-          slideDirection = "next";
-        });
-      }
-
-      if (servicesPagination) {
-        servicesOptions.pagination = {
-          el: ".tv-pagination",
-          clickable: true
-        };
-      }
-
-      const servicesSwiper = new Swiper(".tv-services-swiper", servicesOptions);
-
-      document.addEventListener("visibilitychange", function () {
-        if (document.hidden) {
-          pauseAllServiceVideos(servicesSwiper);
-        } else {
-          playActiveServiceVideo(servicesSwiper);
-        }
-      });
+    if (!video) {
+      videoTimer = setTimeout(() => swiper.slideNext(), 3000);
+      return;
     }
 
+    video.muted = true;
+    video.playsInline = true;
+
+    const playNow = () => {
+      video.play().catch(() => {});
+    };
+
+    if (video.readyState >= 2) {
+      playNow();
+    } else {
+      video.load();
+      video.addEventListener("canplay", playNow, { once: true });
+    }
+
+    video.onended = function () {
+      swiper.slideNext();
+    };
+
+    videoTimer = setTimeout(() => {
+      if (swiper.slides[swiper.activeIndex] === activeSlide) {
+        swiper.slideNext();
+      }
+    }, 7000);
+  }
+
+  function animateActiveServiceSlide(swiper, direction = "next") {
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    if (!activeSlide || typeof gsap === "undefined") return;
+
+    const card = activeSlide.querySelector(".tv-service-card");
+    if (!card) return;
+
+    gsap.killTweensOf(card);
+
+    gsap.fromTo(
+      card,
+      {
+        y: direction === "prev" ? -60 : 60,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.55,
+        ease: "power3.out"
+      }
+    );
+  }
+
+  const servicesOptions = {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    speed: 700,
+    loop: true,
+    watchOverflow: true,
+    allowTouchMove: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 18
+      },
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      }
+    },
+    on: {
+      init(swiper) {
+        updateNavState(swiper);
+        pauseAllServiceVideos(swiper);
+        playActiveServiceVideo(swiper);
+        animateActiveServiceSlide(swiper, "next");
+      },
+      slideChangeTransitionStart(swiper) {
+        updateNavState(swiper);
+        pauseAllServiceVideos(swiper);
+      },
+      slideChangeTransitionEnd(swiper) {
+        playActiveServiceVideo(swiper);
+        animateActiveServiceSlide(swiper, slideDirection);
+      }
+    }
+  };
+
+  if (servicesPrev && servicesNext) {
+    servicesOptions.navigation = {
+      nextEl: ".tv-nav-next",
+      prevEl: ".tv-nav-prev"
+    };
+
+    servicesPrev.addEventListener("click", function () {
+      slideDirection = "prev";
+    });
+
+    servicesNext.addEventListener("click", function () {
+      slideDirection = "next";
+    });
+  }
+
+  if (servicesPagination) {
+    servicesOptions.pagination = {
+      el: ".tv-pagination",
+      clickable: true
+    };
+  }
+
+  const servicesSwiper = new Swiper(".tv-services-swiper", servicesOptions);
+
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      pauseAllServiceVideos(servicesSwiper);
+    } else {
+      playActiveServiceVideo(servicesSwiper);
+    }
+  });
+}
     // =========================================================
     // CHOOSE SLIDER
     // =========================================================
@@ -770,7 +780,8 @@ document.addEventListener("DOMContentLoaded", function () {
       new Swiper(".tv-choose-swiper", {
         slidesPerView: 3,
         centeredSlides: true,
-        loop: false,
+        loop: true,
+        autoplay: true,
         speed: 700,
         spaceBetween: 0,
         grabCursor: true,
@@ -807,21 +818,91 @@ document.addEventListener("DOMContentLoaded", function () {
     // TESTIMONIALS SLIDER
     // =========================================================
     const testimonialsEl = document.querySelector(".tv-testimonials-swiper");
-    const testimonialsDots = document.querySelector(".tv-testimonials__dots");
+const testimonialsDots = document.querySelector(".tv-testimonials__dots");
 
-    if (testimonialsEl && testimonialsDots) {
-      new Swiper(".tv-testimonials-swiper", {
-        slidesPerView: 1,
-        loop: true,
-        speed: 650,
-        spaceBetween: 24,
-        pagination: {
+if (testimonialsEl && typeof Swiper !== "undefined") {
+  let imageTimer = null;
+
+  function stopAllVideos(swiper) {
+    swiper.el.querySelectorAll(".tv-testimonial-video").forEach((video) => {
+      video.pause();
+      video.currentTime = 0;
+      video.onended = null;
+    });
+  }
+
+  function handleSlideMedia(swiper) {
+    clearTimeout(imageTimer);
+    stopAllVideos(swiper);
+
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    if (!activeSlide) return;
+
+    const video = activeSlide.querySelector(".tv-testimonial-video");
+
+    // Video slide: wait until video finishes
+    if (video) {
+      video.muted = true;
+      video.playsInline = true;
+
+      const playVideo = () => {
+        video.play().catch(() => {});
+      };
+
+      if (video.readyState >= 2) {
+        playVideo();
+      } else {
+        video.load();
+        video.addEventListener("canplay", playVideo, { once: true });
+      }
+
+      video.onended = function () {
+        swiper.slideNext();
+      };
+
+      return;
+    }
+
+    // Image slide: auto next after 3s
+    imageTimer = setTimeout(function () {
+      swiper.slideNext();
+    }, 5000);
+  }
+
+  const testimonialsSwiper = new Swiper(".tv-testimonials-swiper", {
+    slidesPerView: 1,
+    loop: true,
+    speed: 1500,
+    spaceBetween: 24,
+    pagination: testimonialsDots
+      ? {
           el: ".tv-testimonials__dots",
           clickable: true
         }
-      });
+      : false,
+    on: {
+      init(swiper) {
+        handleSlideMedia(swiper);
+      },
+      slideChangeTransitionStart(swiper) {
+        clearTimeout(imageTimer);
+        stopAllVideos(swiper);
+      },
+      slideChangeTransitionEnd(swiper) {
+        handleSlideMedia(swiper);
+      }
     }
+  });
 
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      clearTimeout(imageTimer);
+      stopAllVideos(testimonialsSwiper);
+    } else {
+      handleSlideMedia(testimonialsSwiper);
+    }
+  });
+}
     // =========================================================
     // SELECTED WORK SLIDER
     // =========================================================
@@ -834,6 +915,8 @@ document.addEventListener("DOMContentLoaded", function () {
         speed: 700,
         grabCursor: true,
         freeMode: false,
+        loop: true,
+        autoplay: true,
         breakpoints: {
           0: {
             spaceBetween: 16
@@ -1269,140 +1352,599 @@ document.addEventListener("DOMContentLoaded", function () {
   // =========================================================
   // HOW WE WORK CIRCLE ANIMATION
   // =========================================================
-  if (hasGSAP) {
-    const steps = [
-      document.getElementById("hw-step-1"),
-      document.getElementById("hw-step-4"),
-      document.getElementById("hw-step-3"),
-      document.getElementById("hw-step-2"),
-      document.getElementById("hw-step-5")
-    ].filter(Boolean);
+  // if (hasGSAP) {
+  //   const steps = [
+  //     document.getElementById("hw-step-1"),
+  //     document.getElementById("hw-step-4"),
+  //     document.getElementById("hw-step-3"),
+  //     document.getElementById("hw-step-2"),
+  //     document.getElementById("hw-step-5")
+  //   ].filter(Boolean);
 
-    if (steps.length) {
-      gsap.set(steps, {
-        opacity: 0.18,
-        scale: 1,
-        transformOrigin: "center center"
-      });
+  //   if (steps.length) {
+  //     gsap.set(steps, {
+  //       opacity: 0.18,
+  //       scale: 1,
+  //       transformOrigin: "center center"
+  //     });
 
-      function activateStep(stepEl) {
-        steps.forEach((item) => item.classList.remove("is-active"));
-        stepEl.classList.add("is-active");
+  //     function activateStep(stepEl) {
+  //       steps.forEach((item) => item.classList.remove("is-active"));
+  //       stepEl.classList.add("is-active");
 
-        gsap.fromTo(
-          stepEl,
-          { opacity: 1, scale: 0.92 },
-          {
-            opacity: 1,
-            scale: 1.08,
-            duration: 0.28,
-            repeat: 1,
-            yoyo: true,
-            ease: "power2.out",
-            transformOrigin: "center center"
-          }
-        );
-      }
+  //       gsap.fromTo(
+  //         stepEl,
+  //         { opacity: 1, scale: 0.92 },
+  //         {
+  //           opacity: 1,
+  //           scale: 1.08,
+  //           duration: 0.28,
+  //           repeat: 1,
+  //           yoyo: true,
+  //           ease: "power2.out",
+  //           transformOrigin: "center center"
+  //         }
+  //       );
+  //     }
 
-      const tl = gsap.timeline({
-        repeat: -1,
-        repeatDelay: 0.5
-      });
+  //     const tl = gsap.timeline({
+  //       repeat: -1,
+  //       repeatDelay: 0.5
+  //     });
 
-      steps.forEach((step) => {
-        tl.call(() => activateStep(step)).to({}, { duration: 0.7 });
-      });
-    }
-  }
+  //     steps.forEach((step) => {
+  //       tl.call(() => activateStep(step)).to({}, { duration: 0.7 });
+  //     });
+  //   }
+  // }
 
   // =========================================================
   // NEW WHY PINNED SCROLL SECTION
   // =========================================================
-  if (hasGSAP && hasScrollTrigger) {
-    window.addEventListener("load", function () {
-      const whyStage = document.querySelector("#tvWhyStage");
-      const whyPin = document.querySelector("#tvWhyPin");
-      const whySteps = gsap.utils.toArray("#tvWhyPin .tv-whyStep");
-      const whyDots = gsap.utils.toArray("#tvWhyPin .tv-why__progress span");
-      const isDesktop = window.matchMedia("(min-width: 992px)").matches;
+  // if (hasGSAP && hasScrollTrigger) {
+  //   window.addEventListener("load", function () {
+  //     const whyStage = document.querySelector("#tvWhyStage");
+  //     const whyPin = document.querySelector("#tvWhyPin");
+  //     const whySteps = gsap.utils.toArray("#tvWhyPin .tv-whyStep");
+  //     const whyDots = gsap.utils.toArray("#tvWhyPin .tv-why__progress span");
+  //     const isDesktop = window.matchMedia("(min-width: 992px)").matches;
 
-      if (!whyStage || !whyPin || !whySteps.length || !isDesktop) return;
+  //     if (!whyStage || !whyPin || !whySteps.length || !isDesktop) return;
 
-      gsap.set(whySteps, {
-        autoAlpha: 0,
-        y: 60
-      });
+  //     gsap.set(whySteps, {
+  //       autoAlpha: 0,
+  //       y: 60
+  //     });
 
-      gsap.set(whySteps[0], {
-        autoAlpha: 1,
-        y: 0
-      });
+  //     gsap.set(whySteps[0], {
+  //       autoAlpha: 1,
+  //       y: 0
+  //     });
 
-      whySteps.forEach((step, index) => {
-        step.classList.toggle("is-active", index === 0);
-      });
+  //     whySteps.forEach((step, index) => {
+  //       step.classList.toggle("is-active", index === 0);
+  //     });
 
-      whyDots.forEach((dot, index) => {
-        dot.classList.toggle("is-active", index === 0);
-      });
+  //     whyDots.forEach((dot, index) => {
+  //       dot.classList.toggle("is-active", index === 0);
+  //     });
 
-      let activeIndex = 0;
+  //     let activeIndex = 0;
 
-      function setActiveStep(index) {
-        if (index === activeIndex || !whySteps[index]) return;
+  //     function setActiveStep(index) {
+  //       if (index === activeIndex || !whySteps[index]) return;
 
-        const current = whySteps[activeIndex];
-        const next = whySteps[index];
+  //       const current = whySteps[activeIndex];
+  //       const next = whySteps[index];
 
-        current.classList.remove("is-active");
-        next.classList.add("is-active");
+  //       current.classList.remove("is-active");
+  //       next.classList.add("is-active");
 
-        gsap.to(current, {
-          autoAlpha: 0,
-          y: -40,
-          duration: 0.35,
-          ease: "power2.out"
-        });
+  //       gsap.to(current, {
+  //         autoAlpha: 0,
+  //         y: -40,
+  //         duration: 0.35,
+  //         ease: "power2.out"
+  //       });
 
-        gsap.fromTo(
-          next,
-          {
-            autoAlpha: 0,
-            y: 60
-          },
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.5,
-            ease: "power3.out"
-          }
-        );
+  //       gsap.fromTo(
+  //         next,
+  //         {
+  //           autoAlpha: 0,
+  //           y: 60
+  //         },
+  //         {
+  //           autoAlpha: 1,
+  //           y: 0,
+  //           duration: 0.5,
+  //           ease: "power3.out"
+  //         }
+  //       );
 
-        whyDots.forEach((dot, i) => {
-          dot.classList.toggle("is-active", i === index);
-        });
+  //       whyDots.forEach((dot, i) => {
+  //         dot.classList.toggle("is-active", i === index);
+  //       });
 
-        activeIndex = index;
-      }
+  //       activeIndex = index;
+  //     }
 
-      ScrollTrigger.create({
-        trigger: whyStage,
-        start: "top top",
-        end: `+=${whySteps.length * 100}%`,
-        pin: whyPin,
-        scrub: 1,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-        onUpdate: function (self) {
-          const stepIndex = Math.round(self.progress * (whySteps.length - 1));
-          setActiveStep(stepIndex);
-        }
-      });
+  //     ScrollTrigger.create({
+  //       trigger: whyStage,
+  //       start: "top top",
+  //       end: `+=${whySteps.length * 100}%`,
+  //       pin: whyPin,
+  //       scrub: 1,
+  //       anticipatePin: 1,
+  //       invalidateOnRefresh: true,
+  //       onUpdate: function (self) {
+  //         const stepIndex = Math.round(self.progress * (whySteps.length - 1));
+  //         setActiveStep(stepIndex);
+  //       }
+  //     });
 
-      ScrollTrigger.refresh();
+  //     ScrollTrigger.refresh();
+  //   });
+  // }
+
+function initTvStackSlider(rootId) {
+  if (typeof gsap === "undefined") return false;
+
+  const root = document.getElementById(rootId);
+  if (!root) return false;
+
+  const cards = Array.from(root.querySelectorAll(".tv-stack__card"));
+  const mediaItems = Array.from(root.querySelectorAll(".tv-testing-media"));
+  const mediaVideos = Array.from(root.querySelectorAll(".tv-testing-video"));
+
+  const dotsWrap = root.querySelector(".tv-stack__dots");
+  const prevBtn = root.querySelector(".tv-stack__arrow--prev, .tv-stack__prev");
+  const nextBtn = root.querySelector(".tv-stack__arrow--next, .tv-stack__next");
+
+  if (!cards.length || !dotsWrap) return false;
+
+  let index = 0;
+  let animating = false;
+  let autoTimer = null;
+
+  dotsWrap.innerHTML = cards
+    .map((_, i) => {
+      return `<button class="tv-stack__dot ${i === 0 ? "is-active" : ""}" type="button" aria-label="Go to slide ${i + 1}"></button>`;
+    })
+    .join("");
+
+  const dots = Array.from(dotsWrap.querySelectorAll(".tv-stack__dot"));
+
+  function pauseAllVideos() {
+    mediaVideos.forEach((video) => {
+      if (!video) return;
+
+      video.pause();
+      video.currentTime = 0;
+      video.onended = null;
     });
   }
 
+  function playVideo(activeIndex) {
+    const video = mediaVideos[activeIndex];
+    if (!video) return;
+
+    video.muted = true;
+    video.playsInline = true;
+
+    const playNow = () => {
+      video.play().catch(() => {});
+    };
+
+    if (video.readyState >= 2) {
+      playNow();
+    } else {
+      video.load();
+      video.addEventListener("canplay", playNow, { once: true });
+    }
+
+    video.onended = function () {
+      next();
+      restartAutoSlide();
+    };
+  }
+
+  function updateMedia(activeIndex, direction = "next") {
+    if (!mediaItems.length) return;
+
+    const oldActive = root.querySelector(".tv-testing-media.is-active");
+    const newActive = mediaItems[activeIndex];
+
+    if (!newActive) return;
+
+    pauseAllVideos();
+
+    mediaItems.forEach((item, i) => {
+      item.classList.toggle("is-active", i === activeIndex);
+
+      if (i !== activeIndex) {
+        gsap.set(item, {
+          opacity: 0,
+          visibility: "hidden",
+          y: 0
+        });
+      }
+    });
+
+    gsap.set(newActive, {
+      visibility: "visible",
+      opacity: 0,
+      y: direction === "prev" ? -40 : 40
+    });
+
+    if (oldActive && oldActive !== newActive) {
+      gsap.to(oldActive, {
+        opacity: 0,
+        y: direction === "prev" ? 30 : -30,
+        duration: 0.3,
+        ease: "power2.out",
+        onComplete: function () {
+          gsap.set(oldActive, {
+            visibility: "hidden",
+            y: 0
+          });
+        }
+      });
+    }
+
+    gsap.to(newActive, {
+      opacity: 1,
+      y: 0,
+      duration: 0.45,
+      ease: "power3.out",
+      onComplete: function () {
+        playVideo(activeIndex);
+      }
+    });
+  }
+
+  function updateDots(activeIndex) {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("is-active", i === activeIndex);
+    });
+  }
+
+  function layoutSlides(activeIndex) {
+    cards.forEach((card, i) => {
+      const isActive = i === activeIndex;
+
+      gsap.set(card, {
+        zIndex: isActive ? 2 : 1,
+        opacity: isActive ? 1 : 0,
+        y: isActive ? 0 : 30,
+        x: 0,
+        scale: 1,
+        pointerEvents: isActive ? "auto" : "none"
+      });
+
+      card.classList.toggle("is-active", isActive);
+    });
+
+    updateDots(activeIndex);
+  }
+
+  function normalizeIndex(nextIndex) {
+    if (nextIndex < 0) return cards.length - 1;
+    if (nextIndex >= cards.length) return 0;
+    return nextIndex;
+  }
+
+  function goTo(nextIndex) {
+    nextIndex = normalizeIndex(nextIndex);
+
+    if (animating || nextIndex === index) return;
+
+    animating = true;
+
+    const current = cards[index];
+    const nextCard = cards[nextIndex];
+
+    const direction =
+      nextIndex > index || (index === cards.length - 1 && nextIndex === 0)
+        ? "next"
+        : "prev";
+
+    current.classList.remove("is-active");
+    nextCard.classList.add("is-active");
+
+    gsap.set(nextCard, {
+      zIndex: 3,
+      opacity: 0,
+      y: direction === "prev" ? -40 : 40,
+      pointerEvents: "auto"
+    });
+
+    updateMedia(nextIndex, direction);
+
+    gsap.to(current, {
+      opacity: 0,
+      y: direction === "prev" ? 30 : -30,
+      duration: 0.38,
+      ease: "power2.out"
+    });
+
+    gsap.to(nextCard, {
+      opacity: 1,
+      y: 0,
+      duration: 0.48,
+      ease: "power3.out",
+      onComplete: function () {
+        index = nextIndex;
+        layoutSlides(index);
+        animating = false;
+      }
+    });
+  }
+
+  function next() {
+    goTo(index + 1);
+  }
+
+  function prev() {
+    goTo(index - 1);
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+
+    autoTimer = setInterval(function () {
+      if (!animating) {
+        next();
+      }
+    }, 4500);
+  }
+
+  function stopAutoSlide() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  function restartAutoSlide() {
+    startAutoSlide();
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", function () {
+      goTo(i);
+      restartAutoSlide();
+    });
+  });
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", function () {
+      prev();
+      restartAutoSlide();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", function () {
+      next();
+      restartAutoSlide();
+    });
+  }
+
+  root.addEventListener("mouseenter", stopAutoSlide);
+  root.addEventListener("mouseleave", startAutoSlide);
+
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      stopAutoSlide();
+      pauseAllVideos();
+    } else {
+      playVideo(index);
+      startAutoSlide();
+    }
+  });
+
+  layoutSlides(index);
+  updateMedia(index, "next");
+  startAutoSlide();
+
+  return true;
+}
+
+function initWhyCardsToStack() {
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+  const section = document.getElementById("tvWhy");
+  const stage = document.getElementById("tvWhyStage");
+  const cardsWrap = document.getElementById("tvWhyCards");
+  const sliderWrap = document.getElementById("tvWhySliderWrap");
+
+  const cardLeft = document.getElementById("tvWhyCardLeft");
+  const cardCenter = document.getElementById("tvWhyCardCenter");
+  const cardRight = document.getElementById("tvWhyCardRight");
+
+  if (!section || !stage || !cardsWrap || !sliderWrap || !cardLeft || !cardCenter || !cardRight) return;
+
+  const isDesktop = window.matchMedia("(min-width: 992px)").matches;
+
+  if (!isDesktop) {
+    initTvStackSlider("tvWhyStack");
+    sliderWrap.style.opacity = "1";
+    sliderWrap.style.pointerEvents = "auto";
+    return;
+  }
+
+  gsap.set(sliderWrap, {
+    opacity: 0,
+    y: 30,
+    pointerEvents: "none"
+  });
+
+  let sliderStarted = false;
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: stage,
+      start: "top top",
+      end: "+=140%",
+      scrub: 1,
+      pin: true,
+      anticipatePin: 1,
+      onUpdate: function (self) {
+        if (self.progress > 0.45 && !sliderStarted) {
+          sliderStarted = true;
+          initTvStackSlider("tvWhyStack");
+          sliderWrap.style.pointerEvents = "auto";
+        }
+      }
+    }
+  })
+  .to(cardLeft, {
+    opacity: 0,
+    x: -220,
+    y: 30,
+    rotate: -20,
+    scale: 0.9,
+    duration: 0.3,
+    ease: "power2.out"
+  }, 0)
+  .to(cardRight, {
+    opacity: 0,
+    x: 220,
+    y: 30,
+    rotate: 20,
+    scale: 0.9,
+    duration: 0.3,
+    ease: "power2.out"
+  }, 0)
+  .to(cardCenter, {
+    opacity: 0,
+    y: 40,
+    scale: 0.94,
+    duration: 0.3,
+    ease: "power2.out"
+  }, 0.05)
+  .to(cardsWrap, {
+    opacity: 0,
+    duration: 0.12,
+    ease: "none"
+  }, 0.2)
+  .to(sliderWrap, {
+    opacity: 1,
+    y: 0,
+    duration: 0.3,
+    ease: "power2.out",
+    onStart: function () {
+      sliderWrap.style.pointerEvents = "auto";
+    }
+  }, 0.28);
+}
+
+// function initHowWeWorkAnimation() {
+//   if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+//   const section = document.getElementById("tvHowWork");
+//   if (!section) return;
+
+//   const steps = [
+//     document.getElementById("hw-step-1"),
+//     document.getElementById("hw-step-2"),
+//     document.getElementById("hw-step-3"),
+//     document.getElementById("hw-step-4"),
+//     document.getElementById("hw-step-5")
+//   ].filter(Boolean);
+
+//   if (!steps.length) return;
+
+//   steps.forEach((step, index) => {
+//     step.classList.remove("is-visible", "is-active");
+
+//     gsap.set(step, {
+//       opacity: index === 0 ? 1 : 0,
+//       visibility: index === 0 ? "visible" : "hidden",
+//       scale: index === 0 ? 1 : 0.9,
+//       y: index === 0 ? 0 : 20
+//     });
+
+//     if (index === 0) {
+//       step.classList.add("is-visible", "is-active");
+//     }
+//   });
+
+//   function revealStep(stepEl) {
+//     if (!stepEl) return;
+
+//     stepEl.classList.add("is-visible");
+
+//     gsap.fromTo(
+//       stepEl,
+//       {
+//         opacity: 0,
+//         y: 24,
+//         scale: 0.9,
+//         visibility: "visible"
+//       },
+//       {
+//         opacity: 1,
+//         y: 0,
+//         scale: 1,
+//         duration: 0.5,
+//         ease: "power3.out"
+//       }
+//     );
+//   }
+
+//   function setActive(stepEl) {
+//     steps.forEach((item) => item.classList.remove("is-active"));
+//     stepEl.classList.add("is-active");
+
+//     gsap.fromTo(
+//       stepEl,
+//       { scale: 0.96 },
+//       {
+//         scale: 1.04,
+//         duration: 0.22,
+//         yoyo: true,
+//         repeat: 1,
+//         ease: "power2.out"
+//       }
+//     );
+//   }
+
+//   const tl = gsap.timeline({ paused: true });
+
+//   tl.call(() => setActive(steps[0]))
+//     .to({}, { duration: 0.8 })
+
+//     .call(() => {
+//       revealStep(steps[1]);
+//       setActive(steps[1]);
+//     })
+//     .to({}, { duration: 0.8 })
+
+//     .call(() => {
+//       revealStep(steps[2]);
+//       setActive(steps[2]);
+//     })
+//     .to({}, { duration: 0.8 })
+
+//     .call(() => {
+//       revealStep(steps[3]);
+//       setActive(steps[3]);
+//     })
+//     .to({}, { duration: 0.8 })
+
+//     .call(() => {
+//       revealStep(steps[4]);
+//       setActive(steps[4]);
+//     });
+
+//   ScrollTrigger.create({
+//     trigger: section,
+//     start: "top 70%",
+//     onEnter: () => tl.restart(),
+//     onEnterBack: () => tl.restart()
+//   });
+// }
   // =========================================================
   // FINAL CUSTOM INITS
   // =========================================================
@@ -1410,6 +1952,18 @@ document.addEventListener("DOMContentLoaded", function () {
   initTvStackSlider("tvTestingStack");
   initLogoReveal();
   initCaseFilter();
+  initWhyCardsToStack();
+    //initHowWeWorkAnimation();
+
+    setTimeout(function () {
+  const firstVideo = document.querySelector("#tvTestingStack .tv-testing-media.is-active video");
+
+  if (firstVideo) {
+    firstVideo.muted = true;
+    firstVideo.playsInline = true;
+    firstVideo.play().catch(() => {});
+  }
+}, 300);
 
   // =========================================================
   // FINAL REFRESH

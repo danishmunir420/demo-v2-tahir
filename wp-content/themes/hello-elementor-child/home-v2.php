@@ -175,7 +175,7 @@ get_header( 'v2' );
 					</p>
 				</div>
 
-				<a data-anim="fade-up" class="tv-services__viewall" href="#">
+				<a data-anim="fade-up" class="tv-services__viewall" href="<?php echo esc_url( site_url('/services/') ); ?>">
 					View All <span class="tv-caret" aria-hidden="true"></span>
 				</a>
 			</div>
@@ -183,6 +183,20 @@ get_header( 'v2' );
 			<div class="tv-services__slider-wrap">
 				<div class="swiper tv-services-swiper">
 					<div class="swiper-wrapper" data-anim="cards">
+						
+						<div class="swiper-slide">
+							<a class="tv-service-card" href="#">
+								<video class="tv-services__video" playsinline muted preload="auto">
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/AI.mp4' ); ?>" type="video/mp4">
+                                </video>
+								<div class="tv-service-card__overlay"></div>
+								<div class="tv-service-card__content">
+									<h3 class="tv-service-card__title" data-anim="fade-up">AI/ML & LLM Testing</h3>
+								</div>
+							</a>
+						</div>
+						
+
 						<div class="swiper-slide">
 							<a class="tv-service-card" href="<?php echo esc_url( site_url('/automation-testing/') ); ?>">
 								<video class="tv-services__video" playsinline muted preload="auto">
@@ -222,35 +236,23 @@ get_header( 'v2' );
 						<div class="swiper-slide">
 							<a class="tv-service-card" href="#">
 								<video class="tv-services__video" playsinline muted preload="auto">
-                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/Security.mp4' ); ?>" type="video/mp4">
-                                </video>
-								<div class="tv-service-card__overlay"></div>
-								<div class="tv-service-card__content">
-									<h3 class="tv-service-card__title" data-anim="fade-up">Security & Compliance Testing</h3>
-								</div>
-							</a>
-						</div>
-
-						<div class="swiper-slide">
-							<a class="tv-service-card" href="#">
-								<video class="tv-services__video" playsinline muted preload="auto">
-                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/AI.mp4' ); ?>" type="video/mp4">
-                                </video>
-								<div class="tv-service-card__overlay"></div>
-								<div class="tv-service-card__content">
-									<h3 class="tv-service-card__title" data-anim="fade-up">AI/ML & LLM Testing</h3>
-								</div>
-							</a>
-						</div>
-
-						<div class="swiper-slide">
-							<a class="tv-service-card" href="#">
-								<video class="tv-services__video" playsinline muted preload="auto">
                                     <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/APITesting.mp4' ); ?>" type="video/mp4">
                                 </video>
 								<div class="tv-service-card__overlay"></div>
 								<div class="tv-service-card__content">
 									<h3 class="tv-service-card__title" data-anim="fade-up">API & Integration Testing</h3>
+								</div>
+							</a>
+						</div>
+
+						<div class="swiper-slide">
+							<a class="tv-service-card" href="#">
+								<video class="tv-services__video" playsinline muted preload="auto">
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/Security.mp4' ); ?>" type="video/mp4">
+                                </video>
+								<div class="tv-service-card__overlay"></div>
+								<div class="tv-service-card__content">
+									<h3 class="tv-service-card__title" data-anim="fade-up">Security & Compliance Testing</h3>
 								</div>
 							</a>
 						</div>
@@ -272,149 +274,162 @@ get_header( 'v2' );
 		</div>
 	</section>
 
-	<!-- Why Choose Us Section (scroll animation + stack slider) -->
-	<section class="tv-why d-none" id="tvWhy">
+	<!-- TV Why Section -->
+	<section class="tv-why" id="tvWhy">
 		<div class="container">
 			<div class="tv-why__head">
-				<h1><?php esc_html_e( 'Why Choose Us', 'hello-elementor' ); ?></h1>
-				<h2 class="tv-why__title">
+				<h1 data-anim="fade-up"><?php esc_html_e( 'Why Choose Us', 'hello-elementor' ); ?></h1>
+				<h2 class="tv-why__title" data-anim="fade-up">
 					<span class="tv-blue"><?php esc_html_e( 'Let us raise the standard of your software quality,', 'hello-elementor' ); ?></span> <?php esc_html_e( 'and keep it there.', 'hello-elementor' ); ?>
 				</h2>
-				<p class="tv-why__sub">
+				<p class="tv-why__sub" data-anim="fade-up">
 					<?php esc_html_e( 'Partner with us for reliable, efficient, and expert QA solutions that elevate your software quality.', 'hello-elementor' ); ?>
 				</p>
 			</div>
 
-			<div class="tv-why__stage">
-				<!-- Screen 1: Three cards (scroll into view) -->
-				<div class="tv-why__cards">
-					<article class="tv-card tv-card--left" id="tvCardLeft">
-						<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Expertise', 'hello-elementor' ); ?>">
-						<div class="tv-card__content">
+			<div class="tv-why__stage" id="tvWhyStage">
+
+				<!-- FIRST VIEW -->
+				<div class="tv-why__cards" id="tvWhyCards">
+					<article class="tv-whyCard tv-whyCard--left" id="tvWhyCardLeft">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/chose-image-left.png' ); ?>" alt="Expertise">
+						<div class="tv-whyCard__content">
 							<h3><?php esc_html_e( 'Expertise', 'hello-elementor' ); ?></h3>
-							<p><?php esc_html_e( 'Comprehensive QA powered by automation, modern tools, and proven testing practices.', 'hello-elementor' ); ?></p>
 						</div>
 					</article>
 
-					<article class="tv-card tv-card--center" id="tvCardCenter">
-						<img src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Customer-Centric Approach', 'hello-elementor' ); ?>">
-						<div class="tv-card__content">
-							<h3><?php esc_html_e( 'Customer-Centric Approach', 'hello-elementor' ); ?><br><?php esc_html_e( 'Tools', 'hello-elementor' ); ?></h3>
-							<p><?php esc_html_e( 'Tailored QA services with transparent communication and collaboration.', 'hello-elementor' ); ?></p>
-						</div>
+					<article class="tv-whyCard tv-whyCard--center" id="tvWhyCardCenter">
+					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/why-chose-img-01.png' ); ?>" alt="Cutting-Edge Tools">
+					<div class="tv-whyCard__content">
+						<h3><?php esc_html_e( 'Customer-Centric Approach', 'hello-elementor' ); ?><br><?php esc_html_e( 'Tools', 'hello-elementor' ); ?></h3>
+						<p><?php esc_html_e( 'Tailored QA services with transparent communication and collaboration.', 'hello-elementor' ); ?></p>
+					</div>
 					</article>
 
-					<article class="tv-card tv-card--right" id="tvCardRight">
-						<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Commitment to Quality', 'hello-elementor' ); ?>">
-						<div class="tv-card__content">
-							<h3><?php esc_html_e( 'Commitment to Quality', 'hello-elementor' ); ?><br><?php esc_html_e( 'centric', 'hello-elementor' ); ?></h3>
-							<p><?php esc_html_e( 'Rigorous testing standards that ensure reliable and production-ready software.', 'hello-elementor' ); ?></p>
-						</div>
+					<article class="tv-whyCard tv-whyCard--right" id="tvWhyCardRight">
+					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/chose-image-right.png' ); ?>" alt="Customer-centric approach">
+					<div class="tv-whyCard__content">
+						<h3><?php esc_html_e( 'Commitment to Quality', 'hello-elementor' ); ?><br><?php esc_html_e( 'centric', 'hello-elementor' ); ?></h3>
+					</div>
 					</article>
 				</div>
 
-				<!-- Screen 2: Stack slider (revealed on scroll) -->
+				<!-- SECOND VIEW -->
 				<div class="tv-why__sliderWrap" id="tvWhySliderWrap">
 					<div class="tv-stack" id="tvWhyStack">
-						<div class="tv-stack__cards">
+					<div class="tv-stack__cards">
 
-						    <article class="tv-stack__card">
-								<div class="tv-slide2">
-									<div class="tv-slide2__media">
-										<div class="tv-mediaCard">
-											<span class="tv-mediaCard__plate1"></span>
-											<span class="tv-mediaCard__plate2"></span>
-											<div class="tv-mediaCard__inner">
-												<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Expertise', 'hello-elementor' ); ?>">
-												<div class="tv-mediaCard__content">
-													<h3><?php esc_html_e( 'Expertise', 'hello-elementor' ); ?></h3>
-													<p><?php esc_html_e( 'Our experts combine domain knowledge and hands-on QA practices to improve stability and release confidence.', 'hello-elementor' ); ?></p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="tv-slide2__content">
-										<h3 class="tv-slide2__title">
-											<span class="tv-blue"><?php esc_html_e( 'Our Story', 'hello-elementor' ); ?></span>
-											<?php esc_html_e( 'Built on', 'hello-elementor' ); ?>
-											<?php esc_html_e( 'Expertise', 'hello-elementor' ); ?>
-										</h3>
-										<p class="tv-slide2__text">
-											<?php esc_html_e( 'Our team blends structured QA strategy, automation thinking, exploratory testing, and strong communication to support both startups and enterprise delivery teams.', 'hello-elementor' ); ?>
-										</p>
-										<a class="tv-cta-pill" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-											<?php esc_html_e( 'Explore Expertise', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
-										</a>
-									</div>
+						<article class="tv-stack__card">
+						<div class="tv-slide2">
+							<div class="tv-slide2__media">
+							<div class="tv-mediaCard">
+								<span class="tv-mediaCard__plate1"></span>
+								<span class="tv-mediaCard__plate2"></span>
+								<div class="tv-mediaCard__inner">
+								<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/why-chose-img-01.png' ); ?>" alt="Commitment to Quality">
+								<div class="tv-mediaCard__content">
+									<h3>Commitment to Quality</h3>
+									<p>Rigorous testing standards that ensure reliable and production-ready software.</p>
 								</div>
-							</article>
-
-							
-							<article class="tv-stack__card">
-								<div class="tv-slide2">
-									<div class="tv-slide2__media">
-										<div class="tv-mediaCard">
-											<span class="tv-mediaCard__plate1"></span>
-											<span class="tv-mediaCard__plate2"></span>
-											<div class="tv-mediaCard__inner">
-												<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Customer-Centric Approach', 'hello-elementor' ); ?>">
-												<div class="tv-mediaCard__content">
-													<h3><?php esc_html_e( 'Customer-Centric Approach', 'hello-elementor' ); ?></h3>
-													<p><?php esc_html_e( 'Tailored QA services with transparent communication and collaboration.', 'hello-elementor' ); ?></p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="tv-slide2__content">
-										<h3 class="tv-slide2__title">
-											<span class="tv-blue"><?php esc_html_e( 'Our Story', 'hello-elementor' ); ?></span>
-											<?php esc_html_e( 'Focused on', 'hello-elementor' ); ?>
-											<?php esc_html_e( 'Your Success', 'hello-elementor' ); ?>
-										</h3>
-										<p class="tv-slide2__text">
-											<?php esc_html_e( 'We work closely with product and engineering teams to deliver tailored QA services, meaningful testing insights, and clear, timely reporting that align with your business needs.', 'hello-elementor' ); ?>
-										</p>
-										<a class="tv-cta-pill" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-											<?php esc_html_e( 'See Approach', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
-										</a>
-									</div>
 								</div>
-							</article>
+							</div>
+							</div>
 
-							<article class="tv-stack__card is-active">
-								<div class="tv-slide2">
-									<div class="tv-slide2__media">
-										<div class="tv-mediaCard">
-											<span class="tv-mediaCard__plate1"></span>
-											<span class="tv-mediaCard__plate2"></span>
-											<div class="tv-mediaCard__inner">
-												<img src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&w=900&q=80" alt="<?php esc_attr_e( 'Commitment to Quality', 'hello-elementor' ); ?>">
-												<div class="tv-mediaCard__content">
-													<h3><?php esc_html_e( 'Commitment to Quality', 'hello-elementor' ); ?></h3>
-													<p><?php esc_html_e( 'Rigorous testing standards that ensure reliable and production-ready software.', 'hello-elementor' ); ?></p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="tv-slide2__content">
-										<h3 class="tv-slide2__title">
-											<span class="tv-blue"><?php esc_html_e( 'Our Story', 'hello-elementor' ); ?></span>
-											<?php esc_html_e( 'Driven by Quality', 'hello-elementor' ); ?>
-										</h3>
-										<p class="tv-slide2__text">
-											<?php esc_html_e( 'Quality is at the core of everything we do. Through thorough testing practices and continuous improvement, we ensure every release meets the highest standards of reliability and performance.', 'hello-elementor' ); ?>
-										</p>
-										<a class="tv-cta-pill" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-											<?php esc_html_e( 'Learn More', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
-										</a>
-									</div>
-								</div>
-							</article>
-
+							<div class="tv-slide2__content">
+							<h3 class="tv-slide2__title">
+								<span class="tv-blue">Our Story</span>
+								Driven by Quality
+							</h3>
+							<p class="tv-slide2__text">
+								Quality is at the core of everything we do. Through thorough testing practices and continuous improvement, we ensure every release meets the highest standards of reliability and performance.
+							</p>
+							<a class="tv-cta-pill" href="#">
+								Learn More <span class="tv-caret"></span>
+							</a>
+							</div>
 						</div>
-						<div class="tv-stack__dots" aria-label="<?php esc_attr_e( 'Slider dots', 'hello-elementor' ); ?>"></div>
+						</article>
+
+						<article class="tv-stack__card">
+						<div class="tv-slide2">
+							<div class="tv-slide2__media">
+							<div class="tv-mediaCard">
+								<span class="tv-mediaCard__plate1"></span>
+								<span class="tv-mediaCard__plate2"></span>
+								<div class="tv-mediaCard__inner">
+								<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/chose-image-left.png' ); ?>" alt="Expertise">
+								<div class="tv-mediaCard__content">
+									<h3>Expertise</h3>
+									<p>Comprehensive QA powered by automation, modern tools, and proven testing practices.</p>
+								</div>
+								</div>
+							</div>
+							</div>
+
+							<div class="tv-slide2__content">
+							<h3 class="tv-slide2__title">
+								<span class="tv-blue">Our Story</span>
+								Built on
+								Expertise
+							</h3>
+							<p class="tv-slide2__text">
+								We combine proven testing practices, automation frameworks, and industry experience to deliver consistent and dependable software quality.
+							</p>
+							<a class="tv-cta-pill" href="#">
+								Explore Expertise <span class="tv-caret"></span>
+							</a>
+							</div>
+						</div>
+						</article>
+
+						<article class="tv-stack__card">
+						<div class="tv-slide2">
+							<div class="tv-slide2__media">
+							<div class="tv-mediaCard">
+								<span class="tv-mediaCard__plate1"></span>
+								<span class="tv-mediaCard__plate2"></span>
+								<div class="tv-mediaCard__inner">
+								<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/chose-image-right.png' ); ?>" alt="Customer-centric approach">
+								<div class="tv-mediaCard__content">
+									<h3>Customer-<br>centric<br>approach</h3>
+									<p>We adapt our testing process around your goals, timelines, users, and product priorities.</p>
+								</div>
+								</div>
+							</div>
+							</div>
+
+							<div class="tv-slide2__content">
+							<h3 class="tv-slide2__title">
+								<span class="tv-blue">Our Story</span>
+								Focused on
+								Your Success
+							</h3>
+							<p class="tv-slide2__text">
+								We work closely with product and engineering teams to deliver tailored QA services, meaningful testing insights, and clear, timely reporting that align with your business needs.
+							</p>
+							<a class="tv-cta-pill" href="#">
+								See Approach <span class="tv-caret"></span>
+							</a>
+							</div>
+						</div>
+						</article>
+
+					</div>
+
+					<div class="tv-stack__controls">
+						<button class="tv-stack__arrow tv-stack__arrow--prev" type="button" aria-label="Previous slide">
+						<span class="tv-arrow tv-arrow-left"></span>
+						</button>
+
+						<div class="tv-stack__dots"></div>
+
+						<button class="tv-stack__arrow tv-stack__arrow--next" type="button" aria-label="Next slide">
+						<span class="tv-arrow tv-arrow-right"></span>
+						</button>
+					</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</section>
@@ -488,11 +503,54 @@ get_header( 'v2' );
 
 			<div class="swiper tv-testimonials-swiper">
 				<div class="swiper-wrapper" data-anim="cards">
+					<!-- Video 1-->
+					<div class="swiper-slide">
+                            <div class="tv-testimonial">
+                                <!-- VIDEO SLIDE -->
+                                <div class="tv-testimonial__media">
+                                    <video class="tv-testimonial-video" muted controls playsinline preload="auto" autoplay>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/TestivaTestimonial.mp4' ); ?>" type="video/mp4">
+                                    </video>
+                                </div>
 
+                                <div class="tv-testimonial__card">
+                                <p class="tv-testimonial__quote" data-anim="fade-up">
+                                    “The QA services provided by Testiva have always been outstanding. ...they allowed us to release stable software when it counts the most.”
+                                </p>
+
+                                <div class="tv-testimonial__footer">
+                                    <div class="tv-testimonial__name" data-anim="fade-up">Francesco</div>
+                                    <div class="tv-testimonial__role" data-anim="fade-up">Our another template</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+					<!--Video 2-->
+					<div class="swiper-slide">
+                            <div class="tv-testimonial">
+                                <!-- VIDEO SLIDE -->
+                                <div class="tv-testimonial__media">
+                                    <video class="tv-testimonial-video" muted controls playsinline preload="auto" autoplay>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/RokasMMT.mp4' ); ?>" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="tv-testimonial__card">
+                                <p class="tv-testimonial__quote" data-anim="fade-up">
+                                    “The QA services provided by Testiva have always been outstanding. ...they allowed us to release stable software when it counts the most.”
+                                </p>
+
+                                <div class="tv-testimonial__footer">
+                                    <div class="tv-testimonial__name" data-anim="fade-up">Francesco</div>
+                                    <div class="tv-testimonial__role" data-anim="fade-up">Our another template</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/steve.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -512,7 +570,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/chaya.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -531,7 +589,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/hussien.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -550,7 +608,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/murry.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">

@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<!-- Right: CTA -->
 			<div class="d-flex align-items-center d-none d-md-block" data-anim="right">
-				<a class="tv-cta-pill" href="#">
+				<a class="tv-cta-pill" href="<?php echo esc_url( site_url('/contact-us/') ); ?>">
 					<?php esc_html_e( 'Let’s Talk', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
 				</a>
 			</div>
@@ -90,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<!-- Right: CTA (mobile) -->
 					<div class="d-flex align-items-center d-block d-md-none" data-anim="right">
-						<a class="tv-cta-pill" href="#">
+						<a class="tv-cta-pill" href="<?php echo esc_url( site_url('/contact-us/') ); ?>">
 							<?php esc_html_e( 'Let’s Talk', 'hello-elementor' ); ?> <span class="tv-caret" aria-hidden="true"></span>
 						</a>
 					</div>

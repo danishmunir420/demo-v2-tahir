@@ -276,11 +276,54 @@ get_header( 'v2' );
 
 			<div class="swiper tv-testimonials-swiper">
 				<div class="swiper-wrapper" data-anim="cards">
+					<!-- Video 1-->
+					<div class="swiper-slide">
+                            <div class="tv-testimonial">
+                                <!-- VIDEO SLIDE -->
+                                <div class="tv-testimonial__media">
+                                    <video class="tv-testimonial-video" muted controls playsinline preload="auto" autoplay>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/TestivaTestimonial.mp4' ); ?>" type="video/mp4">
+                                    </video>
+                                </div>
 
+                                <div class="tv-testimonial__card">
+                                <p class="tv-testimonial__quote" data-anim="fade-up">
+                                    “The QA services provided by Testiva have always been outstanding. ...they allowed us to release stable software when it counts the most.”
+                                </p>
+
+                                <div class="tv-testimonial__footer">
+                                    <div class="tv-testimonial__name" data-anim="fade-up">Francesco</div>
+                                    <div class="tv-testimonial__role" data-anim="fade-up">Our another template</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+					<!--Video 2-->
+					<div class="swiper-slide">
+                            <div class="tv-testimonial">
+                                <!-- VIDEO SLIDE -->
+                                <div class="tv-testimonial__media">
+                                    <video class="tv-testimonial-video" muted controls playsinline preload="auto" autoplay>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/RokasMMT.mp4' ); ?>" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="tv-testimonial__card">
+                                <p class="tv-testimonial__quote" data-anim="fade-up">
+                                    “The QA services provided by Testiva have always been outstanding. ...they allowed us to release stable software when it counts the most.”
+                                </p>
+
+                                <div class="tv-testimonial__footer">
+                                    <div class="tv-testimonial__name" data-anim="fade-up">Francesco</div>
+                                    <div class="tv-testimonial__role" data-anim="fade-up">Our another template</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/steve.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -300,7 +343,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/chaya.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -319,7 +362,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/hussien.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -338,7 +381,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/murry.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -360,7 +403,6 @@ get_header( 'v2' );
 			</div>
 		</div>
 	</section>
-
 </main>
 
 <?php

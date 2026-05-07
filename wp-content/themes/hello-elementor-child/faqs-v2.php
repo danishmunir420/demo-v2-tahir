@@ -47,6 +47,22 @@ get_header( 'v2.1' );
 				</div>
 
 				<div class="tv-faq__item">
+					<button class="tv-faq__question" type="button" aria-expanded="true" data-anim="fade-up">
+						<span><?php echo wp_kses(
+									__( 'How do you ensure software quality for AI/LLM <br/> applications?', 'hello-elementor' ),
+									array( 'br' => array() )
+								); 
+						?></span>
+						<span class="tv-faq__icon" data-anim="fade-up" aria-hidden="true"></span>
+					</button>
+					<div class="tv-faq__answer">
+						<div class="tv-faq__answer-inner" data-anim="fade-up">
+							<?php esc_html_e( 'At Testiva, AI and LLM applications for accuracy, reliability, safety, and performance. Our testing covers response correctness, hallucinations, bias, fairness, robustness, model drift, output consistency, and security, ensuring AI behaves reliably under real-world scenarios.', 'hello-elementor' ); ?>
+						</div>
+					</div>
+				</div>
+
+				<div class="tv-faq__item">
 					<button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
 						<span>
 								<?php 
@@ -100,7 +116,7 @@ get_header( 'v2.1' );
 						</div>
 					</div>
 				</div>
-
+				
 				<div class="tv-faq__item">
 					<button class="tv-faq__question" type="button" aria-expanded="false" data-anim="fade-up">
 					<span>

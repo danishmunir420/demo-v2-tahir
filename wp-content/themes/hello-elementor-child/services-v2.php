@@ -15,7 +15,7 @@ get_header( 'v2' );
 	<section class="tv-about-banner">
 		<div class="tv-banner-inner">
 			<div class="sub-pg-video-banner">
-					<video class="tv-banner__video" autoplay playsinline muted preload="metadata">
+					<video class="tv-banner__video" autoplay playsinline muted loop preload="metadata">
 					<source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/AboutBanner.mp4' ); ?>" type="video/mp4">
 					</video>
 				</div>
@@ -28,7 +28,7 @@ get_header( 'v2' );
 						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/services-banner-img-01.png' ); ?>" alt="<?php esc_attr_e( 'Services visual', 'hello-elementor' ); ?>" data-anim="image">
 					</div>
 					<h2 data-anim="fade-up">
-						<?php esc_html_e( 'Next- QAGen,', 'hello-elementor' ); ?><br>
+						<?php esc_html_e( 'Next Gen QA', 'hello-elementor' ); ?><br>
 						<?php esc_html_e( 'Flawless Software', 'hello-elementor' ); ?>
 					</h2>
 				</div>
@@ -61,7 +61,7 @@ get_header( 'v2' );
 							<?php esc_html_e( 'Solutions', 'hello-elementor' ); ?>
 						</h3>
 						<p class="tv-strategy-card__text mb-0" data-anim="fade">
-							<?php esc_html_e( 'Each strategy we devise is uniquely sculpted to align with your specific business objectives, ensuring impactful results.', 'hello-elementor' ); ?>
+							<?php esc_html_e( 'Each strategy we devise is uniquely tailored to align with your specific business objectives, ensuring impactful results.', 'hello-elementor' ); ?>
 						</p>
 					</article>
 				</div>
@@ -95,34 +95,35 @@ get_header( 'v2' );
 			<div class="tv-testing-wrap" id="tvTestingStack">
 				<div class="tv-testing-left">
 					<div class="tv-testing-media is-active">
-					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+					  <video class="tv-testing-video" playsinline muted preload="auto">
                                     <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/AutomationTesting.mp4' ); ?>" type="video/mp4">
                       </video>
 					</div>
+					
 
 					<div class="tv-testing-media">
-					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+					  <video class="tv-testing-video" playsinline muted preload="auto">
                                     <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/FunctionalUsabilityTesting.mp4' ); ?>" type="video/mp4">
                       </video>
 					</div>
 
 					<div class="tv-testing-media">
-					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+					  <video class="tv-testing-video" playsinline muted preload="auto">
                                     <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/PerformanceLoadTesting.mp4' ); ?>" type="video/mp4">
                       </video>
 					</div>
 					<div class="tv-testing-media">
-					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+					  <video class="tv-testing-video" playsinline muted preload="auto">
                                     <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/Security.mp4' ); ?>" type="video/mp4">
                       </video>
 					</div>
 					<div class="tv-testing-media">
-					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+					  <video class="tv-testing-video" playsinline muted preload="auto">
                                     <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/AI.mp4' ); ?>" type="video/mp4">
                       </video>
 					</div>
 					<div class="tv-testing-media">
-					  <video class="tv-services__video" playsinline muted preload="auto" loop>
+					  <video class="tv-testing-video" playsinline muted preload="auto">
                                     <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/services/APITesting.mp4' ); ?>" type="video/mp4">
                       </video>
 					</div>
@@ -132,6 +133,17 @@ get_header( 'v2' );
 					<div class="tv-stack tv-stack--testing">
 
 						<div class="tv-stack__cards">
+							<article class="tv-stack__card">
+								<div class="tv-testing-inner text-center">
+									<h3 class="tv-testing-title" data-anim="fade">
+										<span class="tv-testing-blue"><?php esc_html_e( 'AI/LLM Models Testing', 'hello-elementor' ); ?></span>
+									</h3>
+									<p class="tv-testing-text" data-anim="fade">
+										<?php esc_html_e( 'Validate model accuracy, reliability, and safety for AI systems.', 'hello-elementor' ); ?>
+									</p>
+								</div>
+							</article>
+
 							<article class="tv-stack__card">
 								<div class="tv-testing-inner text-center">
 									<h3 class="tv-testing-title" data-anim="fade">
@@ -181,19 +193,8 @@ get_header( 'v2' );
 							<article class="tv-stack__card">
 								<div class="tv-testing-inner text-center">
 									<h3 class="tv-testing-title" data-anim="fade">
-										<span class="tv-testing-blue"><?php esc_html_e( 'AI/ML &', 'hello-elementor' ); ?></span><br>
-										<?php esc_html_e( 'AI/ML & LLM Testing', 'hello-elementor' ); ?>
-									</h3>
-									<p class="tv-testing-text" data-anim="fade">
-										<?php esc_html_e( 'Validate model accuracy, reliability, and safety for AI systems.', 'hello-elementor' ); ?>
-									</p>
-								</div>
-							</article>
-							<article class="tv-stack__card">
-								<div class="tv-testing-inner text-center">
-									<h3 class="tv-testing-title" data-anim="fade">
 										<span class="tv-testing-blue"><?php esc_html_e( 'API &', 'hello-elementor' ); ?></span><br>
-										<?php esc_html_e( '& Integration Testing', 'hello-elementor' ); ?>
+										<?php esc_html_e( 'Integration Testing', 'hello-elementor' ); ?>
 									</h3>
 									<p class="tv-testing-text" data-anim="fade">
 										<?php esc_html_e( 'Verify seamless communication between systems and services.', 'hello-elementor' ); ?>
@@ -228,11 +229,54 @@ get_header( 'v2' );
 
 			<div class="swiper tv-testimonials-swiper">
 				<div class="swiper-wrapper" data-anim="cards">
+					<!-- Video 1-->
+					<div class="swiper-slide">
+                            <div class="tv-testimonial">
+                                <!-- VIDEO SLIDE -->
+                                <div class="tv-testimonial__media">
+                                    <video class="tv-testimonial-video" muted controls playsinline preload="auto" autoplay>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/TestivaTestimonial.mp4' ); ?>" type="video/mp4">
+                                    </video>
+                                </div>
 
+                                <div class="tv-testimonial__card">
+                                <p class="tv-testimonial__quote" data-anim="fade-up">
+                                    “The QA services provided by Testiva have always been outstanding. ...they allowed us to release stable software when it counts the most.”
+                                </p>
+
+                                <div class="tv-testimonial__footer">
+                                    <div class="tv-testimonial__name" data-anim="fade-up">Francesco</div>
+                                    <div class="tv-testimonial__role" data-anim="fade-up">Our another template</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+					<!--Video 2-->
+					<div class="swiper-slide">
+                            <div class="tv-testimonial">
+                                <!-- VIDEO SLIDE -->
+                                <div class="tv-testimonial__media">
+                                    <video class="tv-testimonial-video" muted controls playsinline preload="auto" autoplay>
+                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/RokasMMT.mp4' ); ?>" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="tv-testimonial__card">
+                                <p class="tv-testimonial__quote" data-anim="fade-up">
+                                    “The QA services provided by Testiva have always been outstanding. ...they allowed us to release stable software when it counts the most.”
+                                </p>
+
+                                <div class="tv-testimonial__footer">
+                                    <div class="tv-testimonial__name" data-anim="fade-up">Francesco</div>
+                                    <div class="tv-testimonial__role" data-anim="fade-up">Our another template</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/steve.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -252,7 +296,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/chaya.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -271,7 +315,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/hussien.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -290,7 +334,7 @@ get_header( 'v2' );
 					<div class="swiper-slide">
 						<div class="tv-testimonial">
 							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/testimonial-img.jpg' ); ?>" alt="Client photo">
+								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/murry.jpg' ); ?>" alt="Client photo">
 							</div>
 
 							<div class="tv-testimonial__card">
@@ -312,7 +356,6 @@ get_header( 'v2' );
 			</div>
 		</div>
 	</section>
-
 </main>
 
 <?php

@@ -48,11 +48,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="col-12 col-lg-3">
 				<h3 class="tv-footer__title" data-anim="fade-up"><?php esc_html_e( 'SERVICES', 'hello-elementor' ); ?></h3>
 				<ul class="tv-footer__list">
-					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/ai-driven-automation-testing/') ); ?>"><?php esc_html_e( 'AI Driven Automation Testing', 'hello-elementor' ); ?></a></li>
+					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/ai-driven-automation-testing/') ); ?>"><?php esc_html_e( 'AI/LLM Models Testing', 'hello-elementor' ); ?></a></li>
 					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/automation-testing/') ); ?>"><?php esc_html_e( 'Automation Testing', 'hello-elementor' ); ?></a></li>
-					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/performance-testing/') ); ?>"><?php esc_html_e( 'Performance Testing', 'hello-elementor' ); ?></a></li>
-					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/mobile-app-testing/') ); ?>"><?php esc_html_e( 'Mobile App Testing', 'hello-elementor' ); ?></a></li>
-					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/compatibility-testing/') ); ?>"><?php esc_html_e( 'Compatibility Testing', 'hello-elementor' ); ?></a></li>
+					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/functional-testing/') ); ?>"><?php esc_html_e( 'Functional & Usability Testing', 'hello-elementor' ); ?></a></li>
+					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/performance-testing/') ); ?>"><?php esc_html_e( 'Performance & Load Testing', 'hello-elementor' ); ?></a></li>
+					<li data-anim="fade-up"><a href="#"><?php esc_html_e( 'API & Integration Testing', 'hello-elementor' ); ?></a></li>
+					<li data-anim="fade-up"><a href="#"><?php esc_html_e( 'Security & Compliance Testing', 'hello-elementor' ); ?></a></li>
 				</ul>
 			</div>
 
@@ -76,18 +77,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</ul>
 
 				<div class="tv-footer__social" data-anim="cards">
+					<a data-anim="fade-up" target="_blank" href="https://www.linkedin.com/company/testiva/?viewAsMember=true" aria-label="<?php esc_attr_e( 'Linkedin', 'hello-elementor' ); ?>" class="tv-footer__icon">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/linkedin-icon.svg' ); ?>" alt="<?php esc_attr_e( 'YouTube', 'hello-elementor' ); ?>">
+					</a>
+
+					<a data-anim="fade-up" target="_blank" href="https://x.com/sajidtestiva?t=M8tYCPj5yAwfekCmBkIFrA&s=09" aria-label="<?php esc_attr_e( 'X', 'hello-elementor' ); ?>" class="tv-footer__icon">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/x-icon.svg' ); ?>" alt="<?php esc_attr_e( 'X', 'hello-elementor' ); ?>">
+					</a>
+
 					<a data-anim="fade-up" target="_blank" href="https://www.facebook.com/share/1A733q8qww/" aria-label="<?php esc_attr_e( 'Facebook', 'hello-elementor' ); ?>" class="tv-footer__icon">
 						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/fb-icon.svg' ); ?>" alt="<?php esc_attr_e( 'Facebook', 'hello-elementor' ); ?>">
 					</a>
 					<a data-anim="fade-up" target="_blank" href="https://www.linkedin.com/company/testiva/?viewAsMember=true" aria-label="<?php esc_attr_e( 'Instagram', 'hello-elementor' ); ?>" class="tv-footer__icon">
 						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/instagram-icon.svg' ); ?>" alt="<?php esc_attr_e( 'Instagram', 'hello-elementor' ); ?>">
 					</a>
-					<a data-anim="fade-up" target="_blank" href="https://x.com/sajidtestiva?t=M8tYCPj5yAwfekCmBkIFrA&s=09" aria-label="<?php esc_attr_e( 'X', 'hello-elementor' ); ?>" class="tv-footer__icon">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/x-icon.svg' ); ?>" alt="<?php esc_attr_e( 'X', 'hello-elementor' ); ?>">
-					</a>
-					<a data-anim="fade-up" target="_blank" href="#" aria-label="<?php esc_attr_e( 'YouTube', 'hello-elementor' ); ?>" class="tv-footer__icon">
-						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/youTube-icon.svg' ); ?>" alt="<?php esc_attr_e( 'YouTube', 'hello-elementor' ); ?>">
-					</a>
+					
+					
 				</div>
 
 				<div data-anim="fade-up" class="tv-footer__copy" data-anim="right">
