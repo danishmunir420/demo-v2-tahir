@@ -44,47 +44,40 @@ get_header( 'v2.1' );
 				<p class="tv-section__subtitle" data-anim="fade-up">We support every stage of product development with reliable, domain-aligned quality assurance.</p>
 			</div>
 
-			<div class="row g-4 justify-content-center">
-				<div class="col-md-6 col-lg-4">
-					<article class="tv-about-belief-card" data-anim="left">
-						<div class="tv-about-belief-card__icon" aria-hidden="true"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/b-icon-01.svg' ); ?>" alt=""></div>
-						<p class="tv-about-belief-card__text">Telemedicine & Virtual Care</p>
-					</article>
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<article class="tv-about-belief-card" data-anim="zoom">
-						<div class="tv-about-belief-card__icon" aria-hidden="true"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/b-icon-02.svg' ); ?>" alt=""></div>
-						<p class="tv-about-belief-card__text">Electronic Health Records (EHR/EMR)</p>
-					</article>
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<article class="tv-about-belief-card" data-anim="right">
-						<div class="tv-about-belief-card__icon" aria-hidden="true"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/b-icon-03.svg' ); ?>" alt=""></div>
-						<p class="tv-about-belief-card__text">MedTech / Medical Devices</p>
-					</article>
-				</div>
-			</div>
+			<!--Cards-->
+        <div class="tv-healthcare-grid__wrap">
 
-			<div class="row g-4 justify-content-center">
-				<div class="col-md-6 col-lg-4">
-					<article class="tv-about-belief-card" data-anim="left">
-						<div class="tv-about-belief-card__icon" aria-hidden="true"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/b-icon-01.svg' ); ?>" alt=""></div>
-						<p class="tv-about-belief-card__text">Wellness & Fitness Apps</p>
-					</article>
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<article class="tv-about-belief-card" data-anim="zoom">
-						<div class="tv-about-belief-card__icon" aria-hidden="true"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/b-icon-02.svg' ); ?>" alt=""></div>
-						<p class="tv-about-belief-card__text">Home Healthcare & Digital Therapeutics</p>
-					</article>
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<article class="tv-about-belief-card" data-anim="right">
-						<div class="tv-about-belief-card__icon" aria-hidden="true"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/b-icon-03.svg' ); ?>" alt=""></div>
-						<p class="tv-about-belief-card__text">AI & Data Analytics in healthtech</p>
-					</article>
-				</div>
-			</div>
+          <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.3">
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-01.jpg' ); ?>" alt="Telemedicine & Virtual Care">
+            <div class="tv-healthcare-card__title">Telemedicine &amp; Virtual Care</div>
+          </article>
+
+          <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.6">
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-02.jpg' ); ?>" alt="Electronic Health Records">
+            <div class="tv-healthcare-card__title">Electronic Health Records (EHR/EMR)</div>
+          </article>
+
+          <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.9">
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-03.jpg' ); ?>" alt="MedTech and Medical Devices">
+            <div class="tv-healthcare-card__title">MedTech and Medical Devices</div>
+          </article>
+
+          <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.3">
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-04.jpg' ); ?>" alt="Wellness & Fitness Apps">
+            <div class="tv-healthcare-card__title">Wellness &amp; Fitness Apps</div>
+          </article>
+
+          <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.6">
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-05.jpg' ); ?>" alt="Home Healthcare & Digital Care">
+            <div class="tv-healthcare-card__title">Home Healthcare &amp; Digital Care</div>
+          </article>
+
+          <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.9">
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-06.jpg' ); ?>" alt="Remote patient monitoring">
+            <div class="tv-healthcare-card__title">Remote patient monitoring</div>
+          </article>
+
+        </div>
 		</div>
 	</section>
 
@@ -101,6 +94,57 @@ get_header( 'v2.1' );
 			</div>
 		</div>
 	</section>
+	
+	<!-- /How it work/ -->
+    <section class="tv-process-steps">
+      <div class="container">
+        <div class="tv-process-steps__head">
+          <span class="tv-process-steps__eyebrow" data-anim="fade-up">HOW IT WORKS</span>
+          <h2 data-anim="fade-up">Up and running in 4 simple steps</h2>
+          <p data-anim="fade-up">
+            From first contact to your first test report — a process designed to be fast,
+            transparent and low-friction.
+          </p>
+        </div>
+
+        <div class="tv-process-steps__grid">
+          <article class="tv-process-step">
+            <div class="tv-process-step__icon">
+              <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dsicovery-icon.svg' ); ?>" alt="">
+            </div>
+            <h3>Discovery Call</h3>
+            <p>We learn your platform, tech stack, and testing priorities in a focused 30-minute session.</p>
+          </article>
+
+          <article class="tv-process-step">
+            <div class="tv-process-step__arrow"></div>
+            <div class="tv-process-step__icon">
+              <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/QA-audit-icon.svg' ); ?>" alt="">
+            </div>
+            <h3>QA Audit &amp; Plan</h3>
+            <p>We audit your current test coverage and deliver a tailored testing strategy and test case plan.</p>
+          </article>
+
+          <article class="tv-process-step">
+            <div class="tv-process-step__arrow"></div>
+            <div class="tv-process-step__icon">
+              <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/test-EX-icon.svg' ); ?>" alt="">
+            </div>
+            <h3>Test Execution</h3>
+            <p>Our team runs manual and automated tests, logging every defect with full reproduction steps.</p>
+          </article>
+
+          <article class="tv-process-step">
+            <div class="tv-process-step__arrow"></div>
+            <div class="tv-process-step__icon">
+              <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/report-icon.svg' ); ?>" alt="">
+            </div>
+            <h3>Report &amp; Iterate</h3>
+            <p>You receive a detailed report with severity ratings, trends, and recommendations for the next sprint.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
 	<section class="tv-trusted" data-anim="section">
 		<div class="container">

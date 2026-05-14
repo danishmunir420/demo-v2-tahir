@@ -1945,6 +1945,102 @@ function initWhyCardsToStack() {
 //     onEnterBack: () => tl.restart()
 //   });
 // }
+
+function initProcessStepsAnimation() {
+  const section = document.querySelector(".tv-process-steps");
+  const steps = Array.from(document.querySelectorAll(".tv-process-step"));
+
+  if (!section || !steps.length) return;
+
+  // If GSAP/ScrollTrigger is missing, keep content visible
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+    steps.forEach((step) => {
+      step.style.opacity = "1";
+      step.style.transform = "none";
+
+      const parts = step.querySelectorAll(".tv-process-step__icon, h3, p, .tv-process-step__arrow");
+      parts.forEach((part) => {
+        part.style.opacity = "1";
+        part.style.transform = "none";
+      });
+    });
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  steps.forEach((step) => {
+    const icon = step.querySelector(".tv-process-step__icon");
+    const title = step.querySelector("h3");
+    const text = step.querySelector("p");
+    const arrow = step.querySelector(".tv-process-step__arrow");
+
+    gsap.set(step, { opacity: 1, y: 0 });
+
+    gsap.set([icon, title, text].filter(Boolean), {
+      opacity: 0,
+      y: 35
+    });
+
+    if (arrow) {
+      gsap.set(arrow, {
+        opacity: 0,
+        scaleX: 0,
+        transformOrigin: "left center"
+      });
+    }
+  });
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "top 75%",
+      once: true
+    }
+  });
+
+  steps.forEach((step, index) => {
+    const icon = step.querySelector(".tv-process-step__icon");
+    const title = step.querySelector("h3");
+    const text = step.querySelector("p");
+    const arrow = step.querySelector(".tv-process-step__arrow");
+
+    // show arrow first, because this arrow visually points to this step
+    if (arrow) {
+      tl.to(arrow, {
+        opacity: 1,
+        scaleX: 1,
+        duration: 0.45,
+        ease: "power2.out"
+      });
+    }
+
+    tl.to(icon, {
+      opacity: 1,
+      y: 0,
+      duration: 0.65,
+      ease: "power3.out"
+    }, arrow ? "-=0.15" : undefined);
+
+    tl.to(title, {
+      opacity: 1,
+      y: 0,
+      duration: 0.55,
+      ease: "power3.out"
+    }, "-=0.25");
+
+    tl.to(text, {
+      opacity: 1,
+      y: 0,
+      duration: 0.55,
+      ease: "power3.out"
+    }, "-=0.2");
+
+    tl.to({}, { duration: 0.18 });
+  });
+}
+
+
   // =========================================================
   // FINAL CUSTOM INITS
   // =========================================================
@@ -1953,6 +2049,7 @@ function initWhyCardsToStack() {
   initLogoReveal();
   initCaseFilter();
   initWhyCardsToStack();
+  initProcessStepsAnimation();
     //initHowWeWorkAnimation();
 
     setTimeout(function () {
