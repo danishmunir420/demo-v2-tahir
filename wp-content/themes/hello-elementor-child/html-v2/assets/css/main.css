@@ -1560,6 +1560,132 @@ button:focus,
   backdrop-filter: blur(6px);
 }
 
+
+
+
+
+
+
+
+.whytestivaleftsection{}
+.whytestivaleftsection .tv-values__title{max-width:100%;}
+.toolsweusesection.tv-trusted.trustedteamsection{padding-bottom:20px;}
+.headingtopsection{}
+.headingtopsection h2.tv-section__title{line-height:70px;font-size:55px;}
+.toolsweusesection.tv-trusted{}
+.toolsweusesection.tv-trusted .tv-trusted__title{color:rgba(66, 66, 66, 1);}
+.toolsweusesection.tv-trusted > div > p{text-align:center;color:#000;width:50%;max-width: 40%;}
+.tv-plan-card.tvplancardautoheight{margin-bottom:15px;height:auto;min-height:auto;background: #F9FAFB;}
+.tv-plan-card.tvplancardautoheight .tv-plan-card__inner{height:auto;padding:20px 15px;}
+.tv-plan-card.tvplancardautoheight .tv-plan-card__inner .tv-plan-card__price{margin-bottom:0px;}
+.tvresourcemainsection .tv-plan-card.tvplancardautoheight .tv-plan-card__inner .tv-plan-card__footer .tv-plan-card__btn { min-width:100%; border-radius:8px;height:49px;border:1px solid rgba(16, 24, 40, 1) !important;background:rgba(16, 24, 40, 1) !important;color:#fff !important;font-size: 16px;}
+
+.tvresourcemainsection .tv-plan-card.tvplancardautoheight.tv-plan-card--featured .tv-plan-card__inner .tv-plan-card__footer .tv-plan-card__btn{background:rgba(0, 82, 156, 1) !important;border:1px solid rgba(0, 82, 156, 1) !important;}
+
+
+
+#tablecomparisonwrapper .tv-resource-plans__grid.tvresourcemainsection{display: table;grid-template-columns: auto;width: 100%;margin-left: 0px;margin-right: 0px;}
+
+
+.tv-regulated-env__logos#tv-regulated-env__logos > img{width:160px;}
+.tv-regulated-env__logos#tv-regulated-env__logos {gap:50px;}
+#tablecomparisonwrapper.comparison-wrapper{margin-top:50px;background:#fff;border-radius:0px;}
+#tablecomparisonwrapper.comparison-wrapper .table{margin-bottom:0;}
+#tablecomparisonwrapper.comparison-wrapper .table td.check	{color:rgb(0, 166, 62); text-align:center;}
+#tablecomparisonwrapper.comparison-wrapper .table td.check img{width:16px;text-align:center;margin-left: auto;margin-right: auto;}
+#tablecomparisonwrapper.comparison-wrapper .table td.dash{text-align:center;}
+#tablecomparisonwrapper.comparison-wrapper .table td.dash img{width:16px;text-align:center;margin-left: auto;margin-right: auto;}
+#tablecomparisonwrapper.comparison-wrapper .table td{color: rgb(0, 166, 62);font-size: 16px;line-height: 16px;font-family: Inter;font-weight: 300;border-bottom: 1px solid rgb(243, 244, 246);background: transparent;color:rgba(0, 0, 0, 1);border-top: 0px;border-left: 0px;border-right: 0px;}
+#tablecomparisonwrapper.comparison-wrapper .table th, #tablecomparisonwrapper.comparison-wrapper .table td{vertical-align:middle;padding:16px 18px;}
+#tablecomparisonwrapper.comparison-wrapper .table thead th{border:0px;font-weight: 500;border-radius:4px;}
+
+#tablecomparisonwrapper.comparison-wrapper .table td.tdmain{border:0px;background:rgb(237, 237, 237);text-align:center;white-space:nowrap;font-size: 18px;line-height: 18px;font-family: Inter;font-weight: 600;border-radius:4px;}
+.feature-col{font-weight:500;color:#222;}
+section-title td{background:#efefef;font-weight:700;text-transform:uppercase;color:#111;padding:12px 18px;font-size:15px;}
+.text-center-custom{text-align:center;font-weight:500;}
+
+.paddingleftright{padding-left:120px;padding-right:120px;}
+.herosectionmainwrapper .tv-healthcare-hero__content{width: 93%;text-align: left;margin: 0px;}
+.subpagesheromainsection.tv-healthcare-herosection	{background:#fff url(https://testiva.io/wp-content/themes/hello-elementor-child/html-v2/assets/images/homeheromainbg.webp); background-position:center center;background-repeat:no-repeat;background-size:100%;}
+.faqmainsection.tv-faq{padding:100px 0;background:#fff;}
+.tv-about-belief.tv-health-about.whyitmattersection{padding-top:80px;padding-bottom: 40px;}
+.subpagesheromainsection.tv-healthcare-herosection{text-align:left;padding-top:200px;}
+.subpagesheromainsection.tv-healthcare-herosection{padding-bottom: 120px;}
+.subpagesheromainsection.tv-healthcare-herosection .tv-healthcare-hero__title{ font-size:64px;line-height:74px;letter-spacing:-2px; color:#2F1F33;text-align:left;}
+.subpagesheromainsection.tv-healthcare-herosection .tv-healthcare-hero__subtitle{text-align:left}
+.subpagesheromainsection.tv-healthcare-herosection .tv-healthcare-hero__actions{justify-content: start;}
+.subpagesheromainsection.tv-healthcare-herosection .tv-healthcare-hero__actions .tv-btn{font-size:18px;gap:15px;padding:20px 30px;}
+.subpagesheromainsection.tv-healthcare-herosection .tv-healthcare-hero__actions .tv-btn.tv-btn--outline-dark{}
+.subpagesheromainsection.tv-healthcare-herosection .tv-healthcare-hero__actions .tv-btn.tv-btn--primary{}
+.subpagesheromainsection.tv-healthcare-herosection .herosectionmainwrapper{}
+.subpagesheromainsection.tv-healthcare-herosection .herosectionmainwrapper .tv-healthcare-hero__stats{}
+.subpagesheromainsection.tv-healthcare-herosection .herosectionmainwrapper .tv-healthcare-hero__stats .tv-stat{}
+.subpagesheromainsection.tv-healthcare-herosection .herosectionmainwrapper .tv-healthcare-hero__stats .tv-stat h3{font-size:38px;line-height:42px;color:rgba(20, 20, 20, 1);}
+.subpagesheromainsection.tv-healthcare-herosection .herosectionmainwrapper .tv-healthcare-hero__stats .tv-stat p{font-size:18px;line-height:22px;color:rgba(20, 20, 20, 1);}
+.tv-process-steps__eyebrow.sectiontopsubheading{background:rgba(66, 66, 66, 1);color:#fff;text-transform:uppercase}
+
+.twocolssectionofplatform{}
+.twocolssectionofplatform .platformsfourrowssection{}
+.twocolssectionofplatform .platformsfourrowssection .fourrowsswrapper:last-child {margin-bottom:0px;}
+.twocolssectionofplatform .platformsfourrowssection .fourrowsswrapper:first-child {margin-top:0px;}
+.twocolssectionofplatform .platformsfourrowssection .fourrowsswrapper{background: rgba(241, 231, 231, 1);border-radius: 20px;display: table;width: 100%;padding: 20px;margin: 20px 0px;}
+.twocolssectionofplatform .platformsfourrowssection .fourrowsswrapper .fourrowsrightcontent{width: 94%;float: left;padding-left: 15px;}
+.twocolssectionofplatform .platformsfourrowssection .fourrowsswrapper img{width: 20px;float: left;}
+.twocolssectionofplatform .platformsfourrowssection .fourrowsswrapper h6{font-size:18px;line-height:22px;color:rgba(0, 0, 0, 1);font-weight:700;margin-bottom: 10px;}
+.twocolssectionofplatform .platformsfourrowssection .fourrowsswrapper p{font-size:16px;line-height:22px;color:rgba(0, 0, 0, 1);font-weight:400;margin:0px;}
+.protectplatformsection{background:rgba(0, 82, 156, 1);border-radius:20px;padding:30px;}
+.protectplatformsection h4{font-size:35px;line-height:42px;color:#fff;font-weight:600;letter-spacing:-0.5px;}
+.protectplatformsection ul{list-style:none;padding:0px;margin:0px;}
+.protectplatformsection ul li{background:url(https://testiva.io/wp-content/themes/hello-elementor-child/html-v2/assets/images/ticklisticon.svg); background-position:0px 4px;background-size:16px; background-repeat: no-repeat;  font-size:16px;line-height:25px; color:#fff;font-weight:500; letter-spacing:-0.5px; padding-left: 40px; margin-top: 26px;}
+.protectplatformsection ul li strong{font-weight:700;}
+
+.flip-card {perspective: 1000px;width: 100%;height: 280px;margin: 8px 0px;}
+.flip-card-inner {position: relative;width: 100%;height: 100%;transition: transform 0.8s ease-in-out;transform-style: preserve-3d;}
+.flip-card:hover .flip-card-inner {transform: rotateY(180deg);}
+.flipeffectwrapperbefore, .flipeffectwrapperafter {position: absolute; width: 100%;height: 100%;border-radius: 15px;backface-visibility: hidden;-webkit-backface-visibility: hidden; display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 25px;text-align: center;box-sizing: border-box;}
+.flipeffectwrapperbefore{background: #fff;border-radius: 30px;border: 1px solid rgba(175, 175, 175, 1);box-shadow: none;padding-left: 60px;padding-right: 60px;}
+.flipeffectwrapperbefore img {max-width: 80px;margin-bottom: 20px;}
+.flipeffectwrapperbefore h6 {margin: 0;font-size: 20px;font-weight: 600;letter-spacing:-0.5px;}
+.flipeffectwrapperafter {background: rgba(0, 82, 156, 1);color: #fff; transform: rotateY(180deg);border-radius: 30px;border: 1px solid rgba(0, 82, 156, 1);}
+.flipeffectwrapperafter p {margin: 0;font-size: 18px;line-height: 24px;letter-spacing:-0.5px;}
+.tv-plan-card.notfeaturedpackage{}
+.tv-plan-card.notfeaturedpackage .tv-plan-card__badge{background:rgba(104, 104, 104, 1);}
+.getintouchmainsection{background:rgba(65, 65, 65, 1);padding:120px 0px;}
+.getintouchmainsection .wpcf7 label{color:#fff;}
+
+.getintouchmainsection input[type="date"], .getintouchmainsection input[type="email"], .getintouchmainsection input[type="number"], .getintouchmainsection input[type="password"], .getintouchmainsection input[type="search"], .getintouchmainsection input[type="tel"], .getintouchmainsection input[type="text"], .getintouchmainsection input[type="url"], .getintouchmainsection select, .getintouchmainsection textarea{background:#fff;}
+
+.getintouchmainsection .tv-contact-cta__form-wrap{padding-left:50px;}
+
+.getintouchmainsection .getintouchmainwrapper{}
+.getintouchmainsection .getintouchmainwrapper .getintouchleftcon{width: 85%;}
+.getintouchmainsection .tv-contact-cta__actions{justify-content: start;}
+.getintouchmainsection .getintouchmainwrapper .getintouchleftcon h3{color:#fff;font-weight:600;font-size:48px;line-height:54px;margin-bottom:15px;letter-spacing:-1px;}
+.getintouchmainsection .getintouchmainwrapper .getintouchleftcon p{color:#fff;font-weight:600;font-size:18px;line-height:26px;margin-bottom:15px;letter-spacing:-1px;}
+.getintouchmainsection .tv-process-steps__eyebrow.sectiontopsubheading{background: #fff;
+  color: rgb(65, 65, 65);}
+.getintouchdetailscon{}
+.getintouchdetailscon .gitdetailswrapper{display: table;width: 100%;padding: 15px 0px;margin: 0px 0px;}
+.getintouchdetailscon .gitdetailswrapper .getintouchicon{float: left;}
+.getintouchdetailscon .gitdetailswrapper .getintouchicon img{width: 48px;height:48px;background:rgba(0, 82, 156, 1);border-radius:100px;padding: 10px;text-align: center;}
+.getintouchdetailscon .gitdetailswrapper .gitdetailcontent{width: 88%;float: left;padding-left: 15px;}
+.getintouchdetailscon .gitdetailswrapper .gitdetailcontent h6{font-size:18px;line-height:18px;color:rgba(148, 148, 148, 1);font-weight:600;letter-spacing:-0.5px;margin:0px 0px 5px 0px;}
+.getintouchdetailscon .gitdetailswrapper .gitdetailcontent p{font-size:18px;line-height:18px;color:#fff;font-weight:500;letter-spacing:-0.5px;margin:0px 0px 0px 0px;}
+.getintouchdetailscon .gitdetailswrapper .gitdetailcontent p a{color:#fff;text-decoration:none;}
+.slider-wrapper.herorightsliderwrapper {width: 100%;max-width: 900px;height: 420px;overflow: hidden;position: relative;}
+.slider-track { will-change: transform;display: flex;flex-direction: column;gap: 22px;transition: transform 0.8s ease-in-out;}
+.qa-card.active {background: #fff;border:1px solid rgba(0, 82, 156, 0.66);opacity: 1;box-shadow: 0 10px 30px rgba(79,137,187,0.08);}.qa-card {min-height: auto;border:1px solid rgba(0, 82, 156, 0.66);border-radius: 20px; background: rgba(255,255,255,0.65);padding: 20px 30px;display: flex;flex-direction: column;justify-content: center;transition: all 0.5s ease;opacity: 0.30;}
+.qa-card h2 {font-size: 20px;line-height:25px;font-weight: 700;letter-spacing:-0.48px; color: #000;margin-bottom: 10px;}
+.qa-card p {font-size: 16px;line-height:24px;color: #000;margin:0px;letter-spacing:-0.48px;}
+.qa-card.active h2 {color: #000;}
+.qa-card.active p {color: #000;}
+
+
+
+
+
+
+
 /* Mobile spacing */
 @media (max-width: 991.98px) {
   .tv-sub-hero {
@@ -5819,4 +5945,51 @@ textarea {
     font-size: 34px;
   }
 }
+
+
+
+
+
+
+
+@media screen and (min-width:240px) and (max-width:768px){
+
+.headingtopsection h2.tv-section__title, .tv-testimonials__title, .headingtopsection h2.tv-section__title {line-height: 50px;font-size: 42px;}	
+.tv-section__subtitle{max-width:100%;width:100%;font-size:18px;line-height:26px;}	
+.tv-regulated-env__logos#tv-regulated-env__logos > img{width:50px;}
+.tv-resource-plans__grid.tvresourcemainsection{grid-template-columns: repeat(4, minmax(0, 1fr));margin-left: 0px;margin-right: 0px;max-width: 100%;}
+.tv-testimonial__quote{font-size:24px;line-height:34px;}
+.tv-section.tv-selected-work .tv-case-card__body{margin-bottom:30px;}
+
+
+.getintouchdetailscon .gitdetailswrapper{display:flex;}
+.getintouchdetailscon .gitdetailswrapper .gitdetailcontent h6{font-size:16px;line-height:16px;}
+.getintouchdetailscon .gitdetailswrapper .gitdetailcontent p{font-size:16px;line-height:20px;}
+.getintouchmainsection .tv-contact-cta__form-wrap{padding-left:0px;}	
+.getintouchmainsection .getintouchmainwrapper .getintouchleftcon p{letter-spacing: -0.1px;}	
+.getintouchmainsection .getintouchmainwrapper .getintouchleftcon h3{font-size:42px;line-height:48px;}
+.getintouchmainsection .getintouchmainwrapper .getintouchleftcon{width:100%;}	
+.questionofdiv{white-space: initial;}
+.getintouchmainsection{padding:80px 0px;}	
+.qa-card h2{font-size:18px;line-height:24px;}	
+.subpagesheromainsection.tv-healthcare-herosection.paddingleftright{padding-left:0px;padding-right:0px;}		
+.paddingleftright{padding-left:0px;padding-right:0px;}	
+.subpagesheromainsection.tv-healthcare-herosection{padding-top:150px;}
+.herosectionmainwrapper .tv-healthcare-hero__content{width:100%;}
+.subpagesheromainsection.tv-healthcare-herosection .tv-healthcare-hero__title{font-size: 48px;line-height: 60px;}
+.subpagesheromainsection.tv-healthcare-herosection .tv-healthcare-hero__actions .tv-btn{font-size:16px;height:55px;padding: 15px 25px;}
+.subpagesheromainsection.tv-healthcare-herosection .herosectionmainwrapper .tv-healthcare-hero__stats{margin-bottom:50px;}
+.subpagesheromainsection.tv-healthcare-herosection .herosectionmainwrapper .tv-healthcare-hero__stats .tv-stat h3{font-size:32px;}
+.subpagesheromainsection.tv-healthcare-herosection{padding-bottom: 80px;}
+.tv-about-belief.tv-health-about.whyitmattersection{padding-top:40px;}
+.twocolssectionofplatform .platformsfourrowssection .fourrowsswrapper .fourrowsrightcontent{width:90%;}
+.twocolssectionofplatform .platformsfourrowssection{margin-bottom:50px;}
+.protectplatformsection{padding:20px;}
+.protectplatformsection h4{font-size: 30px;line-height: 38px;}
+.protectplatformsection ul li{margin-top: 15px;}
+.faqmainsection.tv-faq{padding-top:50px;padding-bottom:50px;}
+
+}
+
+
 /*# sourceMappingURL=main.css.map */
