@@ -56,13 +56,26 @@ function hello_elementor_child_v2_assets() {
 	if (
 		! is_page_template( 'home-v2.php' ) &&
 		! is_page_template( 'services-v2.php' ) &&
+		! is_page_template( 'elementor-page-v2.php' ) &&
 		! is_page_template( 'about-v2.php' ) &&
 		! is_page_template( 'case-studies-v2.php' ) &&
 		! is_page_template( 'faqs-v2.php' ) &&
 		! is_page_template( 'contact-us-v2.php' ) &&
 		! is_page_template( 'healthcare-qa-v2.php' ) &&
 		! is_page_template( 'healthcare-ai.php' ) &&
-		! is_page_template( 'healthcare-startups.php' )
+		! is_page_template( 'healthcare-startups.php' ) &&
+		! is_page_template( 'tele-medicine-startups.php' ) &&
+		! is_page_template( 'electronic-health-records-startups.php' ) &&
+		! is_page_template( 'medtech-and-medical-devices-startups.php' ) &&
+		! is_page_template( 'wellness-fitness-apps-startups.php' ) &&
+		! is_page_template( 'home-healthcare-startups.php' ) &&
+		! is_page_template( 'remote-patient-monitoring-startups.php' ) &&
+		! is_page_template( 'llm-testing.php' ) &&
+		! is_page_template( 'chatbots-testing.php' ) &&
+		! is_page_template( 'rag-system-testing.php' ) &&
+		! is_page_template( 'ai-agents-testing.php' ) &&
+		! is_page_template( 'ai-voice-agents-testing.php' ) &&
+		! is_page_template( 'ai-note-taking-testing.php' )
 	) {
 		return;
 	}

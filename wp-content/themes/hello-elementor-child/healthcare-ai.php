@@ -14,7 +14,8 @@ get_header( 'v2.1' );
 		<div class="container">
 			<div class="tv-healthcare-hero__content">
 				<h1 class="tv-healthcare-hero__title" data-anim="fade-up"><span class="tv-blue">Ship Reliable AI, </span>Not Just Smart AI</h1>
-				<p class="tv-healthcare-hero__subtitle" data-anim="fade-up">We help teams build trustworthy AI by testing  AI/LLM applications for hallucinations, accuracy, safety, and consistency, using automated evaluations and real-world scenarios.</p>
+				<p class="tv-healthcare-hero__subtitle" data-anim="fade-up">We help teams build trustworthy AI by testing  AI/LLM applications for hallucinations, accuracy, safety, and consistency, using automated evaluations and real-world scenarios.
+</p>
 				<ul class="tv-healthcare-hero__features">
 					<li data-anim="fade-up"><span class="tv-check-icon" aria-hidden="true"></span>LLM & GenAI Expertise</li>
 					<li data-anim="fade-up"><span class="tv-check-icon" aria-hidden="true"></span>Reduced AI Risk</li>
@@ -61,8 +62,8 @@ get_header( 'v2.1' );
 	<section class="tv-about-belief tv-health-about py-5" id="qa-services">
 		<div class="container">
 			<div class="tv-section__head headingtopsection">
-				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Independent AI Services for</span><br/>Healthcare Startups</h2>
-				<p class="tv-section__subtitle" data-anim="fade-up">We support every stage of product development with reliable, domain-aligned quality assurance.</p>
+				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">End-to-End Testing for</span>  LLMs,<br/>RAG & AI Agents</h2>
+				<p class="tv-section__subtitle" data-anim="fade-up">From prompt design to production monitoring, we ensure your AI systems are accurate, safe, and consistent.</p>
 			</div>
 
 			<!--Cards-->
@@ -237,23 +238,23 @@ get_header( 'v2.1' );
 				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Selected</span> Work</h2>
 				<p class="tv-section__subtitle" data-anim="fade-up">We bring the industry’s best open-source and enterprise tools into your AI process.</p>
 			</div>
-			<div class="tv-selected-work__slider swiper">
-				<div class="swiper-wrapper-s row">
+			<div class="tv-selected-work__slider-s swiper-s">
+				<div class="swiper-wrapper-s row justify-content-md-center align-items-center h-100">
 
-    <!-- 1. Machine Medicine Technologies (MMT) -->
+    <!-- FreeAdCopy - AI -->
     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
         <article class="tv-case-card">
-            <a href="<?php echo esc_url( home_url( '/projects/machine-medicine-technologies/' ) ); ?>" class="tv-case-card__media">
-                <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-01.jpg' ); ?>" 
-                     alt="Machine Medicine Technologies (MMT)">
+            <a href="<?php echo esc_url( home_url( '/projects/freeadcopy/' ) ); ?>" class="tv-case-card__media">
+                <img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-57.png' ) ); ?>" 
+                     alt="FreeAdCopy">
             </a>
             <div class="tv-case-card__body">
-                <h3 class="tv-case-card__title"><a href="<?php echo esc_url( home_url( '/projects/machine-medicine-technologies/' ) ); ?>">Machine Medicine Technologies (MMT)</a></h3>
-                <p class="tv-case-card__text">Machine Medicine Technologies uses AI-powered video analysis to assess and track motor function for neurological conditions.</p>
+                <h3 class="tv-case-card__title"><a href="<?php echo esc_url( home_url( '/projects/freeadcopy/' ) ); ?>">FreeAdCopy</a></h3>
+                <p class="tv-case-card__text">FreeAdCopy is an AI-powered content generation platform designed to create high-converting ad copy efficiently.</p>
                 <ul class="tv-case-card__tags">
-                    <li>Functional Testing</li>
-                    <li>Automation Testing</li>
-                    <li>Compatibility Testing</li>
+                    <li>AI</li>
+                    <li>Test Automation</li>
+                    <li>API Testing</li>
                 </ul>
             </div>
         </article>
@@ -262,56 +263,21 @@ get_header( 'v2.1' );
     <!-- 2. OMED -->
     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
         <article class="tv-case-card">
-            <a href="<?php echo esc_url( home_url( '/projects/omed/' ) ); ?>" class="tv-case-card__media">
-                <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-02.jpg' ); ?>" alt="dmuscle.com">
-            </a>
-            <div class="tv-case-card__body">
-                <h3 class="tv-case-card__title"><a href="<?php echo esc_url( home_url( '/projects/omed/' ) ); ?>">dmuscle.com</a></h3>
-                <p class="tv-case-card__text">Provided advanced Quality Assurance solutions.</p>
-                <ul class="tv-case-card__tags">
-                    <li>UI/UX</li>
-                    <li>Mobile App</li>
-                    <li>Ecommerce</li>
-                </ul>
-            </div>
-        </article>
-    </div>
-
-    <!-- 3. YOU(th) Health App -->
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-        <article class="tv-case-card">
             <a href="<?php echo esc_url( home_url( '/projects/youth-health-app/' ) ); ?>" class="tv-case-card__media">
-                <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/case-study-03.jpg' ); ?>" alt="Loadster.app">
+                <img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-66.jpg' ) ); ?>" alt="YOU(th) Health App">
             </a>
             <div class="tv-case-card__body">
-                <h3 class="tv-case-card__title"><a href="<?php echo esc_url( home_url( '/projects/youth-health-app/' ) ); ?>">Loadster.app</a></h3>
-                <p class="tv-case-card__text">Provided advanced Quality Assurance solutions.</p>
+                <h3 class="tv-case-card__title"><a href="<?php echo esc_url( home_url( '/projects/youth-health-app/' ) ); ?>">YOU(th) Health App</a></h3>
+                <p class="tv-case-card__text">YOU(th) Health provides AI-driven health assessments using smartphones for quick and comprehensive check-ups.</p>
                 <ul class="tv-case-card__tags">
-					<li>UI/UX</li>
-                    <li>Mobile App</li>
-                    <li>Ecommerce</li>
+                    <li>Mobile App Testing</li>
+                    <li>Test Cases</li>
+                    <li>Jira</li>
                 </ul>
             </div>
         </article>
     </div>
 
-    <!-- 12. TCM Mobile App -->
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-        <article class="tv-case-card">
-            <a href="<?php echo esc_url( home_url( '/projects/tcm-mobile-app/' ) ); ?>" class="tv-case-card__media">
-                <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/maxi-family.png' ); ?>" alt="India wide">
-            </a>
-            <div class="tv-case-card__body">
-                <h3 class="tv-case-card__title"><a href="<?php echo esc_url( home_url( '/projects/tcm-mobile-app/' ) ); ?>">India wide</a></h3>
-                <p class="tv-case-card__text">Provided advanced Quality Assurance solutions.</p>
-                <ul class="tv-case-card__tags">
-					<li>UI/UX</li>
-                    <li>Mobile App</li>
-                    <li>Ecommerce</li>
-                </ul>
-            </div>
-        </article>
-    </div>
 
 </div>
 			</div>
@@ -629,6 +595,22 @@ get_header( 'v2.1' );
 						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
 						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
 						</tr>
+
+						<tr>
+						<td class="feature-col">Context window utilisation</td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						</tr>
+
+						<tr>
+						<td class="feature-col">Embedding model & semantic scoring</td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						</tr>
 						
 						<tr>
 						<td colspan="5" class="text-start tdmain">AI QUALITY & SAFETY</td>
@@ -657,6 +639,27 @@ get_header( 'v2.1' );
 						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
 						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
 						</tr>
+						<tr>
+						<td class="feature-col">Prompt injection & jailbreak resistance</td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						</tr>
+						<tr>
+						<td class="feature-col">Output consistency & regression</td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						</tr>
+						<tr>
+						<td class="feature-col">Model version & rollback testing</td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						</tr>
 
 						<tr>
 						<td colspan="5" class="text-start tdmain">SECURITY, PRIVACY & COMPLIANCE</td>
@@ -674,6 +677,28 @@ get_header( 'v2.1' );
 						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
 						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
 						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						</tr>
+
+						<tr>
+						<td class="feature-col">Audit logging & retrieval trail QA</td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						</tr>
+						<tr>
+						<td class="feature-col">GDPR / CCPA compliance testing</td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
+						</tr>
+						<tr>
+						<td class="feature-col">Enterprise SSO & access control testing</td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="dash"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
+						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/dashline_icon.png' ); ?>" alt=""/></td>
 						<td class="check"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/greentick_icon.png' ); ?>" alt=""/></td>
 						</tr>
 

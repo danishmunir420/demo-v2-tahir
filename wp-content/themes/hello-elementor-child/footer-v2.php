@@ -85,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/x-icon.svg' ); ?>" alt="<?php esc_attr_e( 'X', 'hello-elementor' ); ?>">
 					</a>
 
-					<a data-anim="fade-up" target="_blank" href="https://www.facebook.com/share/1A733q8qww/" aria-label="<?php esc_attr_e( 'Facebook', 'hello-elementor' ); ?>" class="tv-footer__icon">
+					<a data-anim="fade-up" target="_blank" href="https://www.facebook.com/profile.php?id=61582605982119" aria-label="<?php esc_attr_e( 'Facebook', 'hello-elementor' ); ?>" class="tv-footer__icon">
 						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/fb-icon.svg' ); ?>" alt="<?php esc_attr_e( 'Facebook', 'hello-elementor' ); ?>">
 					</a>
 					<a data-anim="fade-up" target="_blank" href="https://www.linkedin.com/company/testiva/?viewAsMember=true" aria-label="<?php esc_attr_e( 'Instagram', 'hello-elementor' ); ?>" class="tv-footer__icon">

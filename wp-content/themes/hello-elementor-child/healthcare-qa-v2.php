@@ -48,33 +48,46 @@ get_header( 'v2.1' );
         <div class="tv-healthcare-grid__wrap">
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.3">
+			<a href="<?php echo esc_url( '/healthcare-qa/telemedicine-virtual-care/' ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-01.jpg' ); ?>" alt="Telemedicine & Virtual Care">
+
             <div class="tv-healthcare-card__title">Telemedicine &amp; Virtual Care</div>
+			</a>
           </article>
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.6">
+			<a href="<?php echo esc_url( '/healthcare-qa/electronic-health-records-ehr-emr/' ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-02.jpg' ); ?>" alt="Electronic Health Records">
             <div class="tv-healthcare-card__title">Electronic Health Records (EHR/EMR)</div>
+</a>
           </article>
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.9">
+			<a href="<?php echo esc_url( '/healthcare-qa/medtech-and-medical-devices/' ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-03.jpg' ); ?>" alt="MedTech and Medical Devices">
             <div class="tv-healthcare-card__title">MedTech and Medical Devices</div>
+</a>
           </article>
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.3">
+			<a href="<?php echo esc_url( '/healthcare-qa/wellness-fitness-apps/' ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-04.jpg' ); ?>" alt="Wellness & Fitness Apps">
             <div class="tv-healthcare-card__title">Wellness &amp; Fitness Apps</div>
+</a>
           </article>
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.6">
+			<a href="<?php echo esc_url( '/healthcare-qa/home-healthcare-digital-care/' ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-05.jpg' ); ?>" alt="Home Healthcare & Digital Care">
             <div class="tv-healthcare-card__title">Home Healthcare &amp; Digital Care</div>
+</a>
           </article>
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.9">
+			<a href="<?php echo esc_url( '/healthcare-qa/remote-patient-monitoring/' ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/service-img-06.jpg' ); ?>" alt="Remote patient monitoring">
             <div class="tv-healthcare-card__title">Remote patient monitoring</div>
+</a>
           </article>
 
         </div>
