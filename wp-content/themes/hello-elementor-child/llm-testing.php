@@ -79,8 +79,8 @@ get_header( 'v2.1' );
 		<div class="container">
 			<div class="tv-section__head headingtopsection">
 				<span class="tv-process-steps__eyebrow sectiontopsubheading" data-anim="fade-up">Why it matters</span>
-				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">What happens when telemedicine platforms<br/>isn't tested properly</span></h2>
-				<p class="tv-section__subtitle" data-anim="fade-up">In virtual care, a technical failure isn't just a bad experience, it's a missed diagnosis, a broken care pathway, or a HIPAA violation with serious consequences.</p>
+				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">What happens when LLM outputs<br/>aren't systematically evaluated</span></h2>
+				<p class="tv-section__subtitle" data-anim="fade-up">In production AI, shipping without structured output evaluation isn't a risk you can manage, it's a liability you won't see until users do.</p>
 			</div>
 
 			<div class="row">
@@ -92,55 +92,55 @@ get_header( 'v2.1' );
 									<div class="fourrowsswrapper"  data-anim="fade-up" data-delay="0.1">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Video & audio consultation failures</h6>
-											<p>Dropped calls, audio desync and poor stream quality during live consultations disrupt clinical assessment and erode patient confidence at critical moments.</p>
+											<h6>Silent quality regression</h6>
+											<p>Model updates, prompt changes or temperature shifts silently degrade output quality across thousands of responses before anyone notices.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper"  data-anim="fade-up" data-delay="0.3">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Prescription & clinical data errors</h6>
-											<p> Bugs in e-prescribing flows, incorrect dosage rendering or broken EHR writes put patient safety at risk and expose platforms to regulatory liability.</p>
+											<h6>Inconsistent tone &amp; brand voice</h6>
+											<p>Without evaluation baselines, LLM outputs drift from brand guidelines, producing responses that confuse or alienate users at scale.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper" data-anim="fade-up" data-delay="0.5">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Appointment & scheduling breakdowns</h6>
-											<p>Double-bookings, failed reminders and broken calendar integrations leave patients without care and clinicians with gaps they can't fill in time.</p>
+											<h6>Unsafe or non-compliant outputs</h6>
+											<p>Untested edge cases surface harmful, biased or policy-violating content that slips past human reviewers in high-volume systems.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper" data-anim="fade-up" data-delay="0.7">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Compliance & PHI exposure</h6>
-											<p>Misconfigured access controls, broken consent flows or unencrypted data transmission can expose protected health information and trigger HIPAA penalties.</p>
+											<h6>Evaluation blind spots</h6>
+											<p>Teams relying solely on human spot-checks miss systematic failure patterns that only become visible across large output samples.</p>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 								<div class="protectplatformsection" data-anim="fade-up" data-delay="0.3">
-									<h4>How Testiva protects your telemedicine platform</h4>
+									<h4>How Testiva protects your LLM outputs</h4>
 									<ul>
 	<li data-anim="fade-up" data-delay="0.1">
-		<strong>Health tech expertise —</strong> Our QA engineers specialise in virtual care and clinical platforms, not generic software testing repurposed for healthcare.
+		<strong>LLM evaluation expertise —</strong> Our QA engineers specialise in output quality measurement, not generic software testing or simple pass/fail automation.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.2">
-		<strong>Real-condition video testing —</strong> We simulate low-bandwidth, high-latency and multi-device consultation scenarios to surface stream failures before patients do.
+		<strong>Multi-dimensional scoring —</strong> We evaluate outputs across correctness, coherence, tone, safety, format compliance and task completion simultaneously.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.3">
-		<strong>Clinical flow validation —</strong> End-to-end testing of consultation, e-prescribing, referral, follow-up and care coordination workflows across user roles.
+		<strong>LLM-as-judge pipelines —</strong> We design and validate automated evaluator prompts that score outputs reliably at scale without human bottlenecks.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.4">
-		<strong>EHR &amp; integration QA —</strong> HL7, FHIR, Epic and third-party integration correctness, data fidelity and failure handling tested across every touchpoint.
+		<strong>Regression baseline management —</strong> Every prompt version is benchmarked so regressions are caught before deployment, not after.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.5">
-		<strong>Compliance-first testing —</strong> HIPAA, GDPR, WCAG and state telehealth regulation requirements built into every test cycle by default, not bolted on at the end.
+		<strong>Red-teaming &amp; adversarial probing —</strong> We systematically surface unsafe, biased and policy-violating outputs across diverse input distributions.
 	</li>
 </ul>
 								</div>
@@ -156,8 +156,8 @@ get_header( 'v2.1' );
 		<div class="container">
 			<div class="tv-section__head headingtopsection">
 				<span class="tv-process-steps__eyebrow sectiontopsubheading" data-anim="fade-up">What we test</span>
-				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Telemedicine & Virtual Care Testing</span></h2>
-				<p class="tv-section__subtitle" data-anim="fade-up">Every feature your patients and clinicians depend on is validated, stress-tested, and verified across devices, network conditions and regulatory requirements.</p>
+				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Core dimensions of LLM output quality we cover</span></h2>
+				<p class="tv-section__subtitle" data-anim="fade-up">Every quality signal that matters to your users and your business is measured, tracked, and verified across models, prompts and deployment conditions.</p>
 			</div>
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -168,10 +168,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/core-health-tracking.png' ); ?>" alt="">
-											<h6>Video &amp; audio consultation quality</h6>
+											<h6>Factual accuracy &amp; groundedness</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Stream stability, audio-video sync, codec performance, low-bandwidth degradation handling and multi-participant session reliability across devices.</p>
+											<p>Claim verification against source documents, hallucination rate measurement, citation correctness and confidence calibration testing.</p>
 										</div>
 									</div>
 								</div>
@@ -181,10 +181,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/goal-settings-tracking.png' ); ?>" alt="">
-											<h6>Appointment scheduling &amp; management</h6>
+											<h6>Instruction following &amp; task completion</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Booking flows, availability logic, calendar sync, reminder delivery, cancellation handling and double-booking prevention across time zones.</p>
+											<p>Output adherence to explicit constraints, format compliance, multi-step instruction coverage and edge-case instruction handling.</p>
 										</div>
 									</div>
 								</div>
@@ -194,10 +194,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/social-engagements.png' ); ?>" alt="">
-											<h6>Patient onboarding &amp; verification</h6>
+											<h6>Tone, style &amp; brand consistency</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Registration flows, identity verification, insurance eligibility checks, consent form delivery and document upload accuracy testing.</p>
+											<p>Voice alignment scoring, persona consistency across sessions, formality calibration and deviation detection against brand guidelines.</p>
 										</div>
 									</div>
 								</div>
@@ -207,10 +207,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/coaching-guidance.png' ); ?>" alt="">
-											<h6>E-prescribing &amp; medication management</h6>
+											<h6>Safety &amp; policy compliance</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Prescription generation accuracy, drug interaction alert logic, pharmacy routing, controlled substance workflows and audit trail completeness.</p>
+											<p>Harmful content detection, bias measurement, sensitive topic handling, jailbreak resilience and content policy boundary testing.</p>
 										</div>
 									</div>
 								</div>
@@ -220,10 +220,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/wearables-integrations.png' ); ?>" alt="">
-											<h6>EHR &amp; clinical system integration</h6>
+											<h6>Coherence &amp; reasoning quality</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>HL7 and FHIR message correctness, Epic, Cerner and Athena integration fidelity, data write accuracy and sync failure handling.</p>
+											<p>Logical consistency across output, chain-of-thought validity, self-contradiction detection and argument structure evaluation.</p>
 										</div>
 									</div>
 								</div>
@@ -233,10 +233,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/notifications-alerts.png' ); ?>" alt="">
-											<h6>Clinical documentation &amp; notes</h6>
+											<h6>Output format &amp; structure validation</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>SOAP note generation, structured data capture, template logic, co-signature workflows and document versioning correctness.</p>
+											<p>JSON schema compliance, markdown rendering correctness, length constraint adherence and structured data extraction accuracy.</p>
 										</div>
 									</div>
 								</div>
@@ -246,10 +246,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/data-insights.png' ); ?>" alt="">
-											<h6>Payment, billing &amp; insurance</h6>
+											<h6>Prompt regression testing</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Co-pay calculation accuracy, insurance claim submission, EOB handling, payment gateway integration and billing code correctness.</p>
+											<p>Baseline benchmarking per prompt version, A/B comparison across model updates, score trend tracking and automated regression alerting.</p>
 										</div>
 									</div>
 								</div>
@@ -259,10 +259,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/compliance-health-regulations.png' ); ?>" alt="">
-											<h6>Compliance &amp; PHI protection</h6>
+											<h6>LLM-as-judge pipeline validation</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>HIPAA audit trail validation, PHI encryption testing, consent flow coverage, access control boundary enforcement and breach notification logic.</p>
+											<p>Evaluator prompt design, judge consistency scoring, inter-rater reliability measurement and bias detection in automated evaluators.</p>
 										</div>
 									</div>
 								</div>
@@ -272,10 +272,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/performance-reliablity.png' ); ?>" alt="">
-											<h6>Performance &amp; availability</h6>
+											<h6>Multilingual &amp; cross-cultural quality</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Concurrent consultation load testing, peak appointment window stress testing, failover behaviour and platform availability under high-demand conditions.</p>
+											<p>Output quality parity across languages, cultural sensitivity checks, translation accuracy and locale-specific tone validation.</p>
 										</div>
 									</div>
 								</div>

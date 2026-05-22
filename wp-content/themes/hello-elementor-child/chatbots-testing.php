@@ -79,8 +79,8 @@ get_header( 'v2.1' );
 		<div class="container">
 			<div class="tv-section__head headingtopsection">
 				<span class="tv-process-steps__eyebrow sectiontopsubheading" data-anim="fade-up">Why it matters</span>
-				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">What happens when telemedicine platforms<br/>isn't tested properly</span></h2>
-				<p class="tv-section__subtitle" data-anim="fade-up">In virtual care, a technical failure isn't just a bad experience, it's a missed diagnosis, a broken care pathway, or a HIPAA violation with serious consequences.</p>
+				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">What happens when chatbots<br/>aren't tested properly</span></h2>
+				<p class="tv-section__subtitle" data-anim="fade-up">In customer-facing AI, a single bad response isn't just a bug, it's a support ticket, a churn event, or a compliance incident waiting to happen.</p>
 			</div>
 
 			<div class="row">
@@ -92,55 +92,55 @@ get_header( 'v2.1' );
 									<div class="fourrowsswrapper"  data-anim="fade-up" data-delay="0.1">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Video & audio consultation failures</h6>
-											<p>Dropped calls, audio desync and poor stream quality during live consultations disrupt clinical assessment and erode patient confidence at critical moments.</p>
+											<h6>Off-brand or harmful responses</h6>
+											<p>Untested edge cases produce replies that contradict your brand voice, offend users, or violate safety policies at scale.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper"  data-anim="fade-up" data-delay="0.3">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Prescription & clinical data errors</h6>
-											<p> Bugs in e-prescribing flows, incorrect dosage rendering or broken EHR writes put patient safety at risk and expose platforms to regulatory liability.</p>
+											<h6>Broken conversation flows</h6>
+											<p>Missed intents, failed handoffs and context loss mid-conversation leave users stuck, frustrated and unlikely to return.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper" data-anim="fade-up" data-delay="0.5">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Appointment & scheduling breakdowns</h6>
-											<p>Double-bookings, failed reminders and broken calendar integrations leave patients without care and clinicians with gaps they can't fill in time.</p>
+											<h6>Incorrect information delivery</h6>
+											<p>Chatbots confidently stating wrong product details, prices or policies damage trust and generate significant support overhead.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper" data-anim="fade-up" data-delay="0.7">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Compliance & PHI exposure</h6>
-											<p>Misconfigured access controls, broken consent flows or unencrypted data transmission can expose protected health information and trigger HIPAA penalties.</p>
+											<h6>Integration failures</h6>
+											<p>Broken CRM, ticketing or backend API connections cause silent data loss and unresolved user requests that nobody catches until it's too late.</p>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 								<div class="protectplatformsection" data-anim="fade-up" data-delay="0.3">
-									<h4>How Testiva protects your telemedicine platform</h4>
+									<h4>How Testiva protects your chatbot</h4>
 									<ul>
 	<li data-anim="fade-up" data-delay="0.1">
-		<strong>Health tech expertise —</strong> Our QA engineers specialise in virtual care and clinical platforms, not generic software testing repurposed for healthcare.
+		<strong>Conversational AI expertise —</strong> Our QA engineers specialise in chatbot and dialogue system testing, not generic test automation repurposed for AI.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.2">
-		<strong>Real-condition video testing —</strong> We simulate low-bandwidth, high-latency and multi-device consultation scenarios to surface stream failures before patients do.
+		<strong>Intent &amp; NLU coverage —</strong> We build comprehensive test suites covering edge-case phrasings, synonyms, typos and multilingual input variations.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.3">
-		<strong>Clinical flow validation —</strong> End-to-end testing of consultation, e-prescribing, referral, follow-up and care coordination workflows across user roles.
+		<strong>End-to-end flow testing —</strong> Full conversation path validation including escalation, handoff, fallback and session recovery flows across all channels.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.4">
-		<strong>EHR &amp; integration QA —</strong> HL7, FHIR, Epic and third-party integration correctness, data fidelity and failure handling tested across every touchpoint.
+		<strong>Integration QA —</strong> Backend API, CRM and ticketing system connections tested for correctness, latency and failure handling.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.5">
-		<strong>Compliance-first testing —</strong> HIPAA, GDPR, WCAG and state telehealth regulation requirements built into every test cycle by default, not bolted on at the end.
+		<strong>Safety &amp; guardrail testing —</strong> We probe policy boundaries, adversarial inputs and jailbreak attempts before your users discover them.
 	</li>
 </ul>
 								</div>
@@ -156,8 +156,8 @@ get_header( 'v2.1' );
 		<div class="container">
 			<div class="tv-section__head headingtopsection">
 				<span class="tv-process-steps__eyebrow sectiontopsubheading" data-anim="fade-up">What we test</span>
-				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Telemedicine & Virtual Care Testing</span></h2>
-				<p class="tv-section__subtitle" data-anim="fade-up">Every feature your patients and clinicians depend on is validated, stress-tested, and verified across devices, network conditions and regulatory requirements.</p>
+				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Core areas of a chatbot we cover</span></h2>
+				<p class="tv-section__subtitle" data-anim="fade-up">Every layer that affects conversation quality is  validated, stress-tested, and verified across channels, integrations and real-world input conditions.</p>
 			</div>
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -168,10 +168,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/core-health-tracking.png' ); ?>" alt="">
-											<h6>Video &amp; audio consultation quality</h6>
+											<h6>Intent recognition &amp; NLU</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Stream stability, audio-video sync, codec performance, low-bandwidth degradation handling and multi-participant session reliability across devices.</p>
+											<p>Intent classification accuracy, entity extraction, confidence threshold tuning and performance across paraphrase variations and misspelled inputs.</p>
 										</div>
 									</div>
 								</div>
@@ -181,10 +181,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/goal-settings-tracking.png' ); ?>" alt="">
-											<h6>Appointment scheduling &amp; management</h6>
+											<h6>Conversation flow &amp; dialogue management</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Booking flows, availability logic, calendar sync, reminder delivery, cancellation handling and double-booking prevention across time zones.</p>
+											<p>Multi-turn context retention, branching path coverage, slot-filling logic and graceful fallback handling when inputs go off-script.</p>
 										</div>
 									</div>
 								</div>
@@ -194,10 +194,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/social-engagements.png' ); ?>" alt="">
-											<h6>Patient onboarding &amp; verification</h6>
+											<h6>Response accuracy &amp; consistency</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Registration flows, identity verification, insurance eligibility checks, consent form delivery and document upload accuracy testing.</p>
+											<p>Factual correctness, tone consistency, contradiction detection across sessions and alignment with your live knowledge base.</p>
 										</div>
 									</div>
 								</div>
@@ -207,10 +207,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/coaching-guidance.png' ); ?>" alt="">
-											<h6>E-prescribing &amp; medication management</h6>
+											<h6>Escalation &amp; human handoff</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Prescription generation accuracy, drug interaction alert logic, pharmacy routing, controlled substance workflows and audit trail completeness.</p>
+											<p>Trigger accuracy, context transfer completeness, agent routing logic and queue integration testing across ticketing platforms.</p>
 										</div>
 									</div>
 								</div>
@@ -220,10 +220,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/wearables-integrations.png' ); ?>" alt="">
-											<h6>EHR &amp; clinical system integration</h6>
+											<h6>Channel &amp; platform coverage</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>HL7 and FHIR message correctness, Epic, Cerner and Athena integration fidelity, data write accuracy and sync failure handling.</p>
+											<p>Web widget, WhatsApp, Slack, Teams and mobile SDK behaviour tested for feature parity and platform-specific edge cases.</p>
 										</div>
 									</div>
 								</div>
@@ -233,10 +233,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/notifications-alerts.png' ); ?>" alt="">
-											<h6>Clinical documentation &amp; notes</h6>
+											<h6>Backend &amp; API integrations</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>SOAP note generation, structured data capture, template logic, co-signature workflows and document versioning correctness.</p>
+											<p>CRM lookups, order management, ticketing and payment API calls tested for accuracy, latency and graceful error handling.</p>
 										</div>
 									</div>
 								</div>
@@ -246,10 +246,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/data-insights.png' ); ?>" alt="">
-											<h6>Payment, billing &amp; insurance</h6>
+											<h6>Safety &amp; guardrail enforcement</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Co-pay calculation accuracy, insurance claim submission, EOB handling, payment gateway integration and billing code correctness.</p>
+											<p>Policy boundary testing, prompt injection attempts, sensitive topic handling and content moderation validation across user personas.</p>
 										</div>
 									</div>
 								</div>
@@ -259,10 +259,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/compliance-health-regulations.png' ); ?>" alt="">
-											<h6>Compliance &amp; PHI protection</h6>
+											<h6>Personalisation &amp; context</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>HIPAA audit trail validation, PHI encryption testing, consent flow coverage, access control boundary enforcement and breach notification logic.</p>
+											<p>User profile utilisation, session memory accuracy, preference handling and cross-session continuity testing.</p>
 										</div>
 									</div>
 								</div>
@@ -272,10 +272,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/performance-reliablity.png' ); ?>" alt="">
-											<h6>Performance &amp; availability</h6>
+											<h6>Performance &amp; scalability</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Concurrent consultation load testing, peak appointment window stress testing, failover behaviour and platform availability under high-demand conditions.</p>
+											<p>Concurrent user load testing, response latency under peak traffic and degradation behaviour under sustained stress conditions.</p>
 										</div>
 									</div>
 								</div>

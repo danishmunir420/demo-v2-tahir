@@ -61,7 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<h3 data-anim="fade-up" class="tv-footer__title"><?php esc_html_e( 'VERTICALS', 'hello-elementor' ); ?></h3>
 				<ul class="tv-footer__list">
 					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/healthcare-qa/') ); ?>"><?php esc_html_e( 'Healthcare QA', 'hello-elementor' ); ?></a></li>
-					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/wellness-app-testing/') ); ?>"><?php esc_html_e( 'Wellness Apps Testing', 'hello-elementor' ); ?></a></li>
+					<li data-anim="fade-up"><a href="<?php echo esc_url( site_url('/wellness-app-testing/') ); ?>"><?php esc_html_e( 'AI Applications Testing', 'hello-elementor' ); ?></a></li>
 				</ul>
 			</div>
 

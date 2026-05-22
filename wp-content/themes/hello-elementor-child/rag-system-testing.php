@@ -79,8 +79,8 @@ get_header( 'v2.1' );
 		<div class="container">
 			<div class="tv-section__head headingtopsection">
 				<span class="tv-process-steps__eyebrow sectiontopsubheading" data-anim="fade-up">Why it matters</span>
-				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">What happens when telemedicine platforms<br/>isn't tested properly</span></h2>
-				<p class="tv-section__subtitle" data-anim="fade-up">In virtual care, a technical failure isn't just a bad experience, it's a missed diagnosis, a broken care pathway, or a HIPAA violation with serious consequences.</p>
+				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">What happens when RAG systems<br/>aren't tested properly</span></h2>
+				<p class="tv-section__subtitle" data-anim="fade-up">In production AI, retrieval failures aren't just inconvenient, they erode user trust, generate liability, and silently degrade over time.</p>
 			</div>
 
 			<div class="row">
@@ -92,55 +92,55 @@ get_header( 'v2.1' );
 									<div class="fourrowsswrapper"  data-anim="fade-up" data-delay="0.1">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Video & audio consultation failures</h6>
-											<p>Dropped calls, audio desync and poor stream quality during live consultations disrupt clinical assessment and erode patient confidence at critical moments.</p>
+											<h6>Hallucinated answers</h6>
+											<p>Responses not grounded in retrieved context mislead users and expose organisations to reputational and legal risk.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper"  data-anim="fade-up" data-delay="0.3">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Prescription & clinical data errors</h6>
-											<p> Bugs in e-prescribing flows, incorrect dosage rendering or broken EHR writes put patient safety at risk and expose platforms to regulatory liability.</p>
+											<h6>Retrieval blind spots</h6>
+											<p>Poorly chunked documents or misconfigured embeddings cause critical information to never surface in results.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper" data-anim="fade-up" data-delay="0.5">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Appointment & scheduling breakdowns</h6>
-											<p>Double-bookings, failed reminders and broken calendar integrations leave patients without care and clinicians with gaps they can't fill in time.</p>
+											<h6>Embedding drift</h6>
+											<p>Stale or inconsistently updated vector indexes silently degrade answer quality as your knowledge base grows.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper" data-anim="fade-up" data-delay="0.7">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Compliance & PHI exposure</h6>
-											<p>Misconfigured access controls, broken consent flows or unencrypted data transmission can expose protected health information and trigger HIPAA penalties.</p>
+											<h6>Pipeline latency spikes</h6>
+											<p>Unoptimised retrieval stages cause timeout failures and degraded UX under real production query volumes.</p>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 								<div class="protectplatformsection" data-anim="fade-up" data-delay="0.3">
-									<h4>How Testiva protects your telemedicine platform</h4>
+									<h4>How Testiva protects your RAG system</h4>
 									<ul>
 	<li data-anim="fade-up" data-delay="0.1">
-		<strong>Health tech expertise —</strong> Our QA engineers specialise in virtual care and clinical platforms, not generic software testing repurposed for healthcare.
+		<strong>LLM &amp; RAG expertise —</strong> Our QA engineers specialise in AI pipeline testing, not generic software QA.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.2">
-		<strong>Real-condition video testing —</strong> We simulate low-bandwidth, high-latency and multi-device consultation scenarios to surface stream failures before patients do.
+		<strong>Automated eval suites —</strong> We build RAGAS, TruLens and custom harnesses tailored to your knowledge domain.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.3">
-		<strong>Clinical flow validation —</strong> End-to-end testing of consultation, e-prescribing, referral, follow-up and care coordination workflows across user roles.
+		<strong>Multi-vector store coverage —</strong> Deep integration testing across Pinecone, Weaviate, Qdrant, pgvector and more.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.4">
-		<strong>EHR &amp; integration QA —</strong> HL7, FHIR, Epic and third-party integration correctness, data fidelity and failure handling tested across every touchpoint.
+		<strong>Adversarial query testing —</strong> Prompt injection, out-of-domain queries and edge cases built into every test cycle.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.5">
-		<strong>Compliance-first testing —</strong> HIPAA, GDPR, WCAG and state telehealth regulation requirements built into every test cycle by default, not bolted on at the end.
+		<strong>Shift-left evaluation —</strong> We catch retrieval failures during development, not after your users do.
 	</li>
 </ul>
 								</div>
@@ -156,8 +156,8 @@ get_header( 'v2.1' );
 		<div class="container">
 			<div class="tv-section__head headingtopsection">
 				<span class="tv-process-steps__eyebrow sectiontopsubheading" data-anim="fade-up">What we test</span>
-				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Telemedicine & Virtual Care Testing</span></h2>
-				<p class="tv-section__subtitle" data-anim="fade-up">Every feature your patients and clinicians depend on is validated, stress-tested, and verified across devices, network conditions and regulatory requirements.</p>
+				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Core components of a RAG pipeline we cover</span></h2>
+				<p class="tv-section__subtitle" data-anim="fade-up"> Every layer that affects answer quality is validated, stress-tested, and verified across models and vector stores.</p>
 			</div>
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -168,10 +168,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/core-health-tracking.png' ); ?>" alt="">
-											<h6>Video &amp; audio consultation quality</h6>
+											<h6>Document ingestion &amp; chunking</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Stream stability, audio-video sync, codec performance, low-bandwidth degradation handling and multi-participant session reliability across devices.</p>
+											<p>Chunk size strategy, overlap logic, metadata extraction and parser accuracy tested across diverse document types and formats.</p>
 										</div>
 									</div>
 								</div>
@@ -181,10 +181,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/goal-settings-tracking.png' ); ?>" alt="">
-											<h6>Appointment scheduling &amp; management</h6>
+											<h6>Embedding quality &amp; consistency</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Booking flows, availability logic, calendar sync, reminder delivery, cancellation handling and double-booking prevention across time zones.</p>
+											<p>Semantic similarity calibration, embedding model benchmarking, multilingual coverage and drift detection over time.</p>
 										</div>
 									</div>
 								</div>
@@ -194,10 +194,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/social-engagements.png' ); ?>" alt="">
-											<h6>Patient onboarding &amp; verification</h6>
+											<h6>Retrieval relevance &amp; ranking</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Registration flows, identity verification, insurance eligibility checks, consent form delivery and document upload accuracy testing.</p>
+											<p>Top-k precision, recall@k, re-ranking accuracy, hybrid search quality and metadata filter correctness.</p>
 										</div>
 									</div>
 								</div>
@@ -207,10 +207,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/coaching-guidance.png' ); ?>" alt="">
-											<h6>E-prescribing &amp; medication management</h6>
+											<h6>Answer faithfulness &amp; grounding</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Prescription generation accuracy, drug interaction alert logic, pharmacy routing, controlled substance workflows and audit trail completeness.</p>
+											<p>Hallucination rate measurement, source attribution accuracy, context utilisation scoring and factual consistency checks.</p>
 										</div>
 									</div>
 								</div>
@@ -220,10 +220,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/wearables-integrations.png' ); ?>" alt="">
-											<h6>EHR &amp; clinical system integration</h6>
+											<h6>Vector store integrity</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>HL7 and FHIR message correctness, Epic, Cerner and Athena integration fidelity, data write accuracy and sync failure handling.</p>
+											<p>Index completeness, upsert/delete consistency, namespace isolation and cross-provider migration validation.</p>
 										</div>
 									</div>
 								</div>
@@ -233,10 +233,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/notifications-alerts.png' ); ?>" alt="">
-											<h6>Clinical documentation &amp; notes</h6>
+											<h6>Query understanding &amp; routing</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>SOAP note generation, structured data capture, template logic, co-signature workflows and document versioning correctness.</p>
+											<p>Query rewriting accuracy, HyDE effectiveness, multi-hop reasoning chains and intent classification testing.</p>
 										</div>
 									</div>
 								</div>
@@ -246,10 +246,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/data-insights.png' ); ?>" alt="">
-											<h6>Payment, billing &amp; insurance</h6>
+											<h6>Pipeline latency &amp; throughput</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Co-pay calculation accuracy, insurance claim submission, EOB handling, payment gateway integration and billing code correctness.</p>
+											<p>End-to-end latency profiling, bottleneck identification, concurrent query load testing and streaming response QA.</p>
 										</div>
 									</div>
 								</div>
@@ -259,10 +259,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/compliance-health-regulations.png' ); ?>" alt="">
-											<h6>Compliance &amp; PHI protection</h6>
+											<h6>Security &amp; data governance</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>HIPAA audit trail validation, PHI encryption testing, consent flow coverage, access control boundary enforcement and breach notification logic.</p>
+											<p>Prompt injection resilience, PII leakage detection, access-control boundary testing and audit trail validation.</p>
 										</div>
 									</div>
 								</div>
@@ -272,10 +272,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/performance-reliablity.png' ); ?>" alt="">
-											<h6>Performance &amp; availability</h6>
+											<h6>Regression &amp; evaluation tracking</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Concurrent consultation load testing, peak appointment window stress testing, failover behaviour and platform availability under high-demand conditions.</p>
+											<p>Automated eval baselines, A/B comparison of pipeline versions, score trend monitoring and regression alerting.</p>
 										</div>
 									</div>
 								</div>

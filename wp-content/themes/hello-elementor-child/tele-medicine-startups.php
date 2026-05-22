@@ -157,7 +157,7 @@ get_header( 'v2.1' );
 			<div class="tv-section__head headingtopsection">
 				<span class="tv-process-steps__eyebrow sectiontopsubheading" data-anim="fade-up">What we test</span>
 				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Telemedicine & Virtual Care Testing</span></h2>
-				<p class="tv-section__subtitle" data-anim="fade-up">Every feature your patients and clinicians depend on is validated, stress-tested, and verified across devices, network conditions and regulatory requirements.</p>
+				<p class="tv-section__subtitle" data-anim="fade-up">Core areas of a telemedicine platform we cover Sub: Every feature your patients and clinicians depend on is validated, stress-tested, and verified across devices, network conditions and regulatory requirements.</p>
 			</div>
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">

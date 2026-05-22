@@ -79,8 +79,8 @@ get_header( 'v2.1' );
 		<div class="container">
 			<div class="tv-section__head headingtopsection">
 				<span class="tv-process-steps__eyebrow sectiontopsubheading" data-anim="fade-up">Why it matters</span>
-				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">What happens when telemedicine platforms<br/>isn't tested properly</span></h2>
-				<p class="tv-section__subtitle" data-anim="fade-up">In virtual care, a technical failure isn't just a bad experience, it's a missed diagnosis, a broken care pathway, or a HIPAA violation with serious consequences.</p>
+				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">What happens when AI voice agents<br/>aren't tested properly</span></h2>
+				<p class="tv-section__subtitle" data-anim="fade-up">In voice AI, a single misheard word or broken response isn't just a UX issue, it's a dropped call, a lost customer, or a compliance failure on record.</p>
 			</div>
 
 			<div class="row">
@@ -92,55 +92,55 @@ get_header( 'v2.1' );
 									<div class="fourrowsswrapper"  data-anim="fade-up" data-delay="0.1">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Video & audio consultation failures</h6>
-											<p>Dropped calls, audio desync and poor stream quality during live consultations disrupt clinical assessment and erode patient confidence at critical moments.</p>
+											<h6>Speech recognition failures</h6>
+											<p>Accents, background noise and domain-specific vocabulary trip up untested ASR systems, causing misinterpretations that cascade through the entire conversation.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper"  data-anim="fade-up" data-delay="0.3">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Prescription & clinical data errors</h6>
-											<p> Bugs in e-prescribing flows, incorrect dosage rendering or broken EHR writes put patient safety at risk and expose platforms to regulatory liability.</p>
+											<h6>Unnatural or broken dialogue</h6>
+											<p>Poorly timed responses, abrupt interruptions and unhandled silence cause conversations to feel robotic and drive users to hang up.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper" data-anim="fade-up" data-delay="0.5">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Appointment & scheduling breakdowns</h6>
-											<p>Double-bookings, failed reminders and broken calendar integrations leave patients without care and clinicians with gaps they can't fill in time.</p>
+											<h6>Incorrect information spoken aloud</h6>
+											<p>A chatbot can be ignored — a voice agent speaking wrong policy details, prices or instructions creates immediate trust damage and potential liability.</p>
 										</div>
 									</div>
 									<div class="fourrowsswrapper" data-anim="fade-up" data-delay="0.7">
 										<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/markicon.png' ); ?>" alt="">
 										<div class="fourrowsrightcontent">
-											<h6>Compliance & PHI exposure</h6>
-											<p>Misconfigured access controls, broken consent flows or unencrypted data transmission can expose protected health information and trigger HIPAA penalties.</p>
+											<h6>Telephony &amp; integration failures</h6>
+											<p>Broken PSTN handoffs, failed CRM lookups and dropped transfers leave callers stranded with no resolution and no fallback.</p>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 								<div class="protectplatformsection" data-anim="fade-up" data-delay="0.3">
-									<h4>How Testiva protects your telemedicine platform</h4>
+									<h4>How Testiva protects your AI voice agent</h4>
 									<ul>
 	<li data-anim="fade-up" data-delay="0.1">
-		<strong>Health tech expertise —</strong> Our QA engineers specialise in virtual care and clinical platforms, not generic software testing repurposed for healthcare.
+		<strong>Voice AI expertise —</strong> Our QA engineers specialise in conversational voice systems and telephony pipelines, not generic software or chatbot testing.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.2">
-		<strong>Real-condition video testing —</strong> We simulate low-bandwidth, high-latency and multi-device consultation scenarios to surface stream failures before patients do.
+		<strong>Real audio simulation testing —</strong> We test with diverse voice profiles, accents, noise conditions and speaking speeds to surface ASR failures before real callers do.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.3">
-		<strong>Clinical flow validation —</strong> End-to-end testing of consultation, e-prescribing, referral, follow-up and care coordination workflows across user roles.
+		<strong>End-to-end call flow validation —</strong> Full conversation path coverage including hold, transfer, escalation, fallback and post-call webhook triggers.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.4">
-		<strong>EHR &amp; integration QA —</strong> HL7, FHIR, Epic and third-party integration correctness, data fidelity and failure handling tested across every touchpoint.
+		<strong>Latency &amp; turn-taking QA —</strong> Response timing, barge-in handling, silence detection thresholds and interruption recovery tested to human conversation standards.
 	</li>
 
 	<li data-anim="fade-up" data-delay="0.5">
-		<strong>Compliance-first testing —</strong> HIPAA, GDPR, WCAG and state telehealth regulation requirements built into every test cycle by default, not bolted on at the end.
+		<strong>Compliance &amp; recording validation —</strong> Consent prompt delivery, call recording triggers, PII redaction in transcripts and audit trail completeness tested by default.
 	</li>
 </ul>
 								</div>
@@ -156,8 +156,8 @@ get_header( 'v2.1' );
 		<div class="container">
 			<div class="tv-section__head headingtopsection">
 				<span class="tv-process-steps__eyebrow sectiontopsubheading" data-anim="fade-up">What we test</span>
-				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Telemedicine & Virtual Care Testing</span></h2>
-				<p class="tv-section__subtitle" data-anim="fade-up">Every feature your patients and clinicians depend on is validated, stress-tested, and verified across devices, network conditions and regulatory requirements.</p>
+				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Core components of an AI voice agent we cover</span></h2>
+				<p class="tv-section__subtitle" data-anim="fade-up">Every layer that affects call quality is validated, stress-tested, and verified across telephony providers, accents and real-world audio conditions.</p>
 			</div>
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -168,10 +168,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/core-health-tracking.png' ); ?>" alt="">
-											<h6>Video &amp; audio consultation quality</h6>
+											<h6>Speech recognition &amp; ASR accuracy</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Stream stability, audio-video sync, codec performance, low-bandwidth degradation handling and multi-participant session reliability across devices.</p>
+											<p>Word error rate measurement, accent and dialect coverage, domain vocabulary handling, background noise resilience and homophones edge cases.</p>
 										</div>
 									</div>
 								</div>
@@ -181,10 +181,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/goal-settings-tracking.png' ); ?>" alt="">
-											<h6>Appointment scheduling &amp; management</h6>
+											<h6>Natural language understanding</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Booking flows, availability logic, calendar sync, reminder delivery, cancellation handling and double-booking prevention across time zones.</p>
+											<p>Intent recognition from spoken input, entity extraction accuracy, disfluency handling and performance across informal and fragmented speech.</p>
 										</div>
 									</div>
 								</div>
@@ -194,10 +194,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/social-engagements.png' ); ?>" alt="">
-											<h6>Patient onboarding &amp; verification</h6>
+											<h6>Response generation &amp; TTS quality</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Registration flows, identity verification, insurance eligibility checks, consent form delivery and document upload accuracy testing.</p>
+											<p>Text-to-speech naturalness, pronunciation accuracy, prosody consistency, speaking rate calibration and brand voice alignment.</p>
 										</div>
 									</div>
 								</div>
@@ -207,10 +207,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/coaching-guidance.png' ); ?>" alt="">
-											<h6>E-prescribing &amp; medication management</h6>
+											<h6>Conversation flow &amp; dialogue management</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Prescription generation accuracy, drug interaction alert logic, pharmacy routing, controlled substance workflows and audit trail completeness.</p>
+											<p>Multi-turn context retention, branching path coverage, clarification request logic and graceful recovery from misunderstood inputs.</p>
 										</div>
 									</div>
 								</div>
@@ -220,10 +220,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/wearables-integrations.png' ); ?>" alt="">
-											<h6>EHR &amp; clinical system integration</h6>
+											<h6>Latency &amp; turn-taking behaviour</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>HL7 and FHIR message correctness, Epic, Cerner and Athena integration fidelity, data write accuracy and sync failure handling.</p>
+											<p>End-to-end response latency, barge-in detection accuracy, silence threshold tuning, hold music triggers and perceived conversational naturalness.</p>
 										</div>
 									</div>
 								</div>
@@ -233,10 +233,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/notifications-alerts.png' ); ?>" alt="">
-											<h6>Clinical documentation &amp; notes</h6>
+											<h6>Escalation &amp; human handoff</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>SOAP note generation, structured data capture, template logic, co-signature workflows and document versioning correctness.</p>
+											<p>Transfer trigger accuracy, context packet completeness passed to agents, warm vs cold transfer handling and queue integration testing.</p>
 										</div>
 									</div>
 								</div>
@@ -246,10 +246,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/data-insights.png' ); ?>" alt="">
-											<h6>Payment, billing &amp; insurance</h6>
+											<h6>Telephony &amp; platform integration</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Co-pay calculation accuracy, insurance claim submission, EOB handling, payment gateway integration and billing code correctness.</p>
+											<p>PSTN, VoIP and SIP trunk stability, DTMF fallback handling, call recording triggers and multi-provider behaviour parity testing.</p>
 										</div>
 									</div>
 								</div>
@@ -259,10 +259,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/compliance-health-regulations.png' ); ?>" alt="">
-											<h6>Compliance &amp; PHI protection</h6>
+											<h6>Compliance &amp; privacy enforcement</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>HIPAA audit trail validation, PHI encryption testing, consent flow coverage, access control boundary enforcement and breach notification logic.</p>
+											<p>Consent prompt delivery, PII redaction in transcripts, call recording opt-out flows and regulatory script adherence validation.</p>
 										</div>
 									</div>
 								</div>
@@ -272,10 +272,10 @@ get_header( 'v2.1' );
 									<div class="flip-card-inner">
 										<div class="flipeffectwrapperbefore">
 											<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/performance-reliablity.png' ); ?>" alt="">
-											<h6>Performance &amp; availability</h6>
+											<h6>Performance &amp; concurrency</h6>
 										</div>
 										<div class="flipeffectwrapperafter">
-											<p>Concurrent consultation load testing, peak appointment window stress testing, failover behaviour and platform availability under high-demand conditions.</p>
+											<p>Simultaneous call load testing, per-call latency under peak traffic, degradation behaviour at scale and failover handling across telephony infrastructure.</p>
 										</div>
 									</div>
 								</div>

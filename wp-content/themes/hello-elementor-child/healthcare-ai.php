@@ -22,7 +22,7 @@ get_header( 'v2.1' );
 					<li data-anim="fade-up"><span class="tv-check-icon" aria-hidden="true"></span>Automated Evaluations</li>
 				</ul>
 				<div class="tv-healthcare-hero__actions">
-					<a href="#qa-services" class="tv-btn tv-btn--primary" data-anim="fade-up">BOOK A CALL <span class="tv-caret-white" aria-hidden="true"></span></a>
+					<a href="<?php echo esc_url( site_url( '/contact-us/' ) ); ?>" class="tv-btn tv-btn--primary" data-anim="fade-up">BOOK A CALL <span class="tv-caret-white" aria-hidden="true"></span></a>
 					<a href="#qa-plans" class="tv-btn tv-btn--outline-dark" data-anim="fade-up">VIEW PLANS <span class="tv-carter-black" aria-hidden="true"></span></a>
 				</div>
 			</div>
@@ -38,23 +38,55 @@ get_header( 'v2.1' );
 	</section>
 
 
-	<section class="tv-trusted trustedteamsection toolsweusesection" data-anim="section">
+	<!-- Trusted clients logos -->
+	<section class="tv-trusted" data-anim="section">
 		<div class="container">
-			<h2 class="tv-trusted__title text-center" data-anim="fade-up"><span class="tv-blue">Trusted</span> by teams at</h2>
+			<h2 class="tv-trusted__title text-center" data-anim="fade-up">
+				Trusted by organizations <span class="text-black">that cannot afford mistakes.</span>
+			</h2>
+
 			<div class="swiper tv-logo-slider">
 				<div class="swiper-wrapper align-items-center">
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/youth_logo.png' ); ?>" alt="Youth"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/MaleFromHome__logo.png' ); ?>" alt="Male From Logo"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/OMED_logo.png' ); ?>" alt="OMED Health"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/LumeHealth_logo.png' ); ?>" alt="Lume Health"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/TCM_logo.png' ); ?>" alt="TCM"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/MMT_logo.png' ); ?>" alt="MMT"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/Holistic_logo.png' ); ?>" alt="Holistic WellCare Advisers"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/CliniScripts_logo.png' ); ?>" alt="Clini Scripts"></div>
-					
-					
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/holistic.png' ); ?>" alt="Rise">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/firex.png' ); ?>" alt="U-Turn">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/mmt.png' ); ?>" alt="Oslo">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/nextiva.png' ); ?>" alt="Barca">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/sun.png' ); ?>" alt="TH">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/karen.png' ); ?>" alt="Kobe">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/urban.png' ); ?>" alt="Rise">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/freeaddcopy.png' ); ?>" alt="U-Turn">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/nextiva-v2.png' ); ?>" alt="Oslo">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/holistic.png' ); ?>" alt="Barca">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/firex.png' ); ?>" alt="TH">
+					</div>
+					<div class="swiper-slide tv-logo" data-anim="fade-up">
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/mmt.png' ); ?>" alt="Kobe">
+					</div>
 				</div>
+				
 			</div>
+
 		</div>
 	</section>
 
@@ -70,42 +102,42 @@ get_header( 'v2.1' );
         <div class="tv-healthcare-grid__wrap">
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.3">
-			<a href="#">
+			<a href="<?php echo esc_url( home_url( '/ai-qa/llm-testing/' ) ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/llm-testing-banner.webp' ); ?>" alt="LLM Testing">
             <div class="tv-healthcare-card__title">LLM Testing</div>
 			</a>
           </article>
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.6">
-		  <a href="#">
+		  <a href="<?php echo esc_url( home_url( '/ai-qa/chatbots-testing/' ) ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/chatbot-testing-banner.webp' ); ?>" alt="Chatbots Testing">
             <div class="tv-healthcare-card__title">Chatbots Testing</div>
 			</a>
           </article>
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.9">
-			<a href="#">
+			<a href="<?php echo esc_url( home_url( '/ai-qa/rag-system-testing/' ) ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/rag-system-banner.webp' ); ?>" alt="RAG System Testing ">
             <div class="tv-healthcare-card__title">RAG System Testing</div>
 			</a>
           </article>
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.3">
-			<a href="#">
+			<a href="<?php echo esc_url( home_url( '/ai-qa/ai-agents-testing/' ) ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/ai-agents-testing-banner.webp' ); ?>" alt="AI Agents Testing">
             <div class="tv-healthcare-card__title">AI Agents Testing</div>
 			</a>
           </article>
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.6">
-            <a href="#">
+            <a href="<?php echo esc_url( home_url( '/ai-qa/ai-voice-agents-testing/' ) ); ?>">
 			<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/ai-voice-testing-banner.webp' ); ?>" alt="AI Voice Agents Testing">
             <div class="tv-healthcare-card__title">AI Voice Agents Testing</div>
 			</a>
           </article>
 
           <article class="tv-healthcare-card" data-anim="fade-up" data-delay="0.9">
-		  <a href="#">
+		  <a href="<?php echo esc_url( home_url( '/ai-qa/ai-note-taking-testing/' ) ); ?>">
             <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/ai-note-testing-banner.webp' ); ?>" alt="AI Note Taking Testing">
             <div class="tv-healthcare-card__title">AI Note Taking Testing</div>
 			</a>
@@ -185,21 +217,26 @@ get_header( 'v2.1' );
 			</div>
 			<div class="swiper tv-logo-slider">
 				<div class="swiper-wrapper align-items-center">
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/client-logo-1.png' ); ?>" alt="Jira Logo"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/client-logo-3.png' ); ?>" alt="Cpress logo"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/client-logo-4.png' ); ?>" alt="Selenium Logo"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/client-logo-8.png' ); ?>" alt="TestComplete logo"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/client-logo-10.png' ); ?>" alt="JMeter Logo"></div>
-					
-				
+					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/promptfoo_logo.png' ); ?>" alt="Prompt Foo"></div>
 					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/d_logo.png' ); ?>" alt=""></div>
 					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/ragas_logo.png' ); ?>" alt="Ragas"></div>
 					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/langchain_logo.png' ); ?>" alt="Lang Chain"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/notion_logo.png' ); ?>" alt="Notion"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/slack_logo.png' ); ?>" alt="Slack"></div>
 					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/github_logo.png' ); ?>" alt="Github"></div>
 					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/playwright_logo.png' ); ?>" alt="Play Wright"></div>
-					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/promptfoo_logo.png' ); ?>" alt="Prompt Foo"></div>
+					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/client-logo-10.png' ); ?>" alt="JMeter Logo"></div>
+
+
+					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/client-logo-1.png' ); ?>" alt="Jira Logo"></div>
+					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/notion_logo.png' ); ?>" alt="Notion"></div>
+
+					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/client-logo-3.png' ); ?>" alt="Cpress logo"></div>
+					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/client-logo-4.png' ); ?>" alt="Selenium Logo"></div>
+					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/client-logo-8.png' ); ?>" alt="TestComplete logo"></div>
+					
+					<div class="swiper-slide tv-logo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/slack_logo.png' ); ?>" alt="Slack"></div>
+					
+					
+					
 					
 					
 					
