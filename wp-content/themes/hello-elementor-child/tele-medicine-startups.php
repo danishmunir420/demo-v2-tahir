@@ -9,7 +9,9 @@
 get_header( 'v2.1' );
 ?>
 
-
+<style>
+.slider-wrapper.herorightsliderwrapper{overflow:visible;}
+</style>
 <main id="main">
 	<section class="subpagesheromainsection tv-healthcare-herosection paddingleftright">
 		<div class="container">
@@ -336,140 +338,7 @@ get_header( 'v2.1' );
     </section>
 
 
-	<!-- Testimonial slider -->
-	<section class="tv-testimonials py-5">
-		<div class="container">
-			<h2 class="tv-testimonials__title text-center mb-5" data-anim="fade-up">What’s People Say’s</h2>
-
-			<div class="swiper tv-testimonials-swiper">
-				<div class="swiper-wrapper" data-anim="cards">
-					<!-- Video 1-->
-					<div class="swiper-slide">
-                            <div class="tv-testimonial">
-                                <!-- VIDEO SLIDE -->
-                                <div class="tv-testimonial__media">
-                                    <video class="tv-testimonial-video" muted controls playsinline preload="auto" autoplay>
-                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/TestivaTestimonial.mp4' ); ?>" type="video/mp4">
-                                    </video>
-                                </div>
-
-                                <div class="tv-testimonial__card">
-                                <p class="tv-testimonial__quote" data-anim="fade-up">
-                                    “The QA services provided by Testiva have always been outstanding. ...they allowed us to release stable software when it counts the most.”
-                                </p>
-
-                                <div class="tv-testimonial__footer">
-                                    <div class="tv-testimonial__name" data-anim="fade-up">Francesco</div>
-                                    <div class="tv-testimonial__role" data-anim="fade-up">Our another template</div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-					<!--Video 2-->
-					<div class="swiper-slide">
-                            <div class="tv-testimonial">
-                                <!-- VIDEO SLIDE -->
-                                <div class="tv-testimonial__media">
-                                    <video class="tv-testimonial-video" muted controls playsinline preload="auto" autoplay>
-                                    <source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/videos/RokasMMT.mp4' ); ?>" type="video/mp4">
-                                    </video>
-                                </div>
-
-                                <div class="tv-testimonial__card">
-                                <p class="tv-testimonial__quote" data-anim="fade-up">
-                                    “The QA services provided by Testiva have always been outstanding. ...they allowed us to release stable software when it counts the most.”
-                                </p>
-
-                                <div class="tv-testimonial__footer">
-                                    <div class="tv-testimonial__name" data-anim="fade-up">Francesco</div>
-                                    <div class="tv-testimonial__role" data-anim="fade-up">Our another template</div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-					<div class="swiper-slide">
-						<div class="tv-testimonial">
-							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/steve.jpg' ); ?>" alt="Client photo">
-							</div>
-
-							<div class="tv-testimonial__card">
-								<p class="tv-testimonial__quote" data-anim="fade-up">
-									“Testiva is a great team to work with. I’ve hired them multiple times and recommended them to others, all impressed by their thorough work. Highly recommended for QA.”
-								</p>
-
-								<div class="tv-testimonial__footer">
-									<div class="tv-testimonial__name" data-anim="fade-up">Steve Brickman</div>
-									<div class="tv-testimonial__role" data-anim="fade-up">Director of Technology @ mscripts
-</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="swiper-slide">
-						<div class="tv-testimonial">
-							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/chaya.jpg' ); ?>" alt="Client photo">
-							</div>
-
-							<div class="tv-testimonial__card">
-								<p data-anim="fade-up" class="tv-testimonial__quote">
-									“Testiva team is highly skilled and extremely thorough. I trust them for accurate and timely delivery. They are a reliable resource for any project.”
-								</p>
-
-								<div class="tv-testimonial__footer">
-									<div class="tv-testimonial__name" data-anim="fade-up">Chaya Feigelstock</div>
-									<div class="tv-testimonial__role" data-anim="fade-up">Senior Marketing Coordinator @ Nextiva</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="swiper-slide">
-						<div class="tv-testimonial">
-							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/hussien.jpg' ); ?>" alt="Client photo">
-							</div>
-
-							<div class="tv-testimonial__card">
-								<p data-anim="fade-up" class="tv-testimonial__quote">
-									“Testiva team delivered outstanding quality with great professionalism. Communication was excellent and delivery met expectations. Highly recommended.”
-								</p>
-
-								<div class="tv-testimonial__footer">
-									<div class="tv-testimonial__name" data-anim="fade-up">Hussein Khazaal.</div>
-									<div class="tv-testimonial__role" data-anim="fade-up">Founder & CEO @ Feenix.ai</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="swiper-slide">
-						<div class="tv-testimonial">
-							<div class="tv-testimonial__media">
-								<img data-anim="image" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/html-v2/assets/images/murry.jpg' ); ?>" alt="Client photo">
-							</div>
-
-							<div class="tv-testimonial__card">
-								<p data-anim="fade-up" class="tv-testimonial__quote">
-									“Excellent team worked well with minimal supervision and did a great job. Their work helped us improve the robustness of the platform.”
-								</p>
-
-								<div class="tv-testimonial__footer">
-									<div class="tv-testimonial__name" data-anim="fade-up">Murray Bryant</div>
-									<div class="tv-testimonial__role" data-anim="fade-up">Co-Founder / CTO @ Global Recruit Co.</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="tv-testimonials__dots"></div>
-			</div>
-		</div>
-	</section>
+	<?php get_template_part( 'template-parts/v2/testimonial-slider' ); ?>
 
 	<section class="tv-section tv-resource-plans" id="qa-plans">
 		<div class="container">
@@ -699,14 +568,47 @@ get_header( 'v2.1' );
 		</div>
 	</div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cards = document.querySelectorAll(".qa-card");
+    let current = 0;
+
+    // Function to update active card
+    function setActiveCard(index) {
+
+        cards.forEach((card) => {
+            card.classList.remove("active");
+        });
+
+        cards[index].classList.add("active");
+    }
+
+    // Set first card active on load
+    setActiveCard(current);
+
+    // Change active card every 3 seconds
+    setInterval(() => {
+
+        current++;
+
+        // Restart from first card after last
+        if (current >= cards.length) {
+            current = 0;
+        }
+
+        setActiveCard(current);
+
+    }, 3000);
+
+});
+</script>
 
 
-
-
+<!--
 <script>
 const track = document.getElementById('sliderTrack');
 
-// Duplicate cards
 track.innerHTML += track.innerHTML;
 
 const cards = document.querySelectorAll('.qa-card');
@@ -731,7 +633,6 @@ function slide() {
 
     setActive(current % originalCount);
 
-    // When reached duplicate set
     if (current === originalCount) {
         isResetting = true;
 
@@ -740,7 +641,7 @@ function slide() {
             current = 0;
             track.style.transform = `translateY(0px)`;
 
-            // Force browser repaint
+           
             track.offsetHeight;
 
             track.style.transition = 'transform 0.8s ease-in-out';
@@ -748,12 +649,10 @@ function slide() {
         }, 800);
     }
 }
-
-// Start with first active
 setActive(0);
 
 setInterval(slide, 2500);
-</script>
+</script>-->
 
 
 	<!-- <style>

@@ -760,7 +760,24 @@ if (servicesEl && typeof Swiper !== "undefined") {
   }
 
   const servicesSwiper = new Swiper(".tv-services-swiper", servicesOptions);
+if (typeof ScrollTrigger !== "undefined") {
 
+  const totalSlides = servicesSwiper.slides.length;
+
+  ScrollTrigger.create({
+    trigger: ".tv-services",
+    start: "top top",
+    end: `+=${totalSlides * 700}`,
+    pin: true,
+    scrub: 1,
+    anticipatePin: 1,
+
+   onUpdate: (self) => {
+    const index = Math.round(self.progress * (totalSlides - 1));
+    servicesSwiper.slideTo(index, 600); 
+  }
+  });
+}
   document.addEventListener("visibilitychange", function () {
     if (document.hidden) {
       pauseAllServiceVideos(servicesSwiper);
@@ -780,8 +797,8 @@ if (servicesEl && typeof Swiper !== "undefined") {
       new Swiper(".tv-choose-swiper", {
         slidesPerView: 3,
         centeredSlides: true,
-        loop: true,
-        autoplay: true,
+        loop: false,
+        autoplay: false,
         speed: 700,
         spaceBetween: 0,
         grabCursor: true,
@@ -2050,6 +2067,7 @@ function initProcessStepsAnimation() {
   initCaseFilter();
   initWhyCardsToStack();
   initProcessStepsAnimation();
+  initTestingScrollPin();
     //initHowWeWorkAnimation();
 
     setTimeout(function () {
@@ -2075,3 +2093,67 @@ function initProcessStepsAnimation() {
     });
   }
 });
+
+
+function initTestingScrollPin() {
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+  const section = document.querySelector(".tv-testing-slider");
+  const root = document.getElementById("tvTestingStack");
+
+  if (!section || !root) return;
+
+  const cards = root.querySelectorAll(".tv-stack__card");
+  if (!cards.length) return;
+
+  let currentIndex = 0;
+
+  function goTo(index) {
+    const activeCard = cards[index];
+    if (!activeCard) return;
+
+    cards.forEach((card, i) => {
+      gsap.to(card, {
+        opacity: i === index ? 1 : 0,
+        y: i === index ? 0 : 40,
+        duration: 0.5,
+        ease: "power3.out"
+      });
+
+      card.classList.toggle("is-active", i === index);
+    });
+
+    currentIndex = index;
+  }
+
+  gsap.set(cards, {
+    opacity: 0,
+    y: 40
+  });
+
+  gsap.set(cards[0], {
+    opacity: 1,
+    y: 0
+  });
+
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top+=200 top",
+    end: () => "+=" + (cards.length * 600),
+    pin: true,
+    scrub: true,
+
+    onUpdate: (self) => {
+      const progress = self.progress;
+      const index = Math.min(
+        cards.length - 1,
+        Math.floor(progress * cards.length)
+      );
+
+      if (index !== currentIndex) {
+        goTo(index);
+      }
+    }
+  });
+}
+
