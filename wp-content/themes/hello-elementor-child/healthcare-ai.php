@@ -269,7 +269,7 @@ get_header( 'v2.1' );
 		</div>
 	</section>
 
-	<section class="tv-section tv-selected-work">
+	<section class="tv-section tv-selected-work selectedworkmainsection">
 		<div class="container">
 			<div class="tv-section__head headingtopsection">
 				<h2 class="tv-section__title" data-anim="fade-up"><span class="tv-blue">Selected</span> Work</h2>
@@ -279,7 +279,7 @@ get_header( 'v2.1' );
 				<div class="swiper-wrapper-s row justify-content-md-center align-items-center h-100">
 
     <!-- FreeAdCopy - AI -->
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
         <article class="tv-case-card">
             <a href="<?php echo esc_url( home_url( '/projects/freeadcopy/' ) ); ?>" class="tv-case-card__media">
                 <img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-57.png' ) ); ?>" 
@@ -298,7 +298,7 @@ get_header( 'v2.1' );
     </div>
 
     <!-- 2. OMED -->
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
         <article class="tv-case-card">
             <a href="<?php echo esc_url( home_url( '/projects/youth-health-app/' ) ); ?>" class="tv-case-card__media">
                 <img src="<?php echo esc_url( site_url( '/wp-content/uploads/2025/04/Frame-66.jpg' ) ); ?>" alt="YOU(th) Health App">

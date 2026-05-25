@@ -13,7 +13,6 @@
 # Configuration
 # -------------------------
 wp-config.php
-.env
 
 # -------------------------
 # Ignore everything in wp-content
@@ -60,3 +59,4 @@ Thumbs.db
 node_modules/
 dist/
 build/
+config.bat
